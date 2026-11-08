@@ -35,6 +35,11 @@ export default function HomeBannerBookingForm({bookingUrl,servicesList}) {
             <div className="booking-wrapper" >
                 <div className="container">
                     <div className="booking-inner clearfix banner">
+                        {/* heading shown on tablet/mobile only (form sits below the slider there) */}
+                        <div className="booking-mobile-head d-lg-none">
+                            <p className="dh-kicker">Start Your Investment</p>
+                            <h3>Own a Share of Premium Hospitality</h3>
+                        </div>
                         <form onSubmit={submit}>
                             <div className="row g-2">
                                 <div className="col-12 col-md-5">
