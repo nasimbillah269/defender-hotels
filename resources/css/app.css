@@ -1,0 +1,1468 @@
+header {
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+  
+  .sticky .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333333c9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    border-radius: 0;
+  }
+
+  .toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-left: 5px;
+}
+
+.slide {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: auto;
+    animation: zoomInInfinite 8s ease-in-out infinite; /* infinite loop */
+  }
+  
+  /* Continuous Zoom In */
+  @keyframes zoomInInfinite {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.1); /* zoom to bigger size */
+      opacity: 1;
+    }
+  }
+
+.sd-body .dropdown-menu {
+    display: block;
+    position: relative;
+    background-color: unset;
+    border-top: 0;
+    transition: 1s all;
+    border-bottom: 0;
+    border-right: 0;
+    border: 0;
+}
+.sd-body .dropdown-menu li a {
+    display: inline-block;
+    width: 100%;
+    padding: 4px 15px;
+    color: #475f7b;
+    background-color: #e5e8ec;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: 1s all;
+}
+.sd-body .dropdown-menu li a span {
+    margin-left: 20px;
+}
+
+.booking-inner p {
+    background-color: #17111e;
+    text-align: center;
+    padding: 17px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fadede;
+    border-right: 1px solid #817e7e;
+}
+
+.booking-inner select.form-select {
+    background: #f5f5f5ad;
+
+    border-radius: 0;
+    color: black;
+    padding: 20px 20px;
+    font-family: "Barlow", sans-serif;
+    text-align: center;
+}
+.slick-arrow {display: none !important;}
+
+.moreBtn {
+    background-color: #fff;
+    color: #5a1477;
+    padding: 5px 40px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-family: "Barlow", sans-serif;
+    font-weight: bold;
+    transition: 0.5s all;
+}
+.moreBtn:hover {
+    background-color: #d9d4d4;
+    color: #5a1477;
+    border-radius: 0;
+}
+.discountBox a:hover{
+    background-color: #d9d4d4;
+    color: #5a1477;
+    border-radius: 0;
+}
+
+.booking-inner button {
+    background-color: #f5f5f5ad;
+    width: 100%;
+    display: block;
+    padding: 17px;
+    font-size: 20px;
+    color: black;
+    border-left: 1px solid #817e7e;
+    font-family: "Barlow", sans-serif;
+    font-weight: bold;
+}
+
+.btn-form1-submit {
+    background-color: #fff !important;
+    padding: 2px !important;
+    color: black !important;
+}
+
+.bgSetion {
+    padding: 80px 0;
+    background-color: #d0d2d3;
+}
+.btn-form1-submit:hover {
+    background-color: #1c181e !important;
+    color: #fff !important;
+}
+
+.navbar .navbar-nav .nav-link svg {
+    background-color: #fff;
+    color: #444;
+    font-size: 20px;
+    padding: 0 3px;
+}
+
+.footerSocialLink ul li a svg:hover {
+    color: #937c50;
+    transform: scale(1.2);
+}
+.footerSocialLink ul li a svg {
+    font-size: 16px;
+    transition: 0.5s all;
+}
+
+.bookingPageForm .input-group-text:hover {
+    background-color: #68373c !important;
+    cursor: pointer;
+}
+.tabTitle .active {
+    background-color: #333; /* Active background color */
+    color: #fff; /* Active text color */
+  }
+  
+  .tab-content {
+    margin-top: 20px;
+  }
+
+.about {
+    background-color: #fff;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonials-box .swiper-slide.swiper-slide-active:first-child {
+    transform: translateX(0%);
+    z-index: 2;
+}
+
+.testimonials-box .swiper-slide.swiper-slide-next:nth-child(2) {
+    transform: translateX(0%);
+    z-index: 1;
+}
+
+@media only screen and (min-width: 769px) {
+    .swiper-slide:first-child {
+        transition: transform 100ms;
+    }
+
+    .swiper-slide:first-child img {
+        transition: box-shadow 500ms;
+    }
+
+    .swiper-slide.swiper-slide-active:first-child {
+        transform: translateX(0%);
+        z-index: 2;
+    }
+
+    .swiper-slide.swiper-slide-active:first-child img {
+        box-shadow: 0px 32px 80px rgba(0, 0, 0, 0.35);
+    }
+
+    .swiper-slide:nth-child(2) {
+        transition: transform 100ms;
+    }
+
+    .swiper-slide.swiper-slide-next:nth-child(2) {
+        transform: translateX(0%);
+        z-index: 1;
+    }
+
+    .swiper[dir="rtl"] .swiper-slide.swiper-slide-active:first-child {
+        transform: translateX(-50%);
+    }
+
+    .swiper[dir="rtl"] .swiper-slide.swiper-slide-next:nth-child(2) {
+        transform: translateX(-55%);
+    }
+}
+
+.news .swiper-pagination {
+    display: none;
+}
+
+.news .swiper-scrollbar.swiper-scrollbar-horizontal {
+    display: none;
+}
+.clients .swiper-pagination {
+    display: none;
+}
+
+.clients .swiper-scrollbar.swiper-scrollbar-horizontal {
+    display: none;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    font-family: swiper-icons;
+    font-size: var(--swiper-navigation-size) !important;
+    text-transform: none !important;
+    letter-spacing: 0;
+    font-variant: initial;
+    font-size: 13px !important;
+    color: #fff !important;
+    width: 26px !important;
+    height: 26px !important;
+    border: 1px solid lightcyan !important;
+    border-radius: 50% !important;
+    padding-top: 6px !important;
+    padding-left: 8px !important;
+    margin-top: -140px !important;
+}
+.testimonials {
+    background-color: #fff;
+}
+.bannerOverly h5 {
+    color: black;
+}
+.clientSay{
+    /* background-image: url('../../images/img/Defender Hotels Website Mockup-09.jpg') !important; */
+    background-image: url('../../images/new/header/header.png') !important;
+}
+.background {
+    background-image: url('../../images/img/Defender\ Hotels\ Website\ Mockup\ Sample-09.jpg');
+}
+.bgImg {
+    background-image: url('../../images/img/Header Image.jpg');
+}
+.rooms1 {
+    background-color: #f0f0f1 !important;
+}
+
+.news {
+    background-color: #291332 !important;
+}
+
+.facilties {
+    background-color: #291332 !important;
+}
+
+.iconDiv svg {
+    font-size: 45px;
+    color: #aa8453;
+    margin-bottom: 13px;
+    transition: 0.5s;
+}
+
+.iconDiv img {
+    width: 60px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.video-wrapper .vid {
+    position: relative;
+    z-index: 8;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.projectInvestPartMain {
+    background-color: #4D2574;
+    padding: 80px 0;
+}
+
+.discountOffterMain {
+    padding-top: 100px ;
+    background-color: #fff;
+}
+
+.discountBox img {
+    width: 70%;
+}
+
+.discountBox span {
+    margin: 0;
+    color: black;
+    line-height: 11px;
+    padding-bottom: 10px;
+    font-family: "Barlow", sans-serif;
+    font-weight: bold;
+}
+.discountBox h1 {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 52px;
+    margin: 0;
+    padding-top: 10px;
+    color: black;
+}
+.discountBox p {
+    margin: 0;
+    font-size: 20px;
+    color: black;
+    font-weight: 400;
+    padding: 10px 0;
+    font-family: "Barlow", sans-serif;
+    font-weight: bold;
+}
+.discountBox a {
+    color: #fff;
+    background-color: #4D2574;
+    font-weight: bold;
+    padding: 5px 40px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-family: "Barlow", sans-serif;
+    font-weight: bold;
+    transition: 0.5s all;
+}
+
+/* ✅ Mobile tuning */
+@media (max-width: 576px) {
+   body {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  h1 { font-size: 26px; line-height: 1.2; }
+  h2 { font-size: 22px; line-height: 1.25; }
+  h3 { font-size: 18px; line-height: 1.3; }
+
+  p, li {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+   .btn,
+  button,
+  a.btn,
+  .nav-link,
+  .dropdown-item,
+  input,
+  select,
+  textarea {
+    min-height: 44px; /* mobile-friendly target size */
+  }
+
+  .btn,
+  button,
+  a.btn {
+    padding: 10px 14px;
+    border-radius: 10px;
+  }
+
+  .nav-link,
+  .dropdown-item {
+    padding: 10px 12px;
+  }
+  .container,
+  .container-fluid {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .section,
+  section {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+
+.projectInvestLeftGrid h6 {
+    margin: 0;
+    color: #fff;
+    line-height: 11px;
+    padding-bottom: 10px;
+    font-family: "Barlow", sans-serif;
+    font-weight: bold;
+}
+
+.projectInvestLeftGrid h1 {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 52px;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 25px;
+}
+.projectInvestLeftGrid p {
+    margin: 0;
+    color: #fff;
+    line-height: 23px;
+    text-align: justify;
+    font-size: 19px;
+
+}
+.projectInvestPartMain .row {
+    position: relative;
+}
+.projectInvestLeftGrid {
+    padding: 40px 25px;
+    position: absolute;
+    top: 37px;
+    left: -20px;
+    z-index: 1;
+    width: 50%;
+}
+
+.banner input {
+    color: black !important;
+    background-color: #f5f5f5ad !important;
+    border: none !important;
+    padding: 23px !important;
+    border-right: 1px solid #817e7e !important;
+    line-height: 24px !important;
+}
+
+.banner input::placeholder {
+    color: black !important;
+    font-size: 20px;
+    text-align: center;
+}
+.overViewPage {
+    background-color: #fff;
+    padding-top: 50px;
+}
+
+.overViewPage p {
+    color: black;
+    text-align: justify;
+    font-size: 19px;
+    padding-right: 34px;
+}
+.overViewPage span {
+    color: #7a219f;
+    font-size: 19px;
+}
+.overViewLarg {
+    background: #fff;
+}
+
+
+.overViewNewRow {
+    background-color: #fff;
+}
+.overViewNewRow img {
+    width: 100%;
+}
+.blueList li {
+    color: #000;
+    list-style: disc;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.banner .form-select:focus {
+    box-shadow: none;
+}
+section.overViewPage h4 {
+    color: #000;
+    font-family: "Barlow", sans-serif;
+    font-weight: bold;
+    margin: 0;
+}
+.upcion {
+    background-color: #4D2574;
+    color: #fff;
+    width: 65px;
+    height: 64px;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+label.upbutton {
+    background-color: #4D2574;
+    color: #fff;
+    width: 150px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+.overViewPages {
+    padding-bottom: 50px;
+}
+.loadingCon {
+    width: 200px;
+    height: 115px;
+}
+.uploadCVMain h5 {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 25px;
+}
+.uploadCVMain p {
+    line-height: 20px;
+    font-size: 18px;
+    justify-content: center;
+}
+.blueRainRsortLayout {
+    padding: 80px 0;
+}
+.cvdropDiv {
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #291332;
+    padding: 20px;
+}
+.uploadCVMain {
+    margin-left: 260px;
+}
+.cvdropDiv {
+    max-width: 550px;
+}
+.blueRainReGrid {
+    margin-bottom: 20px;
+}
+.booking-box select.form-select {
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    color: black;
+    padding: 20px 20px;
+
+    font-size: 14px;
+}
+
+.booking-box .form-select:focus {
+    box-shadow: none;
+}
+
+.tabTitle span {
+    color: #fff;
+    background-color: #4D2574;
+    margin-right: 10px;
+    padding: 4px 76px;
+    margin-top: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.searchBar svg {
+    font-size: 23px;
+    background-color: #fff;
+    color: #444;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 3px;
+}
+
+/* footer css start */
+.qrcode img {
+    width: 65%;
+    background-color: #fff;
+    display: block;
+    margin: 0 0 0 auto;
+}
+.footerContactInfo ul li {
+    display: flex;
+    margin-bottom: 10px;
+}
+.footerContactInfo ul {
+    margin: 0;
+    padding: 0;
+}
+.footerContactInfo ul li p {
+    margin: 0;
+    color: #fff;
+}
+.iconF {
+    margin-right: 14px;
+    color: #fff;
+}
+.footerMenuLink ul {
+    margin: 0;
+    padding: 0;
+}
+.logoDiv img {
+    width: 50%;
+    padding-bottom: 24px;
+}
+.footerGrid h5 {
+    font-size: 18px;
+    margin: 0;
+    padding-bottom: 10px;
+    color: #F6D6B1;
+    font-weight: bold;
+}
+
+.footerSocialLink ul {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 10px;
+}
+
+.footerSocialLink ul li {
+    display: inline-block;
+}
+.footerMenuLink ul li a {
+    color: #fff;
+}
+.footerSocialLink ul li a {
+    color: #fff;
+    margin-left: 8px;
+}
+.copyRigt p {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+.designText p {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    color: #fff;
+}
+
+.input1_inner:after {
+    display: none !important;
+}
+.select1_inner:after {
+    display: none !important;
+}
+.booking-box .input1_inner input {
+    background: #fff !important;
+}
+.booking-box .select2 {
+    width: 100%;
+    background: #5e2674;
+}
+/* footer css end */
+.booking-box .input1_inner input::placeholder {
+    color: black;
+}
+/* choose us css start */
+.chooseUsMainPart {
+    padding: 60px 0;
+    background-color: #f0f0f1;
+}
+.chooseUsBox ul li {
+    margin-bottom: 14px;
+    display: flex;
+}
+.chooseUsBox ul li .sirial span {
+    background-color: #4D2574;
+    font-size: 18px;
+    padding: 3px 10px;
+    display: inline-block;
+    margin-right: 15px;
+    color: #fff;
+}
+.chooseUsBox ul li a {
+    color: black;
+    font-size: 16px;
+    line-height: 20px;
+    /* font-family: "Barlow", sans-serif; */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.chooseUsBox h1 {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 52px;
+    color: black;
+}
+.chooseUsBox h6 {
+    margin: 0;
+    color: #7a219f;
+    line-height: 11px;
+    padding-bottom: 10px;
+    font-family: "Barlow", sans-serif;
+    font-weight: bold;
+}
+
+.about span {
+    margin: 0;
+    color: #7a219f;
+    line-height: 11px;
+    padding-bottom: 10px;
+    font-family: "Barlow", sans-serif;
+    font-weight: bold;
+}
+.about .section-title {
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 52px;
+    margin: 0;
+    padding-bottom: 45px;
+}
+.about p {
+    color: black;
+    line-height: 20px;
+    margin: 0;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    text-align: justify;
+    font-size: 19px;
+}
+.about img {
+    width: 83%;
+    margin: 0 auto;
+    display: block;
+}
+.pageBanner h1 {
+    text-align: center;
+    font-size: 48px;
+    text-transform: uppercase;
+    color: #fff;
+}
+/* choose us css end */
+
+/* about us page css start */
+section.misionVisonDiv {
+    background-color:  #f0f0f1;
+    padding: 50px 0;
+}
+.MisonGrid ul li {
+    list-style: disc;
+    color: black;
+    font-size: 19px;
+    margin-top: 10px;
+}
+.visonGrid h4 {
+    font-weight: bold;
+    font-size: 30px;
+    color: black;
+}
+.MisonGrid h4 {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+}
+.visonGrid p {
+    color: black;
+    text-align: justify;
+    font-size: 19px;
+}
+section.meetTeam {
+    background-color: #fff;
+    padding: 50px 0;
+}
+.meetLeftGrid img {
+    width: 80%;
+}
+.meetTeam h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    color: black;
+}
+.meetLeftGrid h5 {
+    font-size: 30px;
+    font-weight: 400;
+    color: black;
+    margin: 0;
+}
+.meetLeftGrid h6 {
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+    margin: 0;
+}
+.meetLeftGrid p {
+    color: black;
+    text-align: justify;
+    font-size: 19px;
+}
+.newTeamRow {
+    margin-top: 50px;
+}
+.meatExTeam h2 {
+    color: black;
+    margin: 50px 0;
+}
+.newsAndEvent {
+    padding: 50px 0 !important;
+    background-color: #fff !important;
+}
+.newAndEventHead p {
+    margin: 0;
+    color: black;
+    font-weight: bold;
+}
+.newAndEventHead h2 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 40px;
+    padding-bottom: 20px;
+    color: black;
+}
+/* about us page css end */
+
+
+
+/* mobile---Sidebar css */
+.mobileMenuDiv { display: none !important; }
+.text-primary {
+    color: #5a8dee !important;
+}
+.btn-primary {
+    border-color: #5a8dee !important;
+    background-color: #5a8dee !important;
+    color: #fff;
+}
+.shadow-md {
+    box-shadow: 0px 5px 10px rgba(90, 116, 148, 0.3);
+}
+.navbar {
+    border-radius: 5px;
+}
+.sidebar {
+width: 280px;
+    min-height: 100vh;
+    box-shadow: 0px 4px 8px rgb(0 0 0 / 16%);
+    background-color: #1e1025;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 10000;
+transition: 0.5s;
+}
+.sidebar.active {
+    left: 0;
+}
+.sd-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+.sidebar-overlay {
+position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+z-index: 9999;
+}
+.sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+.sd-body {
+    padding: 15px;
+    max-height: calc(100vh - 67px);
+    overflow-x: hidden;
+}
+.sd-body ul {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 0;
+}
+.sd-body ul li {
+    list-style: none;
+    margin-bottom: 8px;
+    position: relative;
+}
+.sd-body ul li .sd-link {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 16px;
+    color: #475f7b;
+    background-color: #e5e8ec;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.sd-body ul li button {
+    position: absolute;
+    right: 10px;
+    color: black;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+/* mobile sider bar css end */
+
+/* category page css start */
+section.categoryPageMain {
+    background-color: #fff;
+    padding: 80px 0;
+}
+.categoryHeadBox {
+    padding: 12px;
+}
+.categoryHeadBox p {
+    color: black;
+    line-height: 18px;
+    font-size: 19px;
+}
+.categoryHeadBox h6 {
+    color: black;
+    margin: 0;
+    font-weight: bold;
+    line-height: 9px;
+    font-size: 19px;
+}
+.categoryHeadBox h2 {
+    font-size: 43px;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 12px;
+    color: black;
+}
+
+.categoryGrid {
+    padding: 20px;
+    overflow: hidden;
+}
+.categoryGrid img {
+    width: 100%;
+    transition: all 1s ease;
+}
+.categoryGrid:hover img {
+    transform: scale(1.09, 1.09);
+    -webkit-filter: brightness(70%);
+    transition: all 1s ease;
+    cursor: pointer;
+}
+
+.categoryGrid p {
+    margin: 0;
+    color: black;
+    font-weight: bold;
+    margin-top: 100px;
+    font-size: 19px;
+}
+.categoryGrid h4 {
+       font-size: 38px;
+    font-weight: bold;
+    border-bottom: 1px solid #ce6f55;
+    margin-bottom: 24px;
+    padding-bottom: 3px;
+    color: black;
+}
+.categoryGrid ul li {
+    list-style: disc;
+    color: black;
+    font-size: 19px !important;
+}
+.categoryGrid ul li tr td {
+    padding: 0;
+    border: none;
+}
+.categoryGrid ul li tr td span {
+    color: black;
+    font-family: "Barlow", sans-serif;
+}
+.categoryGrid ul li tr td b {
+    color: black;
+    font-weight: bold;
+    font-family: "Barlow", sans-serif;
+}
+td.tableTitle {
+    width: 90px;
+}
+/* category page css end */
+
+/* contact us page css start */
+.contactUsPart {
+    background-color: #fff;
+    padding: 50px 0;
+}
+.contactInfo h4 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 34px;
+    margin: 0;
+    padding-bottom: 26px;
+    color: black;
+}
+.contactInfoGrid p {
+    text-align: center;
+    color: black;
+    font-size: 19px;
+}
+.contactInfoGrid img {
+    width: 50px;
+    display: block;
+    margin: 0 auto;
+}
+.contactForm {
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+.contactForm .form-control {
+    border: none;
+    background-color: #4D2574;
+    padding: 10px;
+    border-radius: 0;
+    font-family: "Barlow", sans-serif;
+    color: #fff;
+}
+.contactForm .form-control::placeholder {
+    color: #dddbdb;
+}
+.contactForm p {
+    color: black;
+    font-size: 20px;
+    margin: 0;
+    padding-bottom: 5px;
+}
+.btnSendMsg {
+    background-color: #935057;
+    color: #fff;
+    padding: 5px 13px;
+    font-family: "Barlow", sans-serif;
+    font-weight: bold;
+}
+.mapSection {
+    margin-top: 50px;
+    padding: 0 34px;
+}
+/* contact us page css end */
+
+/* booking page css start */
+.bookingPartMain {
+    padding: 50px 0;
+    background-color: #fff;
+}
+.bookingInfoDiv h4 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    line-height: 33px;
+    color: black;
+}
+.bookingInfoDiv p {
+    color: black;
+    line-height: 19px;
+    font-size: 19px;
+}
+.bookingInfoDiv span {
+    color: black;
+    margin: 0;
+    font-weight: 500;
+    font-size: 19px;
+}
+.bookingPageForm {
+    background-color: #4D2574;
+    padding: 40px 30px;
+}
+.bookingPageForm .form-control {
+    border: none;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 0;
+    color: #401353;
+    margin-bottom:0;
+}
+.bookingPageForm .form-select {
+    border: none;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 0;
+    color: #401353;
+    font-family: "Barlow", sans-serif;
+    height:unset;
+}
+.bookingPageForm select {
+    font-size: 15px;
+    color: #401353;
+}
+.bookingPageForm .form-control::placeholder {
+    color: #401353;
+}
+
+.bookingPageForm .input-group-text {
+    display: flex;
+    align-items: center;
+    padding: 15px 60px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #401353;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #cbc7c8 !important;
+    height: 42px;
+    border: none;
+    border-radius: 0;
+    font-family: "Barlow", sans-serif;
+    font-weight: bold;
+}
+.bookingPageForm h4 {
+    text-align: center !important;
+    font-size: 30px !important;
+    padding-bottom: 30px !important;
+    color: #fff;
+}
+
+.bookingPageForm p {
+    margin: 0;
+    text-align: center;
+    color: #ce9072;
+}
+.btnBookingNow {
+    background-color: #cbc7c8;
+    color: #401353;
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    border-radius: 0;
+    padding: 14px 10px;
+    font-weight: bold;
+    font-family: "Barlow", sans-serif;
+    font-weight: bold;
+}
+.btnBookingNow:hover {
+    background-color: #c48a6d;
+    color: #fff;
+}
+/* booking page css end */
+
+/* video controls button css start */
+.videowBox {
+    position: relative;
+}
+.videowBox svg {
+    font-size: 30px;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 23px;
+    margin-left: 23px;
+    background-color: #291332;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.projectInvestRightGrid {
+    position: relative;
+    z-index: 0;
+}
+.projectInvestRightGrid video{
+    height: 550px;
+    object-fit: cover;
+    
+}
+.projectInvestRightGrid svg {
+    font-size: 30px;
+    color: #fff;
+    position: absolute;
+    right: 16px;
+    bottom: 0px;
+    margin-bottom: 23px;
+    margin-left: 23px;
+    background-color: #291332;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 5px;
+}
+/* video controls button css end */
+
+
+/* single blog page css start */
+.singleBLogSection {
+    background-color: #fff !important;
+}
+
+.singleBLogSection .news2-sidebar .widget {
+    background: #4D2574;
+
+}
+.singleBlogHead span {
+    margin: 0;
+    color: #aa8453;
+    line-height: 11px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 19px;
+}
+.singleBlogHead h2 {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 52px;
+    margin: 0;
+    padding: 10px 0;
+    color: black;
+}
+.singleBlogHead p {
+    color: black;
+    font-size: 20px;
+    border: 1px solid;
+    display: inline-block;
+    padding: 0 30px;
+}
+.singleBLogSection .news2-sidebar .widget svg {
+    color: #fff;
+    font-size: 20px;
+}
+.singleBLogSection .news2-sidebar .widget-title h6 {
+    margin: 0;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 400;
+    padding: 10px 0;
+
+    font-weight: bold;
+}
+.singleBLogSection .news2-sidebar .widget .recent a {
+    display: block;
+    margin-left: 105px;
+    font-size: 19px;
+    color: #fff;
+    font-weight: 400;
+    padding: 10px 0;
+    font-weight: bold;
+}
+.singleBLogSection  .postDes {
+    margin-top: 40px;
+}
+.singleBLogSection  .postDes p {
+    color: #ebebeb;
+    font-size: 19px;
+    text-align: justify;
+    line-height: 26px;
+}
+.singleBLogSection .post-user-content p {
+    color: #fff;
+    line-height: 20px;
+    font-size: 18px;
+}
+.singleBLogSection  .post-repay {
+    font-size: 20px;
+    color: #e4a853;
+    margin: 0;
+    font-weight: 400;
+    font-family: "Barlow", sans-serif;
+}
+.singleBLogSection  .post-comment-section h2 {
+    font-size: 38px;
+    color: #fff;
+    font-family: "Bernard MT Condensed", sans-serif;
+    margin-bottom: 15px;
+}
+.singleBLogSection  .post-comment-section input {
+    border-bottom: 1px solid #fff !important;
+}
+.singleBLogSection  .post-comment-section textarea {
+    border-bottom: 1px solid #fff !important;
+}
+
+.singleBLogSection .post-comment-section input::placeholder {
+    color: black;
+}
+
+.singleBLogSection .butn-dark2 {
+    line-height: 1.2em;
+    font-weight: 400;
+    font-family: "Barlow Condensed", sans-serif;
+    text-transform: uppercase;
+    background: #935057 !important;
+    color: #fff;
+    padding: 13px 22px;
+    margin: 0;
+    position: relative;
+    font-size: 15px;
+    letter-spacing: 3px;
+    border-radius: 20px;
+}
+
+.singleBLogSection .post-comment-section input::placeholder {
+    color: black;
+    font-size: 18px;
+}
+
+.singleBLogSection .post-comment-section input:focus {
+    background: unset;
+    border: unset;
+    box-shadow: unset;
+}
+
+.singleBLogSection .post-comment-section input {
+    border-bottom: 1px solid #000 !important;
+    color: white;
+    border-radius: 0;
+}
+.singleBLogSection .post-comment-section textarea::placeholder {
+    color: black;
+    font-size: 18px;
+}
+.singleBLogSection .postDes p{
+    color: black !important;
+}
+
+.singleBLogSection .post-comment-section textarea{
+    border: 0;
+    border-bottom: 1px solid #151111 !important;
+    border-radius: 0;
+}
+
+/* single blog page css end */
+
+
+/* mobile device css start */
+@media screen and (max-width: 767px) {
+    .uploadCVMain {
+        margin-left: 0;
+    }
+    .footer-top {
+        padding: 60px 0 60px 0;
+    }
+    label.upbutton {
+    width: 120px;
+    font-size: 18px;
+    }
+    .loadingCon {
+        width: 125px;
+    }
+    .booking-inner .col-md-5 {
+        padding: 0;
+    }
+    .booking-inner .col-md-4{
+        padding: 0;
+    }
+    .projectInvestLeftGrid h1 {
+        font-size: 38px;
+        line-height: 46px;
+    }
+    .chooseUsBox ul {
+        padding: 0;
+    }
+    .discountBox h1 {
+        font-size: 35px;
+        line-height: 40px;
+    }
+    .section-padding {
+        padding: 50px 0;
+    }
+    .sd-header {
+        background: #421b56;
+    }
+    .bar svg {
+        font-size: 26px;
+        margin-top: 10px;
+        color: #fff;
+    }
+    .footerGrid {
+        margin-bottom: 20px;
+    }
+    .copyRigt p {
+        text-align: center;
+    }
+    .designText p {
+        text-align: center;
+    }
+    .qrcode img {
+        margin: 0;
+    }
+    .footerSocialLink ul {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+    .tabTitle span {
+        margin-top: 0px;
+        margin-bottom: 20px;
+        padding: 4px 50px;
+    }
+    .projectInvestLeftGrid {
+        position: unset;
+        width: 100%;
+    }
+    .projectInvestRightGrid video {
+        height: unset;
+    }
+    .projectInvestRightGrid svg {
+        bottom: 0px;
+    }
+    .chooseUsBox {
+        margin-bottom: 40px;
+    }
+    .discountBox {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .discountBox img {
+        width: 70%;
+        display: block;
+        margin: 0 auto;
+    }
+    .btnBookingNow {
+        width: 100%;
+    }
+
+}
+
+/* mobile device css end */
