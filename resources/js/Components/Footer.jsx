@@ -209,9 +209,7 @@ const Footer = ({ general, footerMenu2, footerMenu3, footerMenu4}) => {
                             <div className="col-md-4">
                                 <div className="designText">
                                     <p>
-                                        <a href="https://natoreit.com/" target="_blank" rel="noopener noreferrer">
-                                            Powered By - Natore-IT
-                                        </a>
+                                        Powered By - ARB Design
                                     </p>
                                 </div>
                             </div>
