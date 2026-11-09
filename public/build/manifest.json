@@ -1,12 +1,16 @@
 {
-  "_AlertMassageCompononets-b308a648.js": {
-    "file": "assets/AlertMassageCompononets-b308a648.js",
+  "RoomsSuites.css": {
+    "file": "assets/RoomsSuites-0107abfd.css",
+    "src": "RoomsSuites.css"
+  },
+  "_AlertMassageCompononets-092522b5.js": {
+    "file": "assets/AlertMassageCompononets-092522b5.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_BlogGrid-7598494b.js": {
-    "file": "assets/BlogGrid-7598494b.js",
+  "_BlogGrid-a1900ae4.js": {
+    "file": "assets/BlogGrid-a1900ae4.js",
     "imports": [
       "resources/js/app.jsx"
     ]
@@ -18,10 +22,10 @@
     ],
     "file": "assets/DHRL Video 2-3e82639c.js"
   },
-  "_Form-c59c7cc7.js": {
-    "file": "assets/Form-c59c7cc7.js",
+  "_Form-84a1f4f6.js": {
+    "file": "assets/Form-84a1f4f6.js",
     "imports": [
-      "_ThemeProvider-a034c56d.js",
+      "_ThemeProvider-ff8b1158.js",
       "resources/js/app.jsx"
     ]
   },
@@ -31,75 +35,79 @@
     ],
     "file": "assets/Header Image-c7155542.js"
   },
-  "_HotelBookingForm-9f62b6a2.js": {
-    "file": "assets/HotelBookingForm-9f62b6a2.js",
+  "_HotelBookingForm-cf49c30a.js": {
+    "file": "assets/HotelBookingForm-cf49c30a.js",
     "imports": [
       "resources/js/app.jsx",
-      "_index-37f12278.js",
-      "_AlertMassageCompononets-b308a648.js",
-      "_Form-c59c7cc7.js"
+      "_index-664f3f84.js",
+      "_AlertMassageCompononets-092522b5.js",
+      "_Form-84a1f4f6.js"
     ]
   },
-  "_Luxury-3cf4a994.js": {
-    "file": "assets/Luxury-3cf4a994.js",
+  "_Luxury-b216b857.js": {
+    "file": "assets/Luxury-b216b857.js",
     "imports": [
       "resources/js/app.jsx",
-      "_index-37f12278.js"
+      "_index-664f3f84.js"
     ]
   },
-  "_MainLayout-77aefdf5.js": {
-    "file": "assets/MainLayout-77aefdf5.js",
+  "_MainLayout-7786f96c.js": {
+    "file": "assets/MainLayout-7786f96c.js",
     "imports": [
       "resources/js/app.jsx",
-      "_index-37f12278.js"
+      "_index-664f3f84.js"
     ]
   },
-  "_Pagination-fdda4bb0.js": {
-    "file": "assets/Pagination-fdda4bb0.js",
+  "_Pagination-b9f9429e.js": {
+    "file": "assets/Pagination-b9f9429e.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_ProjectsInvestments-8e7b5d09.js": {
-    "file": "assets/ProjectsInvestments-8e7b5d09.js",
+  "_ProjectsInvestments-71895194.js": {
+    "file": "assets/ProjectsInvestments-71895194.js",
     "imports": [
       "resources/js/app.jsx",
       "_DHRL Video 2-3e82639c.js"
     ]
   },
-  "_RoomsSuites-6eac4860.js": {
-    "file": "assets/RoomsSuites-6eac4860.js",
-    "imports": [
-      "resources/js/app.jsx"
-    ]
-  },
-  "_Table-3d0c9098.js": {
-    "file": "assets/Table-3d0c9098.js",
-    "imports": [
-      "_ThemeProvider-a034c56d.js",
-      "resources/js/app.jsx"
-    ]
-  },
-  "_ThemeProvider-a034c56d.js": {
-    "file": "assets/ThemeProvider-a034c56d.js",
-    "imports": [
-      "resources/js/app.jsx"
-    ]
-  },
-  "_UserDashboardSideBar-dccb3cce.js": {
-    "file": "assets/UserDashboardSideBar-dccb3cce.js",
+  "_RoomsSuites-2e061433.js": {
+    "css": [
+      "assets/RoomsSuites-0107abfd.css"
+    ],
+    "file": "assets/RoomsSuites-2e061433.js",
     "imports": [
       "resources/js/app.jsx",
-      "_index-37f12278.js",
-      "_MainLayout-77aefdf5.js"
+      "_index-664f3f84.js"
     ]
   },
-  "_VideoPalyer-e1278472.js": {
-    "file": "assets/VideoPalyer-e1278472.js",
+  "_Table-e44ee9db.js": {
+    "file": "assets/Table-e44ee9db.js",
+    "imports": [
+      "_ThemeProvider-ff8b1158.js",
+      "resources/js/app.jsx"
+    ]
+  },
+  "_ThemeProvider-ff8b1158.js": {
+    "file": "assets/ThemeProvider-ff8b1158.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_UserDashboardSideBar-679827af.js": {
+    "file": "assets/UserDashboardSideBar-679827af.js",
     "imports": [
       "resources/js/app.jsx",
-      "_DHRL Video 2-3e82639c.js",
-      "_RoomsSuites-6eac4860.js"
+      "_index-664f3f84.js",
+      "_MainLayout-7786f96c.js"
+    ]
+  },
+  "_VideoPalyer-5bae4746.js": {
+    "file": "assets/VideoPalyer-5bae4746.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_RoomsSuites-2e061433.js",
+      "_DHRL Video 2-3e82639c.js"
     ]
   },
   "_header-c255ab42.js": {
@@ -108,8 +116,8 @@
     ],
     "file": "assets/header-c255ab42.js"
   },
-  "_index-37f12278.js": {
-    "file": "assets/index-37f12278.js",
+  "_index-664f3f84.js": {
+    "file": "assets/index-664f3f84.js",
     "imports": [
       "resources/js/app.jsx"
     ]
@@ -151,391 +159,391 @@
     "src": "public/images/new/header/header.png"
   },
   "resources/js/Pages/AboutUs.jsx": {
-    "file": "assets/AboutUs-d43000a9.js",
+    "file": "assets/AboutUs-8e2e6407.js",
     "imports": [
       "resources/js/app.jsx",
-      "_HotelBookingForm-9f62b6a2.js",
-      "_Luxury-3cf4a994.js",
-      "_MainLayout-77aefdf5.js",
+      "_HotelBookingForm-cf49c30a.js",
+      "_Luxury-b216b857.js",
+      "_MainLayout-7786f96c.js",
       "_header-c255ab42.js",
-      "_index-37f12278.js",
-      "_AlertMassageCompononets-b308a648.js",
-      "_Form-c59c7cc7.js",
-      "_ThemeProvider-a034c56d.js"
+      "_index-664f3f84.js",
+      "_AlertMassageCompononets-092522b5.js",
+      "_Form-84a1f4f6.js",
+      "_ThemeProvider-ff8b1158.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/AboutUs.jsx"
   },
   "resources/js/Pages/Auth/ConfirmPassword.jsx": {
-    "file": "assets/ConfirmPassword-504d5efb.js",
+    "file": "assets/ConfirmPassword-799f991e.js",
     "imports": [
       "resources/js/app.jsx",
-      "_MainLayout-77aefdf5.js",
-      "_index-37f12278.js"
+      "_MainLayout-7786f96c.js",
+      "_index-664f3f84.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/ConfirmPassword.jsx"
   },
   "resources/js/Pages/Auth/ForgotPassword.jsx": {
-    "file": "assets/ForgotPassword-423158df.js",
+    "file": "assets/ForgotPassword-76e25b69.js",
     "imports": [
       "resources/js/app.jsx",
-      "_MainLayout-77aefdf5.js",
-      "_index-37f12278.js"
+      "_MainLayout-7786f96c.js",
+      "_index-664f3f84.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/ForgotPassword.jsx"
   },
   "resources/js/Pages/Auth/Login.jsx": {
-    "file": "assets/Login-1a5521e7.js",
+    "file": "assets/Login-0f714c36.js",
     "imports": [
       "resources/js/app.jsx",
-      "_AlertMassageCompononets-b308a648.js",
-      "_index-37f12278.js"
+      "_AlertMassageCompononets-092522b5.js",
+      "_index-664f3f84.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/Login.jsx"
   },
   "resources/js/Pages/Auth/Register.jsx": {
-    "file": "assets/Register-45d3a886.js",
+    "file": "assets/Register-dccbe192.js",
     "imports": [
       "resources/js/app.jsx",
-      "_MainLayout-77aefdf5.js",
-      "_index-37f12278.js"
+      "_MainLayout-7786f96c.js",
+      "_index-664f3f84.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/Register.jsx"
   },
   "resources/js/Pages/Auth/ResetPassword.jsx": {
-    "file": "assets/ResetPassword-cfde88b2.js",
+    "file": "assets/ResetPassword-ff15c5a5.js",
     "imports": [
       "resources/js/app.jsx",
-      "_MainLayout-77aefdf5.js",
-      "_index-37f12278.js"
+      "_MainLayout-7786f96c.js",
+      "_index-664f3f84.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/ResetPassword.jsx"
   },
   "resources/js/Pages/Auth/VerifyEmail.jsx": {
-    "file": "assets/VerifyEmail-40654c46.js",
+    "file": "assets/VerifyEmail-3726263b.js",
     "imports": [
       "resources/js/app.jsx",
-      "_MainLayout-77aefdf5.js",
-      "_index-37f12278.js"
+      "_MainLayout-7786f96c.js",
+      "_index-664f3f84.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/VerifyEmail.jsx"
   },
   "resources/js/Pages/BellaMaris.jsx": {
-    "file": "assets/BellaMaris-6dce4672.js",
+    "file": "assets/BellaMaris-87317694.js",
     "imports": [
       "resources/js/app.jsx",
-      "_MainLayout-77aefdf5.js",
-      "_HotelBookingForm-9f62b6a2.js",
-      "_VideoPalyer-e1278472.js",
-      "_index-37f12278.js",
+      "_MainLayout-7786f96c.js",
+      "_HotelBookingForm-cf49c30a.js",
+      "_VideoPalyer-5bae4746.js",
+      "_index-664f3f84.js",
       "_header-c255ab42.js",
-      "_AlertMassageCompononets-b308a648.js",
-      "_Form-c59c7cc7.js",
-      "_ThemeProvider-a034c56d.js",
-      "_DHRL Video 2-3e82639c.js",
-      "_RoomsSuites-6eac4860.js"
+      "_AlertMassageCompononets-092522b5.js",
+      "_Form-84a1f4f6.js",
+      "_ThemeProvider-ff8b1158.js",
+      "_RoomsSuites-2e061433.js",
+      "_DHRL Video 2-3e82639c.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/BellaMaris.jsx"
   },
   "resources/js/Pages/BlogDetailPage.jsx": {
-    "file": "assets/BlogDetailPage-cee87884.js",
+    "file": "assets/BlogDetailPage-5dd7547a.js",
     "imports": [
       "resources/js/app.jsx",
-      "_MainLayout-77aefdf5.js",
+      "_MainLayout-7786f96c.js",
       "_header-c255ab42.js",
-      "_index-37f12278.js",
-      "_AlertMassageCompononets-b308a648.js",
-      "_Form-c59c7cc7.js",
-      "_ThemeProvider-a034c56d.js"
+      "_index-664f3f84.js",
+      "_AlertMassageCompononets-092522b5.js",
+      "_Form-84a1f4f6.js",
+      "_ThemeProvider-ff8b1158.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/BlogDetailPage.jsx"
   },
   "resources/js/Pages/BlogSearch.jsx": {
-    "file": "assets/BlogSearch-b8b796ed.js",
+    "file": "assets/BlogSearch-ea29128f.js",
     "imports": [
       "resources/js/app.jsx",
-      "_MainLayout-77aefdf5.js",
+      "_MainLayout-7786f96c.js",
       "_header-c255ab42.js",
-      "_BlogGrid-7598494b.js",
-      "_index-37f12278.js"
+      "_BlogGrid-a1900ae4.js",
+      "_index-664f3f84.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/BlogSearch.jsx"
   },
   "resources/js/Pages/Blogs.jsx": {
-    "file": "assets/Blogs-371fa41d.js",
+    "file": "assets/Blogs-8c4e28e4.js",
     "imports": [
       "resources/js/app.jsx",
-      "_MainLayout-77aefdf5.js",
-      "_BlogGrid-7598494b.js",
-      "_HotelBookingForm-9f62b6a2.js",
-      "_Pagination-fdda4bb0.js",
+      "_MainLayout-7786f96c.js",
+      "_BlogGrid-a1900ae4.js",
+      "_HotelBookingForm-cf49c30a.js",
+      "_Pagination-b9f9429e.js",
       "_header-c255ab42.js",
-      "_index-37f12278.js",
-      "_AlertMassageCompononets-b308a648.js",
-      "_Form-c59c7cc7.js",
-      "_ThemeProvider-a034c56d.js"
+      "_index-664f3f84.js",
+      "_AlertMassageCompononets-092522b5.js",
+      "_Form-84a1f4f6.js",
+      "_ThemeProvider-ff8b1158.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Blogs.jsx"
   },
   "resources/js/Pages/BlueRainResorts.jsx": {
-    "file": "assets/BlueRainResorts-d9faacc0.js",
+    "file": "assets/BlueRainResorts-234302e4.js",
     "imports": [
       "resources/js/app.jsx",
-      "_MainLayout-77aefdf5.js",
-      "_HotelBookingForm-9f62b6a2.js",
-      "_VideoPalyer-e1278472.js",
-      "_RoomsSuites-6eac4860.js",
-      "_index-37f12278.js",
+      "_MainLayout-7786f96c.js",
+      "_HotelBookingForm-cf49c30a.js",
+      "_VideoPalyer-5bae4746.js",
+      "_RoomsSuites-2e061433.js",
+      "_index-664f3f84.js",
       "_header-c255ab42.js",
-      "_AlertMassageCompononets-b308a648.js",
-      "_Form-c59c7cc7.js",
-      "_ThemeProvider-a034c56d.js",
+      "_AlertMassageCompononets-092522b5.js",
+      "_Form-84a1f4f6.js",
+      "_ThemeProvider-ff8b1158.js",
       "_DHRL Video 2-3e82639c.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/BlueRainResorts.jsx"
   },
   "resources/js/Pages/BookingPage.jsx": {
-    "file": "assets/BookingPage-1e61dbe6.js",
+    "file": "assets/BookingPage-2c52d5f2.js",
     "imports": [
       "resources/js/app.jsx",
-      "_MainLayout-77aefdf5.js",
+      "_MainLayout-7786f96c.js",
       "_header-c255ab42.js",
-      "_AlertMassageCompononets-b308a648.js",
-      "_HotelBookingForm-9f62b6a2.js",
-      "_Form-c59c7cc7.js",
-      "_index-37f12278.js",
-      "_ThemeProvider-a034c56d.js"
+      "_AlertMassageCompononets-092522b5.js",
+      "_HotelBookingForm-cf49c30a.js",
+      "_Form-84a1f4f6.js",
+      "_index-664f3f84.js",
+      "_ThemeProvider-ff8b1158.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/BookingPage.jsx"
   },
   "resources/js/Pages/Carrer.jsx": {
-    "file": "assets/Carrer-d187f6eb.js",
+    "file": "assets/Carrer-6c2eba86.js",
     "imports": [
       "resources/js/app.jsx",
-      "_MainLayout-77aefdf5.js",
-      "_HotelBookingForm-9f62b6a2.js",
-      "_index-37f12278.js",
+      "_MainLayout-7786f96c.js",
+      "_HotelBookingForm-cf49c30a.js",
+      "_index-664f3f84.js",
       "_header-c255ab42.js",
-      "_AlertMassageCompononets-b308a648.js",
-      "_Form-c59c7cc7.js",
-      "_ThemeProvider-a034c56d.js"
+      "_AlertMassageCompononets-092522b5.js",
+      "_Form-84a1f4f6.js",
+      "_ThemeProvider-ff8b1158.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Carrer.jsx"
   },
   "resources/js/Pages/ContactUs.jsx": {
-    "file": "assets/ContactUs-21d00ca5.js",
+    "file": "assets/ContactUs-bc34d1b4.js",
     "imports": [
       "resources/js/app.jsx",
-      "_MainLayout-77aefdf5.js",
+      "_MainLayout-7786f96c.js",
       "_header-c255ab42.js",
-      "_AlertMassageCompononets-b308a648.js",
-      "_index-37f12278.js"
+      "_AlertMassageCompononets-092522b5.js",
+      "_index-664f3f84.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/ContactUs.jsx"
   },
   "resources/js/Pages/Gallery.jsx": {
-    "file": "assets/Gallery-6653294d.js",
+    "file": "assets/Gallery-5753024e.js",
     "imports": [
       "resources/js/app.jsx",
-      "_MainLayout-77aefdf5.js",
-      "_HotelBookingForm-9f62b6a2.js",
+      "_MainLayout-7786f96c.js",
+      "_HotelBookingForm-cf49c30a.js",
       "_header-c255ab42.js",
-      "_index-37f12278.js",
-      "_AlertMassageCompononets-b308a648.js",
-      "_Form-c59c7cc7.js",
-      "_ThemeProvider-a034c56d.js"
+      "_index-664f3f84.js",
+      "_AlertMassageCompononets-092522b5.js",
+      "_Form-84a1f4f6.js",
+      "_ThemeProvider-ff8b1158.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Gallery.jsx"
   },
   "resources/js/Pages/NewsAndEvents.jsx": {
-    "file": "assets/NewsAndEvents-c60cef8a.js",
+    "file": "assets/NewsAndEvents-59fcb3cb.js",
     "imports": [
       "resources/js/app.jsx",
-      "_MainLayout-77aefdf5.js",
-      "_BlogGrid-7598494b.js",
-      "_HotelBookingForm-9f62b6a2.js",
-      "_Pagination-fdda4bb0.js",
-      "_VideoPalyer-e1278472.js",
-      "_ProjectsInvestments-8e7b5d09.js",
+      "_MainLayout-7786f96c.js",
+      "_BlogGrid-a1900ae4.js",
+      "_HotelBookingForm-cf49c30a.js",
+      "_Pagination-b9f9429e.js",
+      "_VideoPalyer-5bae4746.js",
+      "_ProjectsInvestments-71895194.js",
       "_header-c255ab42.js",
-      "_index-37f12278.js",
-      "_AlertMassageCompononets-b308a648.js",
-      "_Form-c59c7cc7.js",
-      "_ThemeProvider-a034c56d.js",
-      "_DHRL Video 2-3e82639c.js",
-      "_RoomsSuites-6eac4860.js"
+      "_index-664f3f84.js",
+      "_AlertMassageCompononets-092522b5.js",
+      "_Form-84a1f4f6.js",
+      "_ThemeProvider-ff8b1158.js",
+      "_RoomsSuites-2e061433.js",
+      "_DHRL Video 2-3e82639c.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/NewsAndEvents.jsx"
   },
   "resources/js/Pages/PageView.jsx": {
-    "file": "assets/PageView-4eb4b82c.js",
+    "file": "assets/PageView-7abc4029.js",
     "imports": [
       "resources/js/app.jsx",
-      "_MainLayout-77aefdf5.js",
+      "_MainLayout-7786f96c.js",
       "_header-c255ab42.js",
-      "_index-37f12278.js"
+      "_index-664f3f84.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/PageView.jsx"
   },
   "resources/js/Pages/RewardsCard.jsx": {
-    "file": "assets/RewardsCard-ddcf1853.js",
+    "file": "assets/RewardsCard-6320b155.js",
     "imports": [
       "resources/js/app.jsx",
-      "_MainLayout-77aefdf5.js",
+      "_MainLayout-7786f96c.js",
       "_header-c255ab42.js",
-      "_index-37f12278.js"
+      "_index-664f3f84.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/RewardsCard.jsx"
   },
   "resources/js/Pages/User/ChangePassword.jsx": {
-    "file": "assets/ChangePassword-47f39f20.js",
+    "file": "assets/ChangePassword-8e64be03.js",
     "imports": [
       "resources/js/app.jsx",
-      "_MainLayout-77aefdf5.js",
-      "_UserDashboardSideBar-dccb3cce.js",
-      "_index-37f12278.js",
-      "_AlertMassageCompononets-b308a648.js",
-      "_Form-c59c7cc7.js",
-      "_ThemeProvider-a034c56d.js"
+      "_MainLayout-7786f96c.js",
+      "_UserDashboardSideBar-679827af.js",
+      "_index-664f3f84.js",
+      "_AlertMassageCompononets-092522b5.js",
+      "_Form-84a1f4f6.js",
+      "_ThemeProvider-ff8b1158.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/User/ChangePassword.jsx"
   },
   "resources/js/Pages/User/Dashboard.jsx": {
-    "file": "assets/Dashboard-666edecd.js",
+    "file": "assets/Dashboard-9e80a63c.js",
     "imports": [
       "resources/js/app.jsx",
       "_Header Image-c7155542.js",
-      "_UserDashboardSideBar-dccb3cce.js",
-      "_MainLayout-77aefdf5.js",
-      "_index-37f12278.js"
+      "_UserDashboardSideBar-679827af.js",
+      "_MainLayout-7786f96c.js",
+      "_index-664f3f84.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/User/Dashboard.jsx"
   },
   "resources/js/Pages/User/MyBooking.jsx": {
-    "file": "assets/MyBooking-3ce936a6.js",
+    "file": "assets/MyBooking-8fd570cf.js",
     "imports": [
       "resources/js/app.jsx",
-      "_MainLayout-77aefdf5.js",
-      "_UserDashboardSideBar-dccb3cce.js",
+      "_MainLayout-7786f96c.js",
+      "_UserDashboardSideBar-679827af.js",
       "_Header Image-c7155542.js",
-      "_Pagination-fdda4bb0.js",
-      "_Table-3d0c9098.js",
-      "_index-37f12278.js",
-      "_ThemeProvider-a034c56d.js"
+      "_Pagination-b9f9429e.js",
+      "_Table-e44ee9db.js",
+      "_index-664f3f84.js",
+      "_ThemeProvider-ff8b1158.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/User/MyBooking.jsx"
   },
   "resources/js/Pages/User/MyDonationView.jsx": {
-    "file": "assets/MyDonationView-175538a3.js",
+    "file": "assets/MyDonationView-379c7833.js",
     "imports": [
       "resources/js/app.jsx",
-      "_MainLayout-77aefdf5.js",
-      "_UserDashboardSideBar-dccb3cce.js",
-      "_Table-3d0c9098.js",
-      "_index-37f12278.js",
-      "_ThemeProvider-a034c56d.js"
+      "_MainLayout-7786f96c.js",
+      "_UserDashboardSideBar-679827af.js",
+      "_Table-e44ee9db.js",
+      "_index-664f3f84.js",
+      "_ThemeProvider-ff8b1158.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/User/MyDonationView.jsx"
   },
   "resources/js/Pages/User/Profile.jsx": {
-    "file": "assets/Profile-d98f74cc.js",
+    "file": "assets/Profile-6bcb8b88.js",
     "imports": [
       "resources/js/app.jsx",
       "_Header Image-c7155542.js",
-      "_MainLayout-77aefdf5.js",
-      "_UserDashboardSideBar-dccb3cce.js",
-      "_Form-c59c7cc7.js",
-      "_AlertMassageCompononets-b308a648.js",
-      "_index-37f12278.js",
-      "_ThemeProvider-a034c56d.js"
+      "_MainLayout-7786f96c.js",
+      "_UserDashboardSideBar-679827af.js",
+      "_Form-84a1f4f6.js",
+      "_AlertMassageCompononets-092522b5.js",
+      "_index-664f3f84.js",
+      "_ThemeProvider-ff8b1158.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/User/Profile.jsx"
   },
   "resources/js/Pages/Videos.jsx": {
-    "file": "assets/Videos-ed74b941.js",
+    "file": "assets/Videos-018ffc08.js",
     "imports": [
       "resources/js/app.jsx",
-      "_MainLayout-77aefdf5.js",
-      "_HotelBookingForm-9f62b6a2.js",
-      "_ProjectsInvestments-8e7b5d09.js",
+      "_MainLayout-7786f96c.js",
+      "_HotelBookingForm-cf49c30a.js",
+      "_ProjectsInvestments-71895194.js",
       "_header-c255ab42.js",
-      "_index-37f12278.js",
-      "_AlertMassageCompononets-b308a648.js",
-      "_Form-c59c7cc7.js",
-      "_ThemeProvider-a034c56d.js",
+      "_index-664f3f84.js",
+      "_AlertMassageCompononets-092522b5.js",
+      "_Form-84a1f4f6.js",
+      "_ThemeProvider-ff8b1158.js",
       "_DHRL Video 2-3e82639c.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Videos.jsx"
   },
   "resources/js/Pages/Welcome.css": {
-    "file": "assets/Welcome-8b0b0120.css",
+    "file": "assets/Welcome-4fc6132f.css",
     "src": "resources/js/Pages/Welcome.css"
   },
   "resources/js/Pages/Welcome.jsx": {
     "css": [
-      "assets/Welcome-8b0b0120.css"
+      "assets/Welcome-4fc6132f.css"
     ],
-    "file": "assets/Welcome-a367e22d.js",
+    "file": "assets/Welcome-66975d8b.js",
     "imports": [
       "resources/js/app.jsx",
-      "_Form-c59c7cc7.js",
-      "_ThemeProvider-a034c56d.js",
-      "_HotelBookingForm-9f62b6a2.js",
-      "_Luxury-3cf4a994.js",
-      "_ProjectsInvestments-8e7b5d09.js",
-      "_RoomsSuites-6eac4860.js",
-      "_MainLayout-77aefdf5.js",
-      "_index-37f12278.js",
-      "_AlertMassageCompononets-b308a648.js",
+      "_RoomsSuites-2e061433.js",
+      "_Form-84a1f4f6.js",
+      "_ThemeProvider-ff8b1158.js",
+      "_HotelBookingForm-cf49c30a.js",
+      "_index-664f3f84.js",
+      "_Luxury-b216b857.js",
+      "_ProjectsInvestments-71895194.js",
+      "_MainLayout-7786f96c.js",
+      "_AlertMassageCompononets-092522b5.js",
       "_DHRL Video 2-3e82639c.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Welcome.jsx"
   },
   "resources/js/Pages/projectOverView.jsx": {
-    "file": "assets/projectOverView-26541c25.js",
+    "file": "assets/projectOverView-4a1fe081.js",
     "imports": [
       "resources/js/app.jsx",
-      "_MainLayout-77aefdf5.js",
-      "_HotelBookingForm-9f62b6a2.js",
-      "_VideoPalyer-e1278472.js",
+      "_MainLayout-7786f96c.js",
+      "_HotelBookingForm-cf49c30a.js",
+      "_VideoPalyer-5bae4746.js",
       "_header-c255ab42.js",
-      "_index-37f12278.js",
-      "_AlertMassageCompononets-b308a648.js",
-      "_Form-c59c7cc7.js",
-      "_ThemeProvider-a034c56d.js",
-      "_DHRL Video 2-3e82639c.js",
-      "_RoomsSuites-6eac4860.js"
+      "_index-664f3f84.js",
+      "_AlertMassageCompononets-092522b5.js",
+      "_Form-84a1f4f6.js",
+      "_ThemeProvider-ff8b1158.js",
+      "_RoomsSuites-2e061433.js",
+      "_DHRL Video 2-3e82639c.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/projectOverView.jsx"
   },
   "resources/js/app.css": {
-    "file": "assets/app-206cf6d7.css",
+    "file": "assets/app-648ff21c.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.jsx": {
@@ -547,7 +555,7 @@
       "assets/slick-37bc99cf.ttf"
     ],
     "css": [
-      "assets/app-206cf6d7.css"
+      "assets/app-648ff21c.css"
     ],
     "dynamicImports": [
       "resources/js/Pages/AboutUs.jsx",
@@ -578,7 +586,7 @@
       "resources/js/Pages/Welcome.jsx",
       "resources/js/Pages/projectOverView.jsx"
     ],
-    "file": "assets/app-8b91b2ff.js",
+    "file": "assets/app-5e28e604.js",
     "isEntry": true,
     "src": "resources/js/app.jsx"
   }

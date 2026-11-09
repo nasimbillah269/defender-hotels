@@ -54,7 +54,7 @@ export default function CareerPage({
         <section className="dh-section dh-section--blue">
           <div className="container">
             <div className="row justify-content-center">
-              <div className="col-lg-10" data-aos="fade-up">
+              <div className="col-lg-10" data-aos="fade">
                 <p className="dh-kicker">Career</p>
                 <h2 className="dh-title">
                   Build Your Future with <br /> Defender Hotels &amp; Resorts Ltd.
@@ -78,7 +78,7 @@ export default function CareerPage({
                 </p>
                 <p className="dh-text">Or drop your CV here.</p>
 
-                <div className="dh-upload" data-aos="fade-up">
+                <div className="dh-upload" data-aos="fade">
                   <UploadCV />
                 </div>
               </div>

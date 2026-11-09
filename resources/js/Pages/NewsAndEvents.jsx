@@ -89,7 +89,7 @@ export default function NewsAndEvents({
 
       <section className="dh-section dh-section--blue">
         <div className="container">
-          <div className="dh-head" data-aos="fade-up">
+          <div className="dh-head" data-aos="fade">
             <p className="dh-kicker">{copy.kicker}</p>
             <h2 className="dh-title">
               {copy.title[0]} <br /> {copy.title[1]}
@@ -104,7 +104,7 @@ export default function NewsAndEvents({
                   type="button"
                   key={v.id}
                   className="dh-video-card"
-                  data-aos="fade-up"
+                  data-aos="fade"
                   data-aos-delay={i * 60}
                   onClick={() => setPlaying(v.src)}
                   aria-label={`Play video: ${v.title}`}
@@ -121,7 +121,7 @@ export default function NewsAndEvents({
                   <div
                     key={post.id ?? post.slug ?? index}
                     className="col-sm-6 col-lg-4"
-                    data-aos="fade-up"
+                    data-aos="fade"
                     data-aos-delay={(index % 3) * 80}
                   >
                     <BlogGrid post={post} variant={mode === "news" ? "news" : "blog"} />

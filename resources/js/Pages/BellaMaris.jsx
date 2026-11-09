@@ -71,7 +71,7 @@ export default function BellaMaris({
         <section className="dh-section dh-section--pink">
           <div className="container">
             <div className="row align-items-center gy-5">
-              <div className="col-lg-6" data-aos="fade-right">
+              <div className="col-lg-6" data-aos="fade">
                 <p className="dh-kicker">Project Overview</p>
                 <h2 className="dh-title dh-title--sm">
                   Bella Maris — Where Luxury <br className="d-none d-xl-block" /> Meets Timeless Value.
@@ -108,7 +108,7 @@ export default function BellaMaris({
                   </div>
                 </div>
               </div>
-              <div className="col-lg-6" data-aos="fade-left">
+              <div className="col-lg-6" data-aos="fade">
                 <img
                   className="dh-img dh-img--shadow"
                   src="/images/new/design/bella-overview.png"
@@ -123,12 +123,12 @@ export default function BellaMaris({
         {/* Category of Ownership */}
         <section className="dh-section dh-section--blue">
           <div className="container">
-            <div className="dh-center dh-head" data-aos="fade-up">
+            <div className="dh-center dh-head" data-aos="fade">
               <p className="dh-kicker">Category of Ownership</p>
               <h2 className="dh-title dh-title--sm">Your Ownership, Your Lifestyle, Your Future.</h2>
             </div>
             <div className="row align-items-center gy-4">
-              <div className="col-lg-7" data-aos="fade-right">
+              <div className="col-lg-7" data-aos="fade">
                 <img
                   className="dh-img"
                   src="/images/new/design/bella-ownership.png"
@@ -136,7 +136,7 @@ export default function BellaMaris({
                   loading="lazy"
                 />
               </div>
-              <div className="col-lg-5" data-aos="fade-left">
+              <div className="col-lg-5" data-aos="fade">
                 <div className="dh-pills">
                   {OWNERSHIP.map((o) => (
                     <div className="dh-pill" key={o.name}>

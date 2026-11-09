@@ -64,18 +64,18 @@ export default function BlogDetailPage({
                 <section className="section-padding singleBLogSection">
 
                     <div className="container">
-                        <div className="singleBlogHead" data-aos="fade-up">
+                        <div className="singleBlogHead" data-aos="fade">
                             <span>Blog Post</span>
                             <h2>{blog.name}</h2>
 
                             <p className="postDate">{blog.formatData}</p>
                         </div>
                         <div className="row">
-                            <div className="col-md-8" data-aos="fade-right">
+                            <div className="col-md-8" data-aos="fade">
                                 <img src={blog.image_url} className="mb-30" alt={blog.name} />
                             </div>
                           
-                            <div className="col-md-4" data-aos="fade-left">
+                            <div className="col-md-4" data-aos="fade">
                                 <div className="news2-sidebar row">
                                     <div className="col-md-12">
                                         <div className="widget search">

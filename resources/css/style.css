@@ -6961,7 +6961,7 @@ body.menu-open {
 
 .dh-kicker {
   display: inline-block;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -6974,11 +6974,17 @@ body.menu-open {
   font-weight: 700;
   color: var(--dh-ink);
   letter-spacing: -0.01em;
-  margin: 0 0 18px;
+  margin: 0 0 25px;
   text-transform: none;
 }
 .dh-title--sm { font-size: clamp(24px, 2.4vw, 32px); }
-.dh-text { color: var(--dh-text); font-size: 15.5px; line-height: 1.75; margin: 0 0 14px; text-align: justify; }
+.dh-text {
+  color: #000;
+  font-size: 20px;
+  line-height: 23px;
+  margin: 0 0 20px;
+  text-align: justify;
+}
 .dh-text strong { color: var(--dh-ink); }
 .dh-center { text-align: center; }
 .dh-center .dh-text { text-align: center; }
@@ -6989,9 +6995,9 @@ body.menu-open {
 /* buttons */
 .dh-btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-  padding: 12px 26px; border-radius: 999px; border: 0;
+  padding: 15px 30px; border-radius: 999px; border: 0;
   background: var(--dh-plum); color: #fff !important;
-  font-weight: 600; font-size: 14px; line-height: 1;
+  font-weight: 600; font-size: 22px; line-height: 1;
   transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
   text-decoration: none; cursor: pointer;
 }
@@ -7008,27 +7014,27 @@ body.menu-open {
 }
 .dh-call__label { display: block; font-size: 14px; font-weight: 600; color: var(--dh-ink); line-height: 1.2; }
 .dh-call__num { display: block; font-size: 19px; font-weight: 800; color: var(--dh-ink); line-height: 1.25; letter-spacing: .02em; }
-.dh-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 22px; margin-top: 26px; }
+.dh-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 22px; margin-top: 44px; }
 
 .dh-img { width: 100%; display: block; border-radius: var(--dh-radius); object-fit: cover; }
-.dh-img--shadow { box-shadow: var(--dh-shadow); }
+.dh-img--shadow { box-shadow: none; } /* images stay clean: no frame, no shadow */
 
 /* ---------- About collage ---------- */
-.dh-collage { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: center; }
+.dh-collage { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: end; } /* both columns share the same bottom line */
 .dh-collage__tall img { aspect-ratio: 9 / 16; height: auto; }
 .dh-collage__stack { display: grid; gap: 16px; }
 .dh-collage__stack img { aspect-ratio: 1 / 1; }
-.dh-collage__stack--offset { transform: translateY(-36px); }
+.dh-collage__stack--offset { transform: none; } /* no offset: keeps top/bottom space equal */
 
 /* ---------- Video cards ---------- */
 .dh-video-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 .dh-video-card {
   position: relative; display: block; width: 100%; border-radius: var(--dh-radius); overflow: hidden; border: 0; padding: 0;
-  aspect-ratio: 9 / 15; background: #000; cursor: pointer; box-shadow: var(--dh-shadow);
+  aspect-ratio: 9 / 15; background: transparent; cursor: pointer; box-shadow: none;
 }
 .dh-video-card img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
 .dh-video-card:hover img { transform: scale(1.05); }
-.dh-video-card--offset { transform: translateY(34px); }
+.dh-video-card--offset { margin-top: 0; } /* both video cards aligned top & bottom */
 .dh-play {
   position: absolute; inset: 0; margin: auto; width: 74px; height: 74px;
   background: url("/images/new/design/play-button.png") center / contain no-repeat;
@@ -7085,7 +7091,9 @@ body.menu-open {
 .dh-project__media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .8s ease; }
 .dh-project.is-active .dh-project__media img { transform: scale(1.03); }
 .dh-project__content { display: flex; flex-direction: column; padding: 56px 40px 40px 50px; position: relative; z-index: 1; }
-.dh-project__content h4 { font-size: 17px; font-weight: 700; color: var(--dh-purple); margin: 0 70px 14px 0; line-height: 1.4; }
+.dh-project__content h4 {
+     font-size: 17px; font-weight: 700; color: var(--dh-purple); margin: 0 70px 14px 0; line-height: 1.4; 
+    }
 .dh-project__content p { font-size: 15px; color: var(--dh-muted); line-height: 1.9; margin: 0; }
 .dh-project__foot { margin-top: auto; padding-top: 20px; }
 .dh-project__tag {
@@ -7152,7 +7160,7 @@ body.menu-open {
 .dh-rewards .dh-kicker { color: #e8d6ff; }
 .dh-rewards .dh-title { color: #fff; }
 .dh-rewards .dh-text { color: rgba(255,255,255,.85); }
-.dh-rewards__img { width: 100%; max-width: 560px; display: block; margin: 0 auto; filter: drop-shadow(0 30px 40px rgba(0,0,0,.35)); animation: dhFloat 6s ease-in-out infinite; }
+.dh-rewards__img { width: 100%; max-width: 560px; display: block; margin: 0 auto; filter: none; animation: dhFloat 6s ease-in-out infinite; }
 @keyframes dhFloat { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-12px) } }
 @media (prefers-reduced-motion: reduce) { .dh-rewards__img { animation: none; } }
 
@@ -7196,6 +7204,7 @@ body.menu-open {
 .dh-testi__name { font-weight: 700; color: var(--dh-ink); font-size: 14px; margin: 0; }
 .dh-testi__org { font-weight: 700; color: var(--dh-purple); font-size: 13px; margin: 0; }
 .dh-testi__role { font-size: 12px; color: var(--dh-muted); margin: 0; }
+.dh-testi .swiper-pagination { bottom: 0 !important; } /* dots sit on the section padding line → equal top/bottom space */
 .dh-testi .swiper-pagination-bullet { background: #c9bfd6; opacity: 1; }
 .dh-testi .swiper-pagination-bullet-active { background: var(--dh-purple); width: 22px; border-radius: 6px; }
 
@@ -7252,7 +7261,7 @@ body.menu-open {
 .dh-pill__bottom { padding: 8px 10px; font-size: 13px; font-weight: 600; color: var(--dh-ink); }
 
 .dh-gallery { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; }
-.dh-gallery__main { position: relative; border-radius: var(--dh-radius); overflow: hidden; background: #eee; }
+.dh-gallery__main { position: relative; border-radius: var(--dh-radius); overflow: hidden; background: transparent; }
 .dh-gallery__main img { width: 100%; aspect-ratio: 16 / 8.5; object-fit: cover; display: block; }
 .dh-gallery__nav { position: absolute; top: 50%; transform: translateY(-50%); width: 42px; height: 42px; border-radius: 50%; border: 0; background: rgba(255,255,255,.92); color: var(--dh-purple); font-size: 22px; line-height: 1; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,.2); }
 .dh-gallery__nav--prev { left: 14px; } .dh-gallery__nav--next { right: 14px; }
@@ -7275,7 +7284,7 @@ body.menu-open {
   border-radius: 10px; padding: 10px; text-align: left; cursor: pointer; flex: 1; transition: border-color .2s, background .2s;
 }
 .dh-vg__item.is-active { border-color: var(--dh-plum-soft); background: var(--dh-purple-deep); }
-.dh-vg__thumb { width: 96px; height: 76px; flex: 0 0 96px; border-radius: 10px; object-fit: cover; background: #fff; }
+.dh-vg__thumb { width: 96px; height: 76px; flex: 0 0 96px; border-radius: 10px; object-fit: cover; background: transparent; }
 .dh-vg__item h6 { font-size: 13px; font-weight: 700; color: #fff; margin: 0 0 4px; }
 .dh-vg__item p { font-size: 11.5px; line-height: 1.45; color: rgba(255,255,255,.8); margin: 0; }
 
@@ -7386,7 +7395,7 @@ footer.footer.dh-footer .footer-bottom p { margin: 0; font-size: 13px; }
 }
 @media (max-width: 991px) {
   .dh-section { padding: 70px 0; }
-  .dh-collage__stack--offset, .dh-video-card--offset { transform: none; }
+  .dh-collage__stack--offset, .dh-video-card--offset { transform: none; margin-top: 0; }
   .dh-projects { flex-direction: column; height: auto; }
   .dh-project { flex: 0 0 auto !important; }
   .dh-project__rail { position: static; flex-direction: row-reverse; justify-content: space-between; padding: 16px 18px; }
@@ -7444,24 +7453,38 @@ header.sticky .navbar {
   width: auto;
   height: 68px;
   padding: 0;
-  background: #fff;
+  background: transparent;
   border: 0;
-  border-radius: 40px;
-  box-shadow: 0 8px 28px rgba(20, 4, 40, .08);
+  border-radius: 0;
+  box-shadow: none;
   z-index: 1000;
-  transition: top .3s ease, box-shadow .3s ease;
+  transition: top .3s ease;
 }
 header.sticky .navbar {
   position: fixed;
   top: 12px;
-  box-shadow: 0 10px 30px rgba(20, 4, 40, .16);
 }
-header .header-container { height: 100%; padding-left: 28px; padding-right: 14px; }
+/* the white rounded bar lives on the .container, not the full-width navbar */
+header .header-container {
+  height: 100%;
+  padding-left: 28px;
+  padding-right: 14px;
+  background: #fff;
+  border-radius: 40px;
+  box-shadow: 0 8px 28px rgba(20, 4, 40, .08);
+  transition: box-shadow .3s ease;
+}
+header.sticky .header-container { box-shadow: 0 10px 30px rgba(20, 4, 40, .16); }
 header .navbar .logo-wrapper { display: flex; align-items: center; height: 100%; padding: 0 !important; }
-header .navbar .logo-img { padding: 0; width: 140px; filter: brightness(0); } /* white logo file → dark */
+header .navbar .logo-img { padding: 0; width: 140px;  } /* white logo file → dark */
 
 /* dark text on the white bar */
-header .navbar .navbar-nav .nav-link { color: var(--dh-ink); font-size: 13px; letter-spacing: 1.5px; }
+header .navbar .navbar-nav .nav-link {
+  color: var(--dh-ink);
+  font-family: "Plus Jakarta Sans", "Spline Sans", system-ui, sans-serif; /* same as .header-cta */
+  font-size: 13px;
+  letter-spacing: 1.5px;
+}
 header .navbar .navbar-nav .nav-link:hover,
 header .navbar .navbar-nav .nav-link.active,
 header .navbar .navbar-nav .active { color: var(--dh-plum) !important; }
@@ -7472,9 +7495,9 @@ header .header-cta { padding: 11px 22px; }
 
 @media (max-width: 991px) {
   header .navbar,
-  header.sticky .navbar { top: 12px; left: 12px; right: 12px; height: 60px; border-radius: 30px; }
+  header.sticky .navbar { top: 12px; left: 12px; right: 12px; height: 60px; }
   header.sticky .navbar { top: 8px; }
-  header .header-container { padding-left: 20px; padding-right: 10px; }
+  header .header-container { padding-left: 20px; padding-right: 10px; border-radius: 30px; }
   header .navbar .logo-img { width: 120px; }
 }
 
@@ -7484,7 +7507,7 @@ header .header-cta { padding: 11px 22px; }
   header .navbar .navbar-nav {
     flex: 1 1 auto;
     justify-content: center;
-    gap: clamp(14px, 2.4vw, 46px);
+    gap: clamp(14px, 2.4vw, 20px);
     margin-left: 24px !important;
     margin-right: 24px;
   }
@@ -7495,6 +7518,7 @@ header .header-cta { padding: 11px 22px; }
     font-weight: 500;
     letter-spacing: .6px;
     white-space: nowrap;
+    font-weight: bold;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -7939,12 +7963,6 @@ header .header-cta { padding: 11px 22px; }
     background: transparent;
     transition: background .2s ease, color .2s ease, padding .2s ease;
   }
-  header .navbar .dropdown-menu .dropdown-item::before {
-    content: "";
-    flex: 0 0 8px; width: 8px; height: 8px; border-radius: 50%;
-    background: rgba(123, 42, 143, 0.25);
-    transition: background .2s ease, transform .2s ease;
-  }
   header .navbar .dropdown-menu .dropdown-item::after {
     content: "→";
     margin-left: auto; padding-left: 10px;
@@ -7958,10 +7976,6 @@ header .header-cta { padding: 11px 22px; }
     background: linear-gradient(90deg, rgba(123, 42, 143, 0.10), rgba(123, 42, 143, 0.03));
     color: var(--dh-purple, #4a1180);
   }
-  header .navbar .dropdown-menu .dropdown-item:hover::before,
-  header .navbar .dropdown-menu .dropdown-item.active::before {
-    background: var(--dh-plum, #7b2a8f); transform: scale(1.15);
-  }
   header .navbar .dropdown-menu .dropdown-item:hover::after { opacity: 1; transform: translateX(0); }
   header .navbar .dropdown-menu .dropdown-item.active {
     background: rgba(123, 42, 143, 0.10);
@@ -7969,3 +7983,555 @@ header .header-cta { padding: 11px 22px; }
     font-weight: 700;
   }
 }
+
+/* =========================================================
+   Uniform section spacing (same top & bottom on every section)
+   Change --section-space here to adjust the whole website.
+   ========================================================= */
+:root { --section-space: 96px; }
+@media (max-width: 991px) { :root { --section-space: 72px; } }
+@media (max-width: 575px) { :root { --section-space: 56px; } }
+
+.dh-section,
+.section-padding,
+.project-section,
+.contact.section-padding,
+.career.section-padding {
+  padding-top: var(--section-space) !important;
+  padding-bottom: var(--section-space) !important;
+}
+.section-padding2 { padding: 0 0 var(--section-space) !important; }
+.dh-consult { padding-top: var(--section-space); }
+/* the last element inside a section/column must not add extra space under the content */
+.dh-section > .container > :last-child,
+.dh-section .row > [class*="col"] > :last-child { margin-bottom: 0; }
+
+/* =========================================================
+   Uniform section headings (same size & weight site-wide)
+   ========================================================= */
+.dh-title,
+.dh-title--sm,
+.rewards-title,
+.dh-contact__info h2 {
+  font-size: clamp(28px, 3.2vw, 50px);
+  line-height: 1.15;
+  font-weight: bold;
+}
+
+/* About section: double gap between the image collage and the text (24px → 48px) */
+@media (min-width: 992px) {
+  .row.dh-about-row { --bs-gutter-x: 3rem; }
+}
+
+/* =========================================================
+   Our Projects accordion — smooth, premium open/close
+   - only flex-grow animates (0 → 1, same 104px basis) so the width glides
+     instead of jumping (flex-basis "auto" can't be animated)
+   - content reveals in a soft stagger, image settles from a slow zoom
+   ========================================================= */
+@media (min-width: 992px) {
+  .dh-projects { --dh-ease: cubic-bezier(.76, 0, .24, 1); --dh-ease-out: cubic-bezier(.22, 1, .36, 1); }
+  .dh-project {
+    flex: 0.0001 0 104px;
+    transition: flex-grow .9s var(--dh-ease), background .4s ease, box-shadow .6s ease;
+    will-change: flex-grow;
+  }
+  .dh-project.is-active { flex: 1 0 104px; }
+
+  /* closed rail: fades out fast when opening, comes back after the card has shrunk */
+  .dh-project__rail { transition: opacity .45s ease .35s; }
+  .dh-project.is-active .dh-project__rail { opacity: 0; transition: opacity .2s ease 0s; }
+  .dh-project__arrow { transition: transform .45s var(--dh-ease-out), background .35s ease, color .35s ease; }
+
+  /* body: hidden quickly on close, revealed after the width has mostly opened */
+  .dh-project__body { opacity: 0; transition: opacity .25s ease 0s; }
+  .dh-project.is-active .dh-project__body { opacity: 1; transition: opacity .6s ease .3s; }
+
+  /* image: slow zoom-settle */
+  .dh-project__media img { transform: scale(1.12); transition: transform 1.4s var(--dh-ease-out); }
+  .dh-project.is-active .dh-project__media img { transform: scale(1); }
+
+  /* text + buttons: staggered lift-in */
+  .dh-project__content h4,
+  .dh-project__content p,
+  .dh-project__foot,
+  .dh-project__corner {
+    opacity: 0; transform: translateY(18px);
+    transition: opacity .25s ease, transform .25s ease;
+  }
+  .dh-project__corner { transform: scale(.7); }
+  .dh-project.is-active .dh-project__content h4,
+  .dh-project.is-active .dh-project__content p,
+  .dh-project.is-active .dh-project__foot,
+  .dh-project.is-active .dh-project__corner {
+    opacity: 1; transform: none;
+    transition: opacity .7s ease, transform .9s var(--dh-ease-out), background .3s ease, color .3s ease;
+  }
+  .dh-project.is-active .dh-project__content h4 { transition-delay: .45s; }
+  .dh-project.is-active .dh-project__content p  { transition-delay: .55s; }
+  .dh-project.is-active .dh-project__foot       { transition-delay: .65s; }
+  .dh-project.is-active .dh-project__corner     { transition-delay: .75s, .75s, 0s, 0s; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dh-project, .dh-project *, .dh-project__body { transition: none !important; }
+}
+
+/* Project rail title: wrap long names into 2 lines inside the space under the arrow */
+.dh-project__railTitle {
+  white-space: normal;
+  max-height: calc(100% - 88px); /* arrow (64px) + breathing gap (24px) */
+  line-height: 1.15;
+  text-align: start;
+  overflow-wrap: break-word;
+}
+
+/* =========================================================
+   Our Projects – card layout matched to the reference design
+   ========================================================= */
+.dh-projects { gap: 22px; height: 412px; }
+.dh-project {
+  border-radius: 24px;
+  background: #fcf6fe;
+  border: 1px solid #eee3f4;
+  box-shadow: 0 6px 18px rgba(74, 17, 128, .06);
+}
+.dh-project:not(.is-active):hover { background: #f8eefc; }
+.dh-project.is-active {
+  background: #fff;
+  border-color: #e6e2ea;
+  box-shadow: 0 10px 28px rgba(20, 4, 40, .10);
+}
+
+/* closed rails */
+.dh-project__rail { padding: 22px 0 30px; }
+.dh-project__arrow {
+  width: 62px; height: 62px; background: #fff; box-shadow: none;
+  color: var(--dh-plum); font-size: 30px;
+}
+.dh-project__arrow svg { stroke-width: 2.4; }
+.dh-project__railTitle { font-size: 24px; font-weight: 800; color: var(--dh-ink); max-height: calc(100% - 84px); }
+
+/* open card */
+.dh-project__body { grid-template-columns: 34% 1fr; }
+.dh-project__body::after { display: none; } /* no glow blob */
+.dh-project__content {
+  justify-content: center;
+  padding: 40px 44px 40px 38px;
+}
+.dh-project__content h4 {
+  font-size: 15px; font-weight: 700; color: #000;
+  line-height: 1.8; margin: 0 92px 22px 0; max-width: 260px;
+}
+.dh-project__content p {
+  font-size: 14.5px; color: #000; line-height: 1.85; margin: 0;
+  text-align: justify; hyphens: auto;
+}
+.dh-project__foot { margin-top: 0; padding-top: 30px; }
+.dh-project__btn {
+  display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--dh-plum);
+    color: #fff !important;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 15px 30px;
+    border-radius: 50px;
+    margin-bottom: 14px;
+    transition: background .3s ease, transform .3s ease;
+}
+.dh-project__btn:hover { background: var(--dh-purple); transform: translateY(-2px); }
+.dh-project__foot h3 { display: block; }
+.dh-project__content h3 { font-size: 26px; font-weight: 700; }
+
+.dh-project__corner {
+  top: 34px; right: 40px; width: 64px; height: 64px;
+  background: #f8eefc; box-shadow: none; color: var(--dh-plum); font-size: 32px;
+}
+.dh-project__corner svg { stroke-width: 2.4; }
+.dh-project__corner:hover { background: var(--dh-plum); color: #fff; }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .dh-project__content { padding: 32px 30px 32px 30px; }
+  .dh-project__content h4 { margin-right: 80px; }
+}
+@media (max-width: 991px) {
+  .dh-projects { height: auto; }
+  .dh-project__content { padding: 28px 22px 26px; }
+  .dh-project__content h4 { margin-right: 70px; }
+  .dh-project__corner { top: 16px; right: 16px; width: 48px; height: 48px; font-size: 24px; }
+}
+.dh-why .dh-title {
+    font-size: 42px;
+}
+/* =========================================================
+   Why Choose Us – benefit accordion (reference sizes + smooth open/close)
+   ========================================================= */
+.dh-benefits { max-width: 470px; }
+.dh-benefit {
+  margin-bottom: 4px; padding-left: 18px;
+  --dh-acc-ease: cubic-bezier(.22, 1, .36, 1);
+}
+.dh-benefit::before { top: 6px; bottom: 6px; width: 1.5px; background: #3a3640; }
+
+/* the grey card is drawn behind button + panel, so it grows with the panel */
+.dh-benefit > * { position: relative; z-index: 1; }
+.dh-benefit::after {
+  content: ""; position: absolute; left: 18px; right: 0; top: 0; bottom: 0; z-index: 0;
+  background: #f4f4f5; border-radius: 12px;
+  opacity: 0; transform: scale(.98);
+  transition: opacity .45s ease, transform .6s var(--dh-acc-ease);
+}
+.dh-benefit.is-open::after { opacity: 1; transform: none; }
+
+.dh-benefit__btn,
+.dh-benefit.is-open .dh-benefit__btn {
+  padding: 14px 26px; background: none; border-radius: 12px;
+  font-size: 18px; font-weight: 500; letter-spacing: .01em; color: #111;
+  transition: padding .5s var(--dh-acc-ease), color .3s ease;
+}
+.dh-benefit.is-open .dh-benefit__btn { padding-top: 26px; padding-bottom: 8px; }
+.dh-benefit__btn:hover { background: none; color: var(--dh-plum); }
+.dh-benefit__btn i {
+  font-size: 15px; font-weight: 500; color: #111;
+  transition: transform .5s var(--dh-acc-ease), color .3s ease;
+}
+.dh-benefit.is-open .dh-benefit__btn i { transform: rotate(90deg); color: var(--dh-plum); }
+
+/* smooth height animation */
+.dh-benefit__panel {
+  display: grid; grid-template-rows: 0fr;
+  transition: grid-template-rows .6s var(--dh-acc-ease);
+}
+.dh-benefit.is-open .dh-benefit__panel { grid-template-rows: 1fr; }
+.dh-benefit__inner { overflow: hidden; min-height: 0; }
+.dh-benefit__desc,
+.dh-benefit.is-open .dh-benefit__desc {
+  background: none; border-radius: 0;
+  padding: 0 26px 30px; margin: 0; max-width: 360px;
+  font-size: 15px; line-height: 1.45; color: #2b2830;
+  opacity: 0; transform: translateY(-6px);
+  transition: opacity .3s ease, transform .5s var(--dh-acc-ease);
+}
+.dh-benefit.is-open .dh-benefit__desc { opacity: 1; transform: none; transition-delay: .12s; }
+
+@media (max-width: 575px) {
+  .dh-benefit { padding-left: 12px; }
+  .dh-benefit::after { left: 12px; }
+  .dh-benefit__btn, .dh-benefit.is-open .dh-benefit__btn { padding-left: 16px; padding-right: 16px; font-size: 16px; }
+  .dh-benefit__desc, .dh-benefit.is-open .dh-benefit__desc { padding: 0 16px 22px; font-size: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dh-benefit::after, .dh-benefit__btn, .dh-benefit__btn i, .dh-benefit__panel, .dh-benefit__desc { transition: none !important; }
+}
+
+/* Why Choose Us – independent lists, nothing jumps when an item opens */
+.dh-why .dh-benefits--left,
+.dh-why .dh-benefits--right { margin-top: 0; padding-top: 0; }
+.dh-why__lists { margin-top: 24px; }
+@media (min-width: 992px) {
+  .dh-why__top { align-items: stretch; }
+  .dh-why__imgcol { display: flex; }
+  .dh-why__imgcol .dh-why-img { flex: 0 0 auto; min-height: 260px; } /* keep the full-bleed width (50vw) */
+}
+
+/* =========================================================
+   Rewards band – matched to the reference design
+   ========================================================= */
+.dh-rewards {
+  background: linear-gradient(105deg, #4a0b80 0%, #570a7e 32%, #74208f 62%, #9d4fa5 100%);
+}
+.dh-rewards .dh-kicker {
+  color: #fff; font-size: 15px; font-weight: 500; letter-spacing: .12em; margin-bottom: 14px;
+}
+.dh-rewards .dh-title { color: #fff; margin-bottom: 34px; }
+.dh-rewards .dh-actions { margin-top: 0; }
+.dh-btn--gold,
+.dh-rewards .dh-btn--gold {
+  background: #7d5a22; color: #fff !important;
+  font-size: 19px; font-weight: 700; padding: 15px 33px; border-radius: 50px; box-shadow: none;
+}
+.dh-rewards .dh-btn--gold:hover { background: #946b2b; }
+.dh-rewards__img {
+  max-width: 540px; margin: 0 auto 0 0;
+  animation: none; filter: none;   /* the card image carries its own soft shadow */
+}
+@media (max-width: 991px) {
+  .dh-rewards__img { margin: 0 auto; }
+}
+/* lists fill their column, so the right list ends on the container edge (like the cards above) */
+.dh-why .dh-benefits { max-width: none; }
+/* Rewards: text starts on the container's left edge, card ends on its right edge */
+@media (min-width: 992px) {
+  .dh-rewards__img { margin: 0 0 0 auto; }
+}
+
+/* =========================================================
+   FAQ – reference layout, larger type, smooth premium accordion
+   ========================================================= */
+.dh-faq { --dh-faq-ease: cubic-bezier(.22, 1, .36, 1); }
+@media (min-width: 992px) { .dh-faq { padding-left: 32px; } }
+
+.dh-faq__item { position: relative; border-bottom: 1px solid #4a4650; }
+/* purple line that draws across under the open question */
+.dh-faq__item::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px;
+  background: linear-gradient(90deg, var(--dh-purple), var(--dh-plum));
+  transform: scaleX(0); transform-origin: left;
+  transition: transform .8s var(--dh-faq-ease);
+}
+.dh-faq__item.is-open::after { transform: scaleX(1); }
+
+.dh-faq__btn {
+  padding: 26px 4px; gap: 24px; align-items: center;
+  font-size: 19px; font-weight: 500; letter-spacing: .01em; line-height: 1.4; color: #111;
+  transition: color .3s ease, padding .5s var(--dh-faq-ease);
+}
+.dh-faq__btn:hover,
+.dh-faq__item.is-open .dh-faq__btn { color: var(--dh-purple); }
+.dh-faq__item.is-open .dh-faq__btn { padding-bottom: 14px; }
+
+.dh-faq__icon,
+.dh-faq__btn span.dh-faq__icon {
+  flex: 0 0 auto; display: grid; place-items: center;
+  width: 36px; height: 36px; border-radius: 50%;
+  font-size: 20px; letter-spacing: 0; color: #111; background: transparent;
+  transition: transform .55s var(--dh-faq-ease), background .35s ease, color .35s ease;
+}
+.dh-faq__btn:hover .dh-faq__icon { transform: translateX(3px); color: var(--dh-plum); }
+.dh-faq__item.is-open .dh-faq__btn span.dh-faq__icon {
+  transform: rotate(90deg); background: var(--dh-plum); color: #fff;
+}
+
+/* smooth height animation */
+.dh-faq__panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .6s var(--dh-faq-ease); }
+.dh-faq__item.is-open .dh-faq__panel { grid-template-rows: 1fr; }
+.dh-faq__inner { overflow: hidden; min-height: 0; }
+.dh-faq__ans {
+  padding: 0 64px 26px 4px; margin: 0;
+  font-size: 16px; line-height: 1.6; color: #55505c; text-align: justify; hyphens: auto;
+  opacity: 0; transform: translateY(-8px);
+  transition: opacity .3s ease, transform .5s var(--dh-faq-ease);
+}
+.dh-faq__item.is-open .dh-faq__ans { opacity: 1; transform: none; transition-delay: .12s; }
+
+@media (max-width: 575px) {
+  .dh-faq__btn { font-size: 16.5px; padding: 20px 2px; }
+  .dh-faq__ans { font-size: 15px; padding-right: 8px; text-align: left; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dh-faq__item::after, .dh-faq__btn, .dh-faq__icon, .dh-faq__panel, .dh-faq__ans { transition: none !important; }
+}
+/* FAQ: no divider (or purple line) under the last question */
+.dh-faq__item:last-child { border-bottom: 0; }
+.dh-faq__item:last-child::after { display: none; }
+
+/* =========================================================
+   Testimonials – centre card zoomed in.
+   Swiper's own CSS resets the slide transform (.swiper-backface-hidden .swiper-slide),
+   so the zoom is applied to the card inside the slide instead.
+   ========================================================= */
+.dh-testi .swiper { padding: 56px 6px 64px; }
+.dh-testi .swiper-slide,
+.dh-testi .swiper-slide-active { transform: none; display: flex; }
+.dh-testi .swiper-slide .dh-testi__card {
+  width: 100%;
+  transform: scale(.9); transform-origin: center;
+  transition: transform .7s cubic-bezier(.22, 1, .36, 1), box-shadow .5s ease, border-color .5s ease;
+}
+.dh-testi .swiper-slide-active .dh-testi__card { transform: scale(1.15); }
+@media (max-width: 991px) {
+  .dh-testi .swiper { padding: 36px 6px 56px; }
+  .dh-testi .swiper-slide .dh-testi__card { transform: scale(.94); }
+  .dh-testi .swiper-slide-active .dh-testi__card { transform: scale(1.04); }
+}
+/* Testimonials: tighter name / location / role lines */
+.dh-testi__stars { line-height: 1; margin-bottom: 6px; }
+.dh-testi__name,
+.dh-testi__org,
+.dh-testi__role { line-height: 1.3; margin: 0; padding: 0; }
+.dh-testi__org { margin-top: 1px; }
+
+/* =========================================================
+   Free Consultation – matched to the reference design
+   ========================================================= */
+.dh-consult::after { height: 100px; margin-top: -54px; background: #7d2a8f; }
+
+/* left info: sits near the top of the card */
+.dh-consult__info { padding: 44px 0 40px; }
+.dh-consult__info h3 { font-size: 22px; font-weight: 700; color: #111; margin: 0 0 16px; }
+.dh-consult__info p { font-size: 16px; line-height: 1.3; color: #222; max-width: 510px; margin: 0 0 22px; }
+.dh-consult__info p strong { font-weight: 600; color: #111; }
+.dh-consult__info .dh-call { margin-top: 12px !important; gap: 12px; }
+.dh-consult__info .dh-call__icon { width: 62px; height: 62px; font-size: 28px; }
+.dh-consult__info .dh-call__label { font-size: 22px; font-weight: 400; color: #111; line-height: 1.15; }
+.dh-consult__info .dh-call__num { font-size: 26px; font-weight: 700; color: #111; line-height: 1.15; }
+
+/* right card */
+.dh-consult__card {
+  background: #4a0f80; border-radius: 12px; padding: 46px 48px 32px;
+  box-shadow: 0 18px 24px -10px rgba(30, 6, 50, .55);
+}
+.dh-consult__card .dh-kicker { font-size: 16px; font-weight: 500; letter-spacing: .08em; margin: 0 0 2px 14px; }
+.dh-consult__card h4 {
+  font-size: 34px; font-weight: 800; line-height: 1.2; margin: 0 0 28px; padding: 0 0 6px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, .85);
+}
+.dh-consult__card form .mb-3 { margin-bottom: 14px !important; }
+.dh-consult__card form .row.g-2 { --bs-gutter-x: 4px; }
+.dh-consult__card .form-control,
+.dh-consult__card .form-select {
+  height: 42px; border-radius: 6px; padding: 6px 15px; font-size: 16px; color: #111;
+}
+.dh-consult__card .form-control::placeholder { color: #111; opacity: 1; }
+.dh-consult__card .form-select { color: #111; }
+.dh-consult__card .dh-submit {
+  height: 50px; margin-top: 10px; border-radius: 6px;
+  background: #f4f4f4; color: #1b1b1b; font-size: 21px; font-weight: 700;
+  transition: background .25s ease, color .25s ease, transform .25s ease;
+}
+.dh-consult__card .dh-submit:hover { background: #fff; color: var(--dh-purple); transform: translateY(-1px); }
+
+@media (max-width: 991px) {
+  .dh-consult__info { padding: 0 0 10px; }
+  .dh-consult__card { padding: 30px 22px 26px; }
+  .dh-consult__card h4 { font-size: 28px; }
+  .dh-consult__info .dh-call__label { font-size: 18px; }
+  .dh-consult__info .dh-call__num { font-size: 22px; }
+}
+/* call icon: never squeezed by the text beside it → stays a perfect circle */
+.dh-call__icon { flex: 0 0 auto; aspect-ratio: 1 / 1; border-radius: 50%; display: grid; place-items: center; }
+.dh-consult__info .dh-call__icon { flex: 0 0 62px; width: 62px; height: 62px; }
+
+/* =========================================================
+   Footer contact block – logo + icons aligned
+   ========================================================= */
+/* the logo file has ~7.8% transparent space on its left (57px of 728px).
+   img is 50% wide → pull it back by 50% × 7.8% ≈ 3.9% so the mark lines up with the icons */
+.dh-footer .logoDiv img { margin-left: -3.9%; }
+
+.dh-footer .footerContactInfo ul li { align-items: flex-start; margin-bottom: 14px; }
+.dh-footer .footerContactInfo ul li p { line-height: 1.6; }
+.dh-footer .iconF {
+  flex: 0 0 18px; width: 18px; height: calc(13.5px * 1.6); /* = one text line → icon centred on the first line */
+  margin-right: 14px; display: flex; align-items: center; justify-content: center;
+}
+.dh-footer .iconF svg { width: 15px; height: 15px; display: block; }
+/* Footer links: hover nudge without changing layout (padding made long names wrap) */
+footer.footer.dh-footer .footerMenuLink a {
+  display: inline-block; padding-left: 0 !important;
+  transition: transform .25s ease, color .25s ease;
+}
+footer.footer.dh-footer .footerMenuLink a:hover { padding-left: 0 !important; transform: translateX(3px); }
+
+/* =========================================================
+   Video gallery list – matched to the reference
+   fixed-height cards stacked from the top, big rounded thumbnail on the left
+   ========================================================= */
+.dh-vg { grid-template-columns: minmax(0, 1fr) 342px; gap: 16px; }
+.dh-vg__list {
+  justify-content: flex-start; gap: 6px; padding: 14px 12px; border-radius: 14px;
+  overflow-y: auto; max-height: 100%;
+}
+.dh-vg__item {
+  flex: 0 0 auto; min-height: 132px; align-items: flex-start; gap: 18px;
+  padding: 14px 18px 14px 12px; border-radius: 10px; border: 2px solid transparent;
+  background: #4a0f80;
+  transition: background .3s ease, border-color .3s ease, transform .3s ease;
+}
+.dh-vg__item:hover { transform: translateY(-2px); }
+.dh-vg__item.is-active { background: #3e0b6e; border-color: #b77fd0; }
+.dh-vg__thumb {
+  flex: 0 0 100px; width: 100px; height: 98px; border-radius: 12px; object-fit: cover; background: #fff;
+}
+.dh-vg__item > span { min-width: 0; padding-top: 2px; }
+.dh-vg__item h6 { font-size: 13px; font-weight: 700; line-height: 1.25; margin: 0 0 8px; color: #fff; }
+.dh-vg__item p { font-size: 11px; line-height: 1.35; color: rgba(255, 255, 255, .9); text-align: left; } /* justify left big gaps in the narrow column */
+
+@media (max-width: 991px) {
+  .dh-vg__list { max-height: none; }
+}
+@media (max-width: 575px) {
+  .dh-vg__thumb { flex-basis: 84px; width: 84px; height: 84px; }
+  .dh-vg__item { min-height: 0; gap: 14px; }
+}
+
+/* =========================================================
+   Image gallery – carousel like the reference:
+   big active image, next image peeking (blurred) on the right,
+   light-blue round arrows
+   ========================================================= */
+.dh-gallery--single { max-width: none; }
+.dh-gallery__carousel { overflow: visible; border-radius: 0; }
+.dh-gallery__carousel .swiper { overflow: hidden; border-radius: 22px 0 0 22px; }
+.dh-gallery__carousel .swiper-slide { border-radius: 22px; overflow: hidden; transition: filter .6s ease, opacity .6s ease; }
+.dh-gallery__carousel .swiper-slide img { width: 100%; aspect-ratio: 16 / 8.6; object-fit: cover; display: block; }
+.dh-gallery__carousel .swiper-slide:not(.swiper-slide-active) { filter: blur(4px); opacity: .85; cursor: pointer; }
+
+.dh-gallery__carousel .dh-gallery__nav {
+  z-index: 5; width: 42px; height: 42px; border-radius: 50%; border: 0;
+  background: #56c6f0; color: #fff; font-size: 19px; font-weight: 800; line-height: 1;
+  display: grid; place-items: center; box-shadow: 0 6px 16px rgba(18, 120, 170, .3);
+  transition: background .25s ease, transform .25s ease;
+}
+.dh-gallery__carousel .dh-gallery__nav:hover { background: #2fb3e6; transform: translateY(-50%) scale(1.08); }
+.dh-gallery__carousel .dh-gallery__nav--prev { left: 22px; }
+/* sits on the right edge of the ACTIVE slide: slide width = (100% - 14px) / 1.22 */
+.dh-gallery__carousel .dh-gallery__nav--next { right: calc(100% - (100% - 14px) / 1.22 + 22px); }
+.dh-gallery__carousel .swiper-button-disabled { opacity: .5; pointer-events: none; }
+
+@media (max-width: 767px) {
+  .dh-gallery__carousel .dh-gallery__nav { width: 36px; height: 36px; font-size: 16px; }
+  .dh-gallery__carousel .dh-gallery__nav--prev { left: 12px; }
+  .dh-gallery__carousel .dh-gallery__nav--next { right: calc(100% - (100% - 14px) / 1.22 + 12px); }
+}
+/* Swiper inside a CSS grid: grid items default to min-width:auto, which lets the
+   swiper grow to its content (33M px!). Constrain the column and the item. */
+.dh-gallery { grid-template-columns: minmax(0, 1fr) auto; }
+.dh-gallery--single { grid-template-columns: minmax(0, 1fr); }
+.dh-gallery__main, .dh-gallery__carousel, .dh-gallery__carousel .swiper { min-width: 0; max-width: 100%; }
+@media (max-width: 991px) { .dh-gallery { grid-template-columns: minmax(0, 1fr); } }
+
+/* =========================================================
+   Image gallery – premium stacked carousel (Swiper creative effect)
+   active image in focus, the next ones stacked behind: smaller, blurred, soft
+   ========================================================= */
+.dh-gallery__carousel { overflow: hidden; padding: 6px 0 18px; }           /* clip the stack at the container */
+.dh-gallery__carousel .swiper { width: 80%; margin: 0; overflow: visible; border-radius: 0; }
+.dh-gallery__carousel .swiper-slide {
+  border-radius: 24px; overflow: hidden;
+  filter: blur(5px) saturate(.85); 
+  transition-property: transform, opacity, filter, box-shadow;
+  transition-timing-function: cubic-bezier(.22, .9, .3, 1) !important;
+}
+.dh-gallery__carousel .swiper-slide:not(.swiper-slide-active) { opacity: .9; cursor: pointer; }
+.dh-gallery__carousel .swiper-slide-active {
+  filter: none;
+  box-shadow: 0 24px 50px rgba(20, 10, 60, .22);
+}
+.dh-gallery__carousel .swiper-slide img { aspect-ratio: 16 / 8.6; }
+/* subtle slow zoom on the image in focus */
+.dh-gallery__carousel .swiper-slide img { transform: scale(1.06); transition: transform 1.6s cubic-bezier(.22, 1, .36, 1); }
+.dh-gallery__carousel .swiper-slide-active img { transform: scale(1); }
+
+/* arrows on the edges of the focused image */
+.dh-gallery__carousel .dh-gallery__nav--prev { left: 24px; }
+.dh-gallery__carousel .dh-gallery__nav--next { right: calc(20% + 24px); }
+.dh-gallery__carousel .dh-gallery__nav { top: calc(50% - 6px); }
+
+@media (max-width: 767px) {
+  .dh-gallery__carousel .swiper { width: 86%; }
+  .dh-gallery__carousel .dh-gallery__nav--prev { left: 12px; }
+  .dh-gallery__carousel .dh-gallery__nav--next { right: calc(14% + 12px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dh-gallery__carousel .swiper-slide, .dh-gallery__carousel .swiper-slide img { transition: none !important; }
+}
+/* stack geometry: active 76% wide; 2 stacked images end exactly at the container edge */
+.dh-gallery__carousel .swiper { width: 76%; }
+.dh-gallery__carousel .dh-gallery__nav--next { right: calc(24% + 24px); }
+/* Footer: static white logo (already trimmed, so no offset needed) */
+.dh-footer .logoDiv img { margin-left: 0; width: 42%; max-width: 230px; height: auto; padding-bottom: 0; margin-bottom: 30px; display: block; }

@@ -33,7 +33,7 @@ export default function Comments({blog,comments}) {
     return (
         <>
            <div className="row">
-                <div className="col-md-8" data-aos="fade-up">
+                <div className="col-md-8" data-aos="fade">
                     {comments.data.length > 0 ?(
                         <>
                             {comments.data.map((comment)=>
@@ -68,7 +68,7 @@ export default function Comments({blog,comments}) {
                     )}
                 </div>
                 
-                <div className="col-md-8 mb-30" data-aos="fade-up">
+                <div className="col-md-8 mb-30" data-aos="fade">
                     <h2 className="mb-30">Leave a Reply</h2>
                     <AlertMessageComponents status={errors.status} message={errors.message} />
                     <Form onSubmit={commentSubmit} className="row">

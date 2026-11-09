@@ -80,7 +80,7 @@ export default function Gallery({
 
       <section className="dh-section dh-section--blue">
         <div className="container">
-          <div className="dh-head" data-aos="fade-up">
+          <div className="dh-head" data-aos="fade">
             <p className="dh-kicker">Image Gallery</p>
             <h2 className="dh-title">
               Explore Our World <br /> Through Every Frame.
@@ -119,7 +119,7 @@ export default function Gallery({
                   className="dh-ggrid__item"
                   onClick={() => setOpen(i)}
                   aria-label={`Open image: ${img.title || img.gallery}`}
-                  data-aos="fade-up"
+                  data-aos="fade"
                   data-aos-delay={(i % 4) * 60}
                 >
                   <img src={img.url} alt={img.title || img.gallery} loading="lazy" />

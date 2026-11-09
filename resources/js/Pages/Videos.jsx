@@ -57,7 +57,7 @@ export default function Videos({
 
       <section className="dh-section dh-section--blue">
         <div className="container">
-          <div className="dh-head" data-aos="fade-up">
+          <div className="dh-head" data-aos="fade">
             <p className="dh-kicker">Videos</p>
             <h2 className="dh-title">
               Watch Our Vision, <br /> Experience Our Journey.
@@ -76,7 +76,7 @@ export default function Videos({
                   type="button"
                   key={v.id}
                   className="dh-video-card"
-                  data-aos="fade-up"
+                  data-aos="fade"
                   data-aos-delay={(i % 4) * 60}
                   onClick={() => setPlaying(v.url)}
                   aria-label={`Play video: ${v.title}`}

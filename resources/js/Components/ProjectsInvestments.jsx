@@ -63,7 +63,7 @@ export default function ProjectsInvestments() {
       <div className="container">
         <div className="row align-items-center gy-5">
           {/* LEFT CONTENT */}
-          <div className="col-lg-6" data-aos="fade-right">
+          <div className="col-lg-6" data-aos="fade">
             <p className="dh-kicker">Projects &amp; Investments</p>
             <h2 className="dh-title">
               Why Should You <br /> Invest in Defender <br className="d-none d-lg-block" /> Projects?
@@ -83,7 +83,7 @@ export default function ProjectsInvestments() {
           </div>
 
           {/* RIGHT VIDEOS */}
-          <div className="col-lg-5 offset-lg-1" data-aos="fade-left">
+          <div className="col-lg-5 offset-lg-1" data-aos="fade">
             <div className="dh-video-cards">
               {VIDEOS.map((v, i) => (
                 <button

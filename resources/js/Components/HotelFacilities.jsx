@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FiChevronsRight } from "react-icons/fi";
 
 /**
  * Home page FAQ section.
@@ -34,7 +35,7 @@ export default function HotelFacilities() {
     <section className="dh-section dh-section--pink">
       <div className="container">
         <div className="row gy-4 align-items-start">
-          <div className="col-lg-4" data-aos="fade-right">
+          <div className="col-lg-5" data-aos="fade">
             <p className="dh-kicker">FAQ</p>
             <h2 className="dh-title dh-title--sm">
               Frequently Asked <br /> Question
@@ -47,7 +48,7 @@ export default function HotelFacilities() {
             />
           </div>
 
-          <div className="col-lg-7 offset-lg-1" data-aos="fade-left">
+          <div className="col-lg-7 dh-faq" data-aos="fade">
             {FAQS.map((f, i) => {
               const isOpen = open === i;
               return (
@@ -61,9 +62,14 @@ export default function HotelFacilities() {
                     <span>
                       {i + 1}. {f.q}
                     </span>
-                    <span aria-hidden="true">››</span>
+                    <span className="dh-faq__icon" aria-hidden="true"><FiChevronsRight /></span>
                   </button>
-                  {isOpen && <p className="dh-faq__ans">{f.a}</p>}
+                  {/* always rendered so the answer can slide open/closed smoothly */}
+                  <div className="dh-faq__panel" aria-hidden={!isOpen}>
+                    <div className="dh-faq__inner">
+                      <p className="dh-faq__ans">{f.a}</p>
+                    </div>
+                  </div>
                 </div>
               );
             })}

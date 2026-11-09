@@ -201,7 +201,7 @@ export default function BlueRainResorts({
         <section className={`dh-section ${p.investor ? "dh-section--pink" : "dh-section--blue"}`}>
           <div className="container">
             <div className="row align-items-center gy-5">
-              <div className="col-lg-6" data-aos="fade-right">
+              <div className="col-lg-6" data-aos="fade">
                 <p className="dh-kicker">Project Overview</p>
                 <h2 className="dh-title dh-title--sm">
                   {p.heading[0]} <br className="d-none d-xl-block" /> {p.heading[1]}
@@ -238,7 +238,7 @@ export default function BlueRainResorts({
                 </div>
               </div>
 
-              <div className="col-lg-6" data-aos="fade-left">
+              <div className="col-lg-6" data-aos="fade">
                 <img
                   className="dh-img dh-img--shadow"
                   src={p.image}
@@ -253,8 +253,8 @@ export default function BlueRainResorts({
 
         {/* Plan a visit (resorts) */}
         {p.visit && (
-          <section className="dh-section dh-section--white" style={{ padding: "50px 0" }}>
-            <div className="container" data-aos="fade-up">
+          <section className="dh-section dh-section--white">
+            <div className="container" data-aos="fade">
               <div className="dh-visit">
                 <div>
                   <h3>{p.visit}</h3>
@@ -279,7 +279,7 @@ export default function BlueRainResorts({
         {p.benefits && (
           <section className="dh-section dh-section--blue">
             <div className="container">
-              <div className="dh-center" data-aos="fade-up">
+              <div className="dh-center" data-aos="fade">
                 <p className="dh-kicker">Benefits of Ownership</p>
                 <h2 className="dh-title dh-title--sm">Exclusive Benefits for Bella Maris Shareholders</h2>
                 <div className="mx-auto" style={{ maxWidth: 920 }}>
@@ -296,15 +296,15 @@ export default function BlueRainResorts({
         {p.ownership && (
           <section className="dh-section dh-section--blue">
             <div className="container">
-              <div className="dh-center dh-head" data-aos="fade-up">
+              <div className="dh-center dh-head" data-aos="fade">
                 <p className="dh-kicker">Category of Ownership</p>
                 <h2 className="dh-title dh-title--sm">Your Ownership, Your Lifestyle, Your Future.</h2>
               </div>
               <div className="row align-items-center gy-4">
-                <div className="col-lg-7" data-aos="fade-right">
+                <div className="col-lg-7" data-aos="fade">
                   <img className="dh-img" src={p.ownership.image} alt={`${p.title} interior`} loading="lazy" />
                 </div>
-                <div className="col-lg-5" data-aos="fade-left">
+                <div className="col-lg-5" data-aos="fade">
                   <div className="dh-pills">
                     {p.ownership.items.map((o) => (
                       <div className="dh-pill" key={o.name}>

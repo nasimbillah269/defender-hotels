@@ -1,5 +1,6 @@
 import { Link } from "@inertiajs/react";
 import { useState } from "react";
+import { FiArrowRight, FiArrowUpRight } from "react-icons/fi";
 
 /**
  * "Our Projects" – expanding accordion cards (home page).
@@ -29,17 +30,6 @@ export const PROJECTS = [
       "A peaceful island escape just moments from the beach and a short walk from the main jetty. Comfortable rooms, modern amenities and warm hospitality — with exclusive stay privileges for Bella Maris shareholders.",
   },
   {
-    id: "lusai",
-    tag: "Hill Resort",
-    name: "Lusai Cottage Resorts",
-    rail: "Lusai Cottage Resorts",
-    url: "/lusai-cottage",
-    image: "/images/new/design/lusai-overview.png",
-    heading: "Lusai Cottage — Embrace the Hills of Sajek",
-    text:
-      "A refreshing mountain retreat surrounded by lush green hills, rolling clouds and breathtaking valley views. Perfect for families, couples and adventure lovers seeking a calm hilltop stay.",
-  },
-  {
     id: "raj",
     tag: "Restaurant",
     name: "Raj Darbar Highway Restaurant",
@@ -63,14 +53,14 @@ export default function RoomsSuites() {
   return (
     <section className="dh-section dh-section--white">
       <div className="container">
-        <div className="dh-center dh-head" data-aos="fade-up">
+        <div className="dh-center dh-head" data-aos="fade">
           <p className="dh-kicker">Our Projects</p>
           <h2 className="dh-title">
             One Vision, Multiple <br /> Destinations, Endless Possibilities
           </h2>
         </div>
 
-        <div className="dh-projects" data-aos="fade-up">
+        <div className="dh-projects" data-aos="fade">
           {PROJECTS.map((p) => {
             const isActive = active === p.id;
             return (
@@ -86,7 +76,7 @@ export default function RoomsSuites() {
                   aria-expanded={isActive}
                   aria-label={`Show ${p.name}`}
                 >
-                  <span className="dh-project__arrow">→</span>
+                  <span className="dh-project__arrow"><FiArrowRight /></span>
                   <span className="dh-project__railTitle">{p.rail}</span>
                 </button>
 
@@ -98,14 +88,16 @@ export default function RoomsSuites() {
                     <h4>{p.heading}</h4>
                     <p>{p.text}</p>
                     <div className="dh-project__foot">
-                      <span className="dh-project__tag">{p.tag}</span>
+                      <Link href={p.url} className="dh-project__btn" tabIndex={isActive ? 0 : -1}>
+                        Discover More
+                      </Link>
                       <h3>
                         <Link href={p.url} tabIndex={isActive ? 0 : -1}>{p.name}</Link>
                       </h3>
                     </div>
                   </div>
                   <Link href={p.url} className="dh-project__corner" aria-label={p.name} tabIndex={isActive ? 0 : -1}>
-                    ↗
+                    <FiArrowUpRight />
                   </Link>
                 </div>
               </article>

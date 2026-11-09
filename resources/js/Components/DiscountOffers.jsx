@@ -5,16 +5,11 @@ export default function DiscountOffers() {
     <section className="dh-section dh-rewards">
       <div className="container">
         <div className="row align-items-center gy-5">
-          <div className="col-lg-5" data-aos="fade-right">
+          <div className="col-lg-6" data-aos="fade">
             <p className="dh-kicker">Discount &amp; Offers</p>
             <h2 className="dh-title">
               Rewards Card <br /> Benefits
             </h2>
-            <p className="dh-text">
-              Enjoy exclusive privileges with the Defender Rewards Card — special offers, seasonal
-              discounts and partner benefits across our hospitality network, designed to add more
-              value to your ownership experience.
-            </p>
             <div className="dh-actions">
               <Link href="/rewards-card" className="dh-btn dh-btn--gold">
                 Discover More
@@ -22,10 +17,10 @@ export default function DiscountOffers() {
             </div>
           </div>
 
-          <div className="col-lg-7" data-aos="fade-left">
+          <div className="col-lg-6" data-aos="fade">
             <img
               className="dh-rewards__img"
-              src="/images/new/design/rewards-card.png"
+              src="/images/new/design/rewards-card-band.png"
               alt="Defender Rewards Card"
               loading="lazy"
             />

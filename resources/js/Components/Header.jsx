@@ -23,6 +23,8 @@ const Header = ({ auth, general, headerMenu }) => {
   const currentPath = normalize(url);
 
   const isActive = (slug) => {
+    // "#" style placeholder links (e.g. dropdown parents) are never active by themselves
+    if (typeof slug === "string" && slug.trim().startsWith("#")) return false;
     const target = normalize(slug);
     return (
       currentPath === target ||
@@ -57,7 +59,7 @@ const Header = ({ auth, general, headerMenu }) => {
     <>
       <header className={isSticky ? "sticky" : ""}>
         <nav className="navbar navbar-expand-lg">
-          <div className="container-fluid header-container">
+          <div className="container header-container">
             {/* Logo */}
             <div className="logo-wrapper">
               <Link className="logo" href="/">

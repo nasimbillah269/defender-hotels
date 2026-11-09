@@ -17,9 +17,11 @@ const { url } = usePage();
     useEffect(() => {
         // Initialize AOS with options
         AOS.init({
-          duration: 1500, // Animation duration
+          duration: 900,  // soft, quick fade
           once: true,     // Whether animation should happen only once
-          easing: 'ease-in-out',
+          easing: 'ease-out',
+          offset: 60,
+          disable: () => window.matchMedia('(prefers-reduced-motion: reduce)').matches,
         });
     
         // Refresh AOS on every Inertia navigation

@@ -51,7 +51,7 @@ export default function Blogs({
 
       <section className="dh-section dh-section--blue">
         <div className="container">
-          <div className="dh-head" data-aos="fade-up">
+          <div className="dh-head" data-aos="fade">
             <p className="dh-kicker">Hotels &amp; Resorts Blogs</p>
             <h2 className="dh-title">
               Insights, Ideas &amp; Inspiration <br /> for Better Investments.
@@ -68,7 +68,7 @@ export default function Blogs({
               <div
                 key={post.id ?? post.slug ?? index}
                 className="col-sm-6 col-lg-4"
-                data-aos="fade-up"
+                data-aos="fade"
                 data-aos-delay={(index % 3) * 80}
               >
                 <BlogGrid post={post} variant="blog" />

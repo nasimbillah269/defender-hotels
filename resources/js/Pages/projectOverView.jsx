@@ -38,7 +38,7 @@ export default function projectOverView({
                 <section className="dh-section dh-section--pink">
                     <div className="container">
                         <div className="row align-items-center gy-5">
-                            <div className="col-lg-6" data-aos="fade-right">
+                            <div className="col-lg-6" data-aos="fade">
                                 <p className="dh-kicker">Project Overview</p>
                                 <h2 className="dh-title dh-title--sm">
                                     Enjoy a Luxury <br /> Experience at Bella Maris
@@ -59,7 +59,7 @@ export default function projectOverView({
                                     <Link href="/bella-maris" className="dh-btn dh-btn--gold">Explore Bella Maris</Link>
                                 </div>
                             </div>
-                            <div className="col-lg-6" data-aos="fade-left">
+                            <div className="col-lg-6" data-aos="fade">
                                 <img
                                     className="dh-img dh-img--shadow"
                                     src="/images/img/DHRL Bella Maris_00007.jpg"

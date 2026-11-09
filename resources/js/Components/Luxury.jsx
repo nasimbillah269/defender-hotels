@@ -14,9 +14,9 @@ export default function Luxury({ variant = "home" }) {
   return (
     <section className={`dh-section ${isPage ? "dh-section--pink" : "dh-section--white"}`}>
       <div className="container">
-        <div className="row align-items-center gy-5">
+        <div className="row align-items-center gy-5 dh-about-row">
           {/* LEFT: COLLAGE */}
-          <div className="col-lg-6" data-aos="fade-right">
+          <div className="col-lg-6" data-aos="fade">
             <div className="dh-collage">
               <div className="dh-collage__tall">
                 <img
@@ -44,7 +44,7 @@ export default function Luxury({ variant = "home" }) {
           </div>
 
           {/* RIGHT: TEXT */}
-          <div className="col-lg-6" data-aos="fade-left">
+          <div className="col-lg-6" data-aos="fade">
             <p className="dh-kicker">About Us</p>
             <h2 className="dh-title">
               Invest in Luxury, <br /> Own a Better Future
@@ -86,7 +86,7 @@ export default function Luxury({ variant = "home" }) {
         </div>
 
         {isPage && (
-          <p className="dh-text mt-5" data-aos="fade-up">
+          <p className="dh-text mt-5" data-aos="fade">
             At Defender Hotels &amp; Resorts Ltd., we prioritize personalized attention, professional
             guidance, and a seamless experience throughout every stage of the investment journey. Our
             dedicated team of experienced professionals combines industry knowledge, market insights,

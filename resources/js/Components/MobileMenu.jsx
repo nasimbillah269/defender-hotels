@@ -23,6 +23,8 @@ const MobileMenu = ({ general, headerMenu, isOpen, onClose, activePath }) => {
   };
 
   const isActive = (slug) => {
+    // "#" style placeholder links (e.g. dropdown parents) are never active by themselves
+    if (typeof slug === "string" && slug.trim().startsWith("#")) return false;
     const current = normalize(activePath);
     const target = normalize(slug);
     return (

@@ -73,7 +73,7 @@ export default function ClientsSay({ general }) {
   return (
     <section className="dh-section dh-section--blue dh-testi">
       <div className="container">
-        <div className="dh-center dh-head mb-2" data-aos="fade-up">
+        <div className="dh-center dh-head mb-2" data-aos="fade">
           <p className="dh-kicker">Testimonials</p>
           <h2 className="dh-title">
             What They&rsquo;re Talking <br /> About Defender?

@@ -18,12 +18,13 @@ const Footer = ({ general, footerMenu2, footerMenu3, footerMenu4}) => {
                 <div className="footer-top">
                     <div className="container">
                         <div className="row">
-                            <div className="col-md-4" data-aos="fade-up">
+                            <div className="col-md-4" data-aos="fade">
                                 <div className="footerGrid">
                                     <div className="logoDiv">
+                                        {/* static white logo (transparent PNG) – the admin logo may be a JPG */}
                                         <img
-                                            src={`/${general.logo}`}
-                                            alt={general.title}
+                                            src="/images/new/logo-white.png"
+                                            alt={general?.title || "Defender Hotels & Resorts Ltd"}
                                         />
                                     </div>
                                     <div className="footerContactInfo" style={{maxWidth: "287px"}}>
@@ -52,7 +53,7 @@ const Footer = ({ general, footerMenu2, footerMenu3, footerMenu4}) => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-md-2 col-6" data-aos="fade-up">
+                            <div className="col-md-2 col-6" data-aos="fade">
                             {footerMenu2 && footerMenu2.items && (
                                 <div className="footerGrid">
 
@@ -73,7 +74,7 @@ const Footer = ({ general, footerMenu2, footerMenu3, footerMenu4}) => {
                                 </div>
                             )}
                             </div>
-                            <div className="col-md-2 col-6" data-aos="fade-up">
+                            <div className="col-md-2 col-6" data-aos="fade">
                             {footerMenu3 && footerMenu3.items && (
                                 <div className="footerGrid">
 
@@ -94,7 +95,7 @@ const Footer = ({ general, footerMenu2, footerMenu3, footerMenu4}) => {
                                 </div>
                             )}
                             </div>
-                            <div className="col-md-2 col-6" data-aos="fade-up">
+                            <div className="col-md-2 col-6" data-aos="fade">
                             {footerMenu4 && footerMenu4.items && (
                                 <div className="footerGrid">
 
@@ -116,7 +117,7 @@ const Footer = ({ general, footerMenu2, footerMenu3, footerMenu4}) => {
                             )}
                                 
                             </div>
-                            <div className="col-md-2 col-6" data-aos="fade-up">
+                            <div className="col-md-2 col-6" data-aos="fade">
                                 <div className="footerGrid">
                                     <div className="qrcode">
                                         <img src="/images/img/Defender_QR.png" alt="qrCode" loading="lazy" decoding="async" />

@@ -27,7 +27,12 @@ function BenefitList({ items, openId, onToggle, className = "" }) {
               <span>{b.title}</span>
               <i aria-hidden="true">&gt;</i>
             </button>
-            {open && <p className="dh-benefit__desc">{b.desc}</p>}
+            {/* always rendered so it can animate open/closed (grid-rows 0fr ↔ 1fr) */}
+            <div className="dh-benefit__panel" aria-hidden={!open}>
+              <div className="dh-benefit__inner">
+                <p className="dh-benefit__desc">{b.desc}</p>
+              </div>
+            </div>
           </li>
         );
       })}
@@ -36,25 +41,23 @@ function BenefitList({ items, openId, onToggle, className = "" }) {
 }
 
 export default function ChooseUs() {
-  const [openId, setOpenId] = useState(1);
+  // each list keeps its own open item, so clicking one side never closes the other
+  const [openLeft, setOpenLeft] = useState(1);
+  const [openRight, setOpenRight] = useState(null);
 
   return (
     <section className="dh-section dh-why">
       <div className="container">
-        {/* Both columns stretch to the same height and the lists sit at the bottom,
-            so the rows of the two lists line up (as in the design). */}
-        <div className="row gy-4 dh-why__row">
-          <div className="col-lg-5 dh-why__col" data-aos="fade-right">
-            <div>
-              <p className="dh-kicker">Why Choose Us</p>
-              <h2 className="dh-title dh-title--sm">
-                Own Premium Hospitality <br /> with Exclusive Benefits <br /> and Confidence
-              </h2>
-            </div>
-            <BenefitList items={BENEFITS.slice(0, 4)} openId={openId} onToggle={setOpenId} className="dh-benefits--left" />
+        {/* Row 1: heading | image (same height).  Row 2: both lists start on the same line
+            and only grow downwards, so opening an item never moves anything above it. */}
+        <div className="row gy-4 dh-why__top">
+          <div className="col-lg-5" data-aos="fade">
+            <p className="dh-kicker">Why Choose Us</p>
+            <h2 className="dh-title dh-title--sm">
+              Own Premium Hospitality <br /> with Exclusive Benefits <br /> and Confidence
+            </h2>
           </div>
-
-          <div className="col-lg-6 offset-lg-1 dh-why__col" data-aos="fade-left">
+          <div className="col-lg-6 offset-lg-1 dh-why__imgcol" data-aos="fade">
             <div className="dh-why-img">
               <img
                 src="/images/new/design/why-choose-clean.jpg"
@@ -62,7 +65,15 @@ export default function ChooseUs() {
                 loading="lazy"
               />
             </div>
-            <BenefitList items={BENEFITS.slice(4)} openId={openId} onToggle={setOpenId} className="dh-benefits--right" />
+          </div>
+        </div>
+
+        <div className="row gy-2 align-items-start dh-why__lists">
+          <div className="col-lg-5" data-aos="fade">
+            <BenefitList items={BENEFITS.slice(0, 4)} openId={openLeft} onToggle={setOpenLeft} className="dh-benefits--left" />
+          </div>
+          <div className="col-lg-6 offset-lg-1" data-aos="fade">
+            <BenefitList items={BENEFITS.slice(4)} openId={openRight} onToggle={setOpenRight} className="dh-benefits--right" />
           </div>
         </div>
       </div>

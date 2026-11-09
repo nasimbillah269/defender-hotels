@@ -35,8 +35,8 @@ export default function HotelBookingForm({ servicesList }) {
     return (
         <section className="dh-consult" id="consultation">
             <div className="container">
-                <div className="row align-items-end gy-4">
-                    <div className="col-lg-6" data-aos="fade-right">
+                <div className="row align-items-start gy-4">
+                    <div className="col-lg-6" data-aos="fade">
                         <div className="dh-consult__info">
                             <h3>Invest in Your Future with Defender Projects!</h3>
                             <p>
@@ -56,7 +56,7 @@ export default function HotelBookingForm({ servicesList }) {
                         </div>
                     </div>
 
-                    <div className="col-lg-5 offset-lg-1" data-aos="fade-up">
+                    <div className="col-lg-5 offset-lg-1" data-aos="fade">
                         <div className="dh-consult__card">
                             <p className="dh-kicker">Register Your Interest</p>
                             <h4>Free Consultation</h4>

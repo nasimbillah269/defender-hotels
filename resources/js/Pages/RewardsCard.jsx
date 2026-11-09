@@ -49,7 +49,7 @@ export default function RewardsCard({
       {/* White premium section */}
       <section className="rewards-page section-padding">
         <div className="container">
-          <div className="rewards-header" data-aos="fade-up">
+          <div className="rewards-header" data-aos="fade">
             <p className="rewards-kicker">DEFENDER PRIVILEGES</p>
             <h2 className="rewards-title">Defender Rewards Card</h2>
             <p className="rewards-subtitle">
@@ -61,7 +61,7 @@ export default function RewardsCard({
 
           <div className="row align-items-center gy-4 rewards-grid">
             {/* Card Visual */}
-            <div className="col-lg-5" data-aos="fade-right">
+            <div className="col-lg-5" data-aos="fade">
               <div className="rewards-card-visual">
                 <div className="rewards-card">
                   <div className="rewards-card__brand">DEFENDER</div>
@@ -83,7 +83,7 @@ export default function RewardsCard({
             </div>
 
             {/* Content */}
-            <div className="col-lg-7" data-aos="fade-left">
+            <div className="col-lg-7" data-aos="fade">
               <div className="rewards-content">
                 <h3 className="rewards-content__title">What the card means</h3>
                 <p className="rewards-content__text">

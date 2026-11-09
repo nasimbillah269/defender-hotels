@@ -89,7 +89,7 @@ export default function ContactUs({
 
         <section className="dh-section dh-contact">
           <div className="container">
-            <div className="dh-contact__wrap" data-aos="fade-up">
+            <div className="dh-contact__wrap" data-aos="fade">
               {/* ---- Left: contact information ---- */}
               <aside className="dh-contact__info">
                 <p className="dh-contact__kicker">Contact Information</p>
@@ -224,7 +224,7 @@ export default function ContactUs({
             </div>
 
             {/* ---- Map ---- */}
-            <div className="dh-contact__map" data-aos="fade-up">
+            <div className="dh-contact__map" data-aos="fade">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29206.413098238932!2d90.408608!3d23.790077!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c76cf4240757%3A0x2284e62b52c67a3e!2sSuvastu%20Jahanara%20Square!5e0!3m2!1sen!2sus!4v1748178928818!5m2!1sen!2sus"
                 width="100%"

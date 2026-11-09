@@ -173,7 +173,7 @@ export default function BookingPage({
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-10">
-              <div className="dh-head mb-4" data-aos="fade-up">
+              <div className="dh-head mb-4" data-aos="fade">
                 <p className="dh-kicker">Investment Form</p>
                 <h2 className="dh-title">
                   Take the First Step <br /> Towards Ownership.
@@ -187,7 +187,7 @@ export default function BookingPage({
 
               <AlertMessageComponents status={errors.status} message={errors.message} />
 
-              <Form onSubmit={submit} data-aos="fade-up">
+              <Form onSubmit={submit} data-aos="fade">
                 <div className="row g-3">
                   <div className="col-md-6">
                     <Form.Control

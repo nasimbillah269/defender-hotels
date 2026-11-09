@@ -17,7 +17,7 @@ export default function OurNews({posts}) {
                     <div className="row">
                         
                             {posts.map( (post, index) =>
-                                <div className="col-md-3"  data-aos={index % 2 === 0 ? 'fade-up' : 'fade-down'} >
+                                <div className="col-md-3"  data-aos="fade" >
                                  <BlogGrid post={post} />
                                 </div>
                             )}

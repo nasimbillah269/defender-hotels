@@ -43,7 +43,7 @@ export default function AboutUs({
                 <section className="dh-section dh-section--white">
                     <div className="container">
                         <div className="row gy-4 justify-content-center">
-                            <div className="col-lg-5" data-aos="fade-right">
+                            <div className="col-lg-5" data-aos="fade">
                                 <div className="dh-mv dh-mv--pink">
                                     <h3>Our Vision</h3>
                                     <p className="dh-text mb-0">
@@ -54,7 +54,7 @@ export default function AboutUs({
                                     </p>
                                 </div>
                             </div>
-                            <div className="col-lg-5" data-aos="fade-left">
+                            <div className="col-lg-5" data-aos="fade">
                                 <div className="dh-mv dh-mv--blue">
                                     <h3>Our Mission</h3>
                                     <p className="dh-text mb-0">
@@ -76,7 +76,7 @@ export default function AboutUs({
                 <section className="dh-section dh-section--blue">
                     <div className="container">
                         <div className="row justify-content-center">
-                            <div className="col-lg-10" data-aos="fade-up">
+                            <div className="col-lg-10" data-aos="fade">
                                 <p className="dh-kicker">Leadership Message</p>
                                 <h2 className="dh-title">Message from the Chairman</h2>
                                 <p className="dh-text">
@@ -110,7 +110,7 @@ export default function AboutUs({
                 {/* Team */}
                 <section className="dh-section dh-section--white">
                     <div className="container">
-                        <div className="dh-center dh-head" data-aos="fade-up">
+                        <div className="dh-center dh-head" data-aos="fade">
                             <p className="dh-kicker">Our People</p>
                             <h2 className="dh-title">Meet Our Team</h2>
                             <p className="dh-text">
@@ -118,7 +118,7 @@ export default function AboutUs({
                             </p>
                         </div>
                         <div className="row justify-content-center">
-                            <div className="col-lg-10" data-aos="fade-up">
+                            <div className="col-lg-10" data-aos="fade">
                                 <img
                                     className="dh-img dh-img--shadow"
                                     src="/images/new/design/team-family-day.png"
