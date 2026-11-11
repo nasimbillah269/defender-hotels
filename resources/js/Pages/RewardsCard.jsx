@@ -39,9 +39,6 @@ export default function RewardsCard({
         >
           <div className="container">
             <h1 className="mt-4">Rewards Card</h1>
-            <h5 align='center'>
-              Premium privileges for eligible ownership customers
-            </h5>
           </div>
         </div>
       </div>

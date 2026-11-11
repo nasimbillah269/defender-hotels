@@ -78,13 +78,13 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <input type="file" name="image" accept="image/*" class="form-control {{$errors->has('image')?'error':''}}" />
-                                    <small class="text-muted">Portrait image recommended (9:16, e.g. 540×960).</small>
+                                    <small class="text-muted">Optional — leave empty to use the YouTube thumbnail. Portrait image recommended (9:16, e.g. 540×960).</small>
                                     @if ($errors->has('image'))
                                     <p style="color: red; margin: 0; font-size: 10px;">{{ $errors->first('image') }}</p>
                                     @endif
                                 </div>
                                 <div class="form-group">
-                                    <img src="{{asset($video->image())}}" style="max-width: 120px; border-radius: 8px;" />
+                                    <img src="{{$video->videoThumb()}}" style="max-width: 120px; border-radius: 8px;" />
                                     @if($video->imageFile)
                                     <a href="{{route('admin.mediesDelete',$video->imageFile->id)}}" class="mediaDelete" style="color: red;"><i class="fa fa-trash"></i></a>
                                     @endif

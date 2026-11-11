@@ -51,14 +51,16 @@ const PROJECTS = {
     },
     gallery: {
       photos: [
-        "/images/new/blue/Defender Hotels Images-19.jpg",
-        "/images/new/blue/Defender Hotels Images-20.jpg",
-        "/images/new/blue/Defender Hotels Images-21.jpg",
-        "/images/new/blue/Defender Hotels Images-22.jpg",
-        "/images/new/blue/Defender Hotels Images-23.jpg",
-        "/images/new/blue/Defender Hotels Images-24.jpg",
-        "/images/new/blue/Defender Hotels Images-25.jpg",
-        "/images/new/blue/Defender Hotels Images-26.jpg",
+        "/images/new/blue-3d/blue-rain-01.jpg",
+        "/images/new/blue-3d/blue-rain-02.jpg",
+        "/images/new/blue-3d/blue-rain-03.jpg",
+        "/images/new/blue-3d/blue-rain-04.jpg",
+        "/images/new/blue-3d/blue-rain-05.jpg",
+        "/images/new/blue-3d/blue-rain-06.jpg",
+        "/images/new/blue-3d/blue-rain-07.jpg",
+        "/images/new/blue-3d/blue-rain-08.jpg",
+        "/images/new/blue-3d/blue-rain-09.jpg",
+        "/images/new/blue-3d/blue-rain-10.jpg",
       ],
     },
   },
@@ -136,7 +138,26 @@ const PROJECTS = {
       ],
     },
     gallery: {
-      photos: ["/images/new/design/raj-darbar-interior.png", "/images/new/design/raj-darbar-overview.png"],
+      photos: [
+        "/images/new/raj-darbar/raj-darbar-01.jpg",
+        "/images/new/raj-darbar/raj-darbar-02.jpg",
+        "/images/new/raj-darbar/raj-darbar-03.jpg",
+        "/images/new/raj-darbar/raj-darbar-04.jpg",
+        "/images/new/raj-darbar/raj-darbar-05.jpg",
+        "/images/new/raj-darbar/raj-darbar-06.jpg",
+        "/images/new/raj-darbar/raj-darbar-07.jpg",
+        "/images/new/raj-darbar/raj-darbar-08.jpg",
+        "/images/new/raj-darbar/raj-darbar-09.jpg",
+        "/images/new/raj-darbar/raj-darbar-10.jpg",
+        "/images/new/raj-darbar/raj-darbar-11.jpg",
+        "/images/new/raj-darbar/raj-darbar-12.jpg",
+        "/images/new/raj-darbar/raj-darbar-13.jpg",
+        "/images/new/raj-darbar/raj-darbar-14.jpg",
+        "/images/new/raj-darbar/raj-darbar-15.jpg",
+        "/images/new/raj-darbar/raj-darbar-16.jpg",
+        "/images/new/raj-darbar/raj-darbar-17.jpg",
+        "/images/new/raj-darbar/raj-darbar-18.jpg",
+      ],
       plans: ["/images/new/design/raj-darbar-overview.png"],
     },
   },
@@ -200,11 +221,11 @@ export default function BlueRainResorts({
         {/* Project overview */}
         <section className={`dh-section ${p.investor ? "dh-section--pink" : "dh-section--blue"}`}>
           <div className="container">
-            <div className="row align-items-center gy-5">
+            <div className="row align-items-center gy-5 dh-split">
               <div className="col-lg-6" data-aos="fade">
                 <p className="dh-kicker">Project Overview</p>
-                <h2 className="dh-title dh-title--sm">
-                  {p.heading[0]} <br className="d-none d-xl-block" /> {p.heading[1]}
+                <h2 className="dh-title dh-title--sm dh-title--fit">
+                  {p.heading[0]} <br className="d-none d-lg-block" /> {p.heading[1]}
                 </h2>
                 <p className="dh-text">{p.intro}</p>
 

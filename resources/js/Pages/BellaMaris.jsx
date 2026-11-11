@@ -2,7 +2,7 @@ import MainLayout from "@/Layouts/MainLayout";
 import HotelBookingForm from "@/Components/HotelBookingForm";
 import VideoPalyer, { ImageGallery } from "@/Components/VideoPalyer";
 import { Head, Link } from "@inertiajs/react";
-import { FiFileText, FiMapPin } from "react-icons/fi";
+import { FiDownload, FiFileText, FiMapPin } from "react-icons/fi";
 import banner from "../../../public/images/new/header/header.png";
 
 const OWNERSHIP = [
@@ -14,14 +14,36 @@ const OWNERSHIP = [
   { name: "Presidential Villa", size: "4500 sft" },
 ];
 
+// Brochure PDF offered by the download button beside "Become an Investor"
+const BROCHURE = "/downloads/Bella-Maris-Brochure.pdf";
+
+// 3D renders shown under the "3D Photo" gallery tab
 const PHOTOS = [
-  "/images/new/design/bella-overview.png",
-  "/images/img/DHRL Bella Maris_00007.jpg",
-  "/images/img/DHRL Bella Maris_00004.jpg",
-  "/images/img/DHRL Bella Maris_00005.jpg",
-  "/images/new/design/bella-ownership.png",
+  "/images/new/bella-3d/bella-maris-3d-01.jpg",
+  "/images/new/bella-3d/bella-maris-3d-02.jpg",
+  "/images/new/bella-3d/bella-maris-3d-03.jpg",
+  "/images/new/bella-3d/bella-maris-3d-04.jpg",
+  "/images/new/bella-3d/bella-maris-3d-05.jpg",
+  "/images/new/bella-3d/bella-maris-3d-06.jpg",
+  "/images/new/bella-3d/bella-maris-3d-07.jpg",
+  "/images/new/bella-3d/bella-maris-3d-08.jpg",
+  "/images/new/bella-3d/bella-maris-3d-09.jpg",
+  "/images/new/bella-3d/bella-maris-3d-10.jpg",
+  "/images/new/bella-3d/bella-maris-3d-11.jpg",
+  "/images/new/bella-3d/bella-maris-3d-12.jpg",
+  "/images/new/bella-3d/bella-maris-3d-13.jpg",
+  "/images/new/bella-3d/bella-maris-3d-14.jpg",
+  "/images/new/bella-3d/bella-maris-3d-15.jpg",
+  "/images/new/bella-3d/bella-maris-3d-16.jpg",
 ];
-const PLANS = ["/images/new/design/bella-masterplan.png", "/images/new/over.webp"];
+// floor plans shown under the "Floor Plan" gallery tab
+const PLANS = [
+  "/images/new/bella-plans/bella-maris-ground-floor-plan.jpg",
+  "/images/new/bella-plans/bella-maris-typical-and-roof-floor-plan.jpg",
+  "/images/new/bella-plans/bella-maris-triplex-villa.jpg",
+  "/images/new/bella-plans/bella-maris-luxury-villa.jpg",
+  "/images/new/bella-plans/bella-maris-presidential-villa.jpg",
+];
 
 export default function BellaMaris({
   general,
@@ -62,7 +84,6 @@ export default function BellaMaris({
           >
             <div className="container">
               <h1 className="mt-4">Bella Maris</h1>
-              <h5 align="center">A premium hospitality destination by Defender Hotels &amp; Resorts Ltd.</h5>
             </div>
           </div>
         </div>
@@ -70,11 +91,11 @@ export default function BellaMaris({
         {/* Project Overview */}
         <section className="dh-section dh-section--pink">
           <div className="container">
-            <div className="row align-items-center gy-5">
+            <div className="row align-items-center gy-5 dh-split">
               <div className="col-lg-6" data-aos="fade">
                 <p className="dh-kicker">Project Overview</p>
-                <h2 className="dh-title dh-title--sm">
-                  Bella Maris — Where Luxury <br className="d-none d-xl-block" /> Meets Timeless Value.
+                <h2 className="dh-title dh-title--sm dh-title--fit">
+                  Bella Maris — Where Luxury <br className="d-none d-lg-block" /> Meets Timeless Value.
                 </h2>
                 <p className="dh-text">
                   Bella Maris represents a vision of modern luxury, combining elegant architecture,
@@ -102,8 +123,17 @@ export default function BellaMaris({
                     >
                       <FiMapPin />
                     </a>
-                    <a href="#consultation" aria-label="Request brochure" title="Request brochure">
+                    <a
+                      href={BROCHURE}
+                      download="Bella Maris Brochure.pdf"
+                      className="dh-icon-box__download"
+                      aria-label="Download the Bella Maris brochure (PDF)"
+                      title="Download brochure (PDF)"
+                    >
                       <FiFileText />
+                      <span className="dh-icon-box__badge" aria-hidden="true">
+                        <FiDownload />
+                      </span>
                     </a>
                   </div>
                 </div>

@@ -1,0 +1,1 @@
+import{j as t,Y as o}from"./app-01b06f8e.js";import{M as r}from"./MainLayout-a9bbb61b.js";import"./index-b0c0144d.js";function n({status:s}){return t.jsxs(r,{children:[t.jsx(o,{title:"Forgot Password"}),t.jsx("p",{children:"text"})]})}export{n as default};

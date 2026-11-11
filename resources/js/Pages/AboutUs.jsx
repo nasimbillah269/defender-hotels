@@ -31,7 +31,6 @@ export default function AboutUs({
                     >
                         <div className="container">
                             <h1 className="mt-4">About Us</h1>
-                            <h5 align="center">At Defender Hotels &amp; Resorts Ltd., we redefine luxury living through thoughtfully designed hospitality investments.</h5>
                         </div>
                     </div>
                 </div>
@@ -99,7 +98,7 @@ export default function AboutUs({
                                 </p>
                                 <div className="dh-signature">
                                     <strong>Abu Bakar Siddique</strong>
-                                    <span>Chairman</span>
+                                    <span>Founder &amp; Chairman</span>
                                     <small>Defender Hotels &amp; Resorts Ltd.</small>
                                 </div>
                             </div>

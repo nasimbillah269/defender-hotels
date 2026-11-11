@@ -5,6 +5,7 @@ import HomeBannerBookingForm from "@/Components/HomeBannerBookingForm";
 import HomeSliderComponet from "@/Components/HomeSliderCoponent";
 import HotelBookingForm from "@/Components/HotelBookingForm";
 import HotelFacilities from "@/Components/HotelFacilities";
+import InvestorVideos from "@/Components/InvestorVideos";
 import Luxury from "@/Components/Luxury";
 import OurNews from "@/Components/OurNews";
 import ProjectsInvestments from "@/Components/ProjectsInvestments";
@@ -59,6 +60,7 @@ export default function Welcome({
                 {/* FAQ section */}
                 <HotelFacilities />
                 <ClientsSay general={general} />
+                <InvestorVideos />
                 {/* <OurNews posts={posts} /> */}
                 <HotelBookingForm  servicesList={servicesList} />
             </MainLayout>

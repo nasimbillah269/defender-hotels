@@ -1,0 +1,1 @@
+import{j as i,Y as r}from"./app-1a3eb9ec.js";import{M as t}from"./MainLayout-8f26465e.js";import"./index-ed2c340a.js";function m(){return i.jsxs(t,{children:[i.jsx(r,{title:"Email Verification"}),i.jsx("p",{children:"VerifyEmail"})]})}export{m as default};

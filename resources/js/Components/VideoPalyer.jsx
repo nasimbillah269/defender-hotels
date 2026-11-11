@@ -6,6 +6,7 @@ import "swiper/css/effect-creative";
 import video1 from "../../../public/images/Videos/DHRL Video 1.mp4";
 import video2 from "../../../public/images/Videos/DHRL Video 2.mp4";
 import { imgFallback } from "./RoomsSuites";
+import { parseYouTube } from "./ProjectsInvestments";
 
 /**
  * Project media sections shared by the project pages
@@ -32,10 +33,22 @@ export const PROJECT_VIDEOS = [
   },
 ];
 
-export default function VideoPalyer({ videos = PROJECT_VIDEOS, background = "blue" }) {
+/** Playlist needs at least this many cards to fill the column beside the player. */
+const MIN_PLAYLIST = 4;
+
+export default function VideoPalyer({ videos: source = PROJECT_VIDEOS, background = "blue" }) {
+  // too few videos → repeat them (with unique ids) so the playlist has no empty space
+  const videos = useMemo(() => {
+    if (!source.length || source.length >= MIN_PLAYLIST) return source;
+    return Array.from({ length: MIN_PLAYLIST }, (_, i) => ({
+      ...source[i % source.length],
+      id: `${source[i % source.length].id}-${i}`,
+    }));
+  }, [source]);
   const [activeId, setActiveId] = useState(videos[0]?.id);
   const active = videos.find((v) => v.id === activeId) ?? videos[0];
   if (!active) return null;
+  const youTube = parseYouTube(active.src);
 
   return (
     <section className={`dh-section dh-section--${background}`}>
@@ -47,7 +60,17 @@ export default function VideoPalyer({ videos = PROJECT_VIDEOS, background = "blu
 
         <div className="dh-vg" data-aos="fade">
           <div className="dh-vg__main">
-            <video key={active.id} src={active.src} poster={active.thumb} controls playsInline preload="metadata" />
+            {youTube ? (
+              <iframe
+                key={active.id}
+                src={`https://www.youtube.com/embed/${youTube.id}?rel=0`}
+                title={active.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            ) : (
+              <video key={active.id} src={active.src} poster={active.thumb} controls playsInline preload="metadata" />
+            )}
           </div>
 
           <div className="dh-vg__list">
@@ -59,7 +82,7 @@ export default function VideoPalyer({ videos = PROJECT_VIDEOS, background = "blu
                 onClick={() => setActiveId(v.id)}
                 aria-pressed={v.id === active.id}
               >
-                <img className="dh-vg__thumb" src={v.thumb} alt="" loading="lazy" />
+                <img className="dh-vg__thumb" src={v.thumb} alt="" loading="lazy" onError={imgFallback} />
                 <span>
                   <h6>{v.title}</h6>
                   <p>{v.text}</p>
@@ -78,30 +101,70 @@ export default function VideoPalyer({ videos = PROJECT_VIDEOS, background = "blu
  * @param sets  { photos: string[], plans?: string[] }  – when `plans` is given,
  *              "3D Photo Gallery" / "Floor Plans" tabs are shown.
  */
-export function ImageGallery({ photos = [], plans, background = "pink", alt = "Project" }) {
-  const hasTabs = Array.isArray(plans) && plans.length > 0;
-  const [tab, setTab] = useState(hasTabs ? "plans" : "photos");
+export function ImageGallery({ photos = [], recent, plans, background = "pink", alt = "Project" }) {
+  // "3D Photo" and "Floor Plan" tabs are always shown (an empty one shows a "coming soon" note);
+  // "Recent Image" appears only when images are supplied
+  const sets = useMemo(() => {
+    const list = (v) => (Array.isArray(v) ? v : []);
+    return [
+      { key: "photos", label: ["3D", "Photo"], images: list(photos) },
+      { key: "recent", label: ["Recent", "Image"], images: list(recent), optional: true },
+      { key: "plans", label: ["Floor", "Plan"], images: list(plans) },
+    ].filter((s) => !s.optional || s.images.length > 0);
+  }, [photos, recent, plans]);
+  const tabThumb = (s) => s.images[0] ?? sets.find((x) => x.images.length)?.images[0];
+  const [tab, setTab] = useState(sets[0]?.key);
   const prevRef = useRef(null);
   const nextRef = useRef(null);
-  const images = useMemo(() => (tab === "plans" ? plans : photos) ?? [], [tab, plans, photos]);
-  if (!images.length) return null;
+  const current = sets.find((s) => s.key === tab) ?? sets[0];
+  if (!sets.some((s) => s.images.length)) return null;
 
-  const switchTab = (t) => setTab(t);
+  const images = current.images;
+  const hasTabs = sets.length > 1;
   const many = images.length > 1;
 
   return (
     <section className={`dh-section dh-section--${background}`}>
       <div className="container">
-        <div className="dh-center dh-head" data-aos="fade">
-          <p className="dh-kicker">Image Gallery</p>
-          <h2 className="dh-title dh-title--sm">Explore Our World Through Every Frame.</h2>
-        </div>
+        <div className="dh-gallery-panel" data-aos="fade">
+        <h2 className="dh-gallery-panel__title">Photo Gallery</h2>
 
-        <div className={`dh-gallery ${hasTabs ? "" : "dh-gallery--single"}`} data-aos="fade">
+        <div className={`dh-gallery ${hasTabs ? "" : "dh-gallery--single"}`}>
+          {hasTabs && (
+            <div className="dh-gallery__tabs" role="tablist">
+              {sets.map((s) => (
+                <button
+                  type="button"
+                  role="tab"
+                  key={s.key}
+                  aria-selected={s.key === current.key}
+                  className={`dh-gallery__tab ${s.key === current.key ? "is-active" : ""}`}
+                  onClick={() => setTab(s.key)}
+                >
+                  <span className="dh-gallery__tabIcon">
+                    <img src={tabThumb(s)} alt="" loading="lazy" onError={imgFallback} />
+                  </span>
+                  <span className="dh-gallery__tabLabel">
+                    {s.label[0]} <br /> {s.label[1]}
+                  </span>
+                </button>
+              ))}
+            </div>
+          )}
+
           {/* carousel: active image large, next one peeks (blurred) on the right */}
+          {images.length === 0 ? (
+            <div className="dh-gallery__main dh-gallery__empty">
+              <p className="dh-gallery__emptyTitle">{current.label.join(" ")}s coming soon</p>
+              <p className="dh-gallery__emptyText">
+                Contact us for the latest {current.label.join(" ").toLowerCase()}s of {alt}.
+              </p>
+              <a href="#consultation" className="dh-btn">Request Details</a>
+            </div>
+          ) : (
           <div className="dh-gallery__main dh-gallery__carousel">
             <Swiper
-              key={tab}
+              key={current.key}
               modules={[Navigation, EffectCreative]}
               effect="creative"
               loop={images.length > 3}
@@ -125,7 +188,7 @@ export function ImageGallery({ photos = [], plans, background = "pink", alt = "P
               }}
             >
               {images.map((src, i) => (
-                <SwiperSlide key={`${tab}-${i}`}>
+                <SwiperSlide key={`${current.key}-${i}`}>
                   <img src={src} alt={`${alt} gallery image ${i + 1}`} loading="lazy" onError={imgFallback} />
                 </SwiperSlide>
               ))}
@@ -137,29 +200,8 @@ export function ImageGallery({ photos = [], plans, background = "pink", alt = "P
               </>
             )}
           </div>
-
-          {hasTabs && (
-            <div className="dh-gallery__tabs" role="tablist">
-              <button
-                type="button"
-                role="tab"
-                aria-selected={tab === "photos"}
-                className={`dh-gallery__tab ${tab === "photos" ? "is-active" : ""}`}
-                onClick={() => switchTab("photos")}
-              >
-                3D Photo <br /> Gallery
-              </button>
-              <button
-                type="button"
-                role="tab"
-                aria-selected={tab === "plans"}
-                className={`dh-gallery__tab ${tab === "plans" ? "is-active" : ""}`}
-                onClick={() => switchTab("plans")}
-              >
-                Floor <br /> Plans
-              </button>
-            </div>
           )}
+        </div>
         </div>
       </div>
     </section>

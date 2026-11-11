@@ -1,7 +1,7 @@
 import { FaWhatsapp } from "react-icons/fa";
 
 /**
- * Floating WhatsApp button (bottom-left).
+ * Floating WhatsApp button (bottom-right, above the chat button).
  * Pulse rings + gentle icon wiggle (no hover effect).
  */
 const PHONE = "8801953000022"; // international format, digits only (wa.me requirement)

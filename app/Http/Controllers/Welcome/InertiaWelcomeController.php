@@ -345,9 +345,45 @@ class InertiaWelcomeController extends Controller
         }
         ///////Image Uploard End///////////
 
+        // Invest Now form → thank-you page (the booking id is kept in the session for that one view)
+        if($booking->type==0){
+            return redirect()->route('investSuccess')->with('investment_id', $booking->id);
+        }
+
         return redirect()->back()
             ->withErrors(['status'=>'success','message' => 'Your Booking has been send success. we are responsonse as soon as possiable']);
 
+    }
+
+    /** Thank-you page shown once after the Invest Now form is submitted. */
+    public function investSuccess(Request $r){
+        $booking = Booking::find(session('investment_id'));
+        if(!$booking){
+            return redirect('/invest-now');
+        }
+
+        $investment = [
+            'reference'      => 'DHRL-'.str_pad($booking->id, 6, '0', STR_PAD_LEFT),
+            'name'           => $booking->name,
+            'email'          => $booking->email,
+            'mobile'         => $booking->mobile,
+            'category'       => optional($booking->category)->name,
+            'quantity'       => (int) $booking->quantity,
+            'amount'         => (float) $booking->amount,
+            'booking_amount' => (float) $booking->booking_amount,
+            'payment_method' => $booking->payment_method,
+            'date'           => $booking->created_at->format('d M Y, h:i A'),
+        ];
+
+        $meta = [
+            'title' => websiteTitle('Investment Submitted'),
+            'description' => general()->meta_description,
+            'keywords' => general()->meta_keyword,
+            'image' => asset(general()->logo),
+            'url' => url('/invest-now'),
+        ];
+
+        return Inertia::render('InvestSuccess', compact('investment','meta'));
     }
 
     public function blogCategory($slug){
@@ -507,7 +543,7 @@ class InertiaWelcomeController extends Controller
                   'id'    => $item->id,
                   'title' => $item->name,
                   'url'   => $item->search_key,
-                  'thumb' => asset($item->image()),
+                  'thumb' => $item->videoThumb(),
               ];
           })->values();
 
@@ -630,10 +666,11 @@ class InertiaWelcomeController extends Controller
         //Booking Page
         if($page->template=='Booking'){
             $categores =Attribute::latest()->where('type',0)->where('status','active')->where('fetured',true)->get(['id','name']);
-            $servicesList =Post::where('type',3)
+            // Ownership packages (posts.type = 6, see OwnershipPackageSeeder)
+            $servicesList =Post::where('type',6)
             ->where('status','active')
-            ->whereDate('created_at','<=',Carbon::now())
-            ->get(['id','name','share_price','share_quantity']);
+            ->orderBy('view')
+            ->get(['id','name','short_description','share_price','share_quantity']);
 
             return Inertia::render('BookingPage', compact('page','categores','servicesList','meta'));
         }

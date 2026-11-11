@@ -12,7 +12,7 @@ import banner from "../../../public/images/new/header/header.png";
 const thumbFor = (v) => {
   const yt = parseYouTube(v.url);
   if (v.thumb && !/noimage\.jpg$/i.test(v.thumb)) return v.thumb;
-  return yt ? `https://img.youtube.com/vi/${yt.id}/hqdefault.jpg` : v.thumb;
+  return yt ? `https://i.ytimg.com/vi/${yt.id}/${yt.vertical ? "oardefault" : "hqdefault"}.jpg` : v.thumb;
 };
 
 export default function Videos({

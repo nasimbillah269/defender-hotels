@@ -1,0 +1,1 @@
+import{j as r,Y as t}from"./app-c97ad8dc.js";import{M as e}from"./MainLayout-a5957711.js";import"./index-4ae8ac92.js";function n(){return r.jsxs(e,{children:[r.jsx(t,{title:"Register"}),r.jsx("p",{children:"regeister"})]})}export{n as default};

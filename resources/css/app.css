@@ -1289,12 +1289,7 @@ td.tableTitle {
 .singleBLogSection  .postDes {
     margin-top: 40px;
 }
-.singleBLogSection  .postDes p {
-    color: #ebebeb;
-    font-size: 19px;
-    text-align: justify;
-    line-height: 26px;
-}
+/* post body typography: see .dh-richtext in style.css */
 .singleBLogSection .post-user-content p {
     color: #fff;
     line-height: 20px;
@@ -1359,9 +1354,7 @@ td.tableTitle {
     color: black;
     font-size: 18px;
 }
-.singleBLogSection .postDes p{
-    color: black !important;
-}
+
 
 .singleBLogSection .post-comment-section textarea{
     border: 0;

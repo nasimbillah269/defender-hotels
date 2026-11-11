@@ -210,7 +210,10 @@ const Footer = ({ general, footerMenu2, footerMenu3, footerMenu4}) => {
                             <div className="col-md-4">
                                 <div className="designText">
                                     <p>
-                                        Powered By - ARB Design
+                                        Powered By -{" "}
+                                        <a href="https://arbdesignbd.com/" target="_blank" rel="noopener noreferrer">
+                                            ARB Design
+                                        </a>
                                     </p>
                                 </div>
                             </div>

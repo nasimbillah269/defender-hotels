@@ -68,7 +68,7 @@ export default function ContactUs({
         footerMenu4={footerMenu4}
       >
         {/* Banner */}
-        <div className="pageBanner">
+        <div className="pageBanner pageBanner--contact">
           <div
             className="bgImg"
             style={{
@@ -80,9 +80,6 @@ export default function ContactUs({
           >
             <div className="container">
               <h1 className="mt-4">Contact Us</h1>
-              <h5 align="center">
-                We’re here to help—send us a message and our team will respond shortly.
-              </h5>
             </div>
           </div>
         </div>

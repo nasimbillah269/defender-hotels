@@ -22,7 +22,7 @@ function BenefitList({ items, openId, onToggle, className = "" }) {
               type="button"
               className="dh-benefit__btn"
               aria-expanded={open}
-              onClick={() => onToggle(open ? null : b.id)}
+              onClick={() => onToggle(b.id)}
             >
               <span>{b.title}</span>
               <i aria-hidden="true">&gt;</i>
@@ -41,9 +41,10 @@ function BenefitList({ items, openId, onToggle, className = "" }) {
 }
 
 export default function ChooseUs() {
-  // each list keeps its own open item, so clicking one side never closes the other
+  // each list always has exactly one open item (clicking another switches to it) and every
+  // open panel has the same height, so the lists never change height and the next section stays put
   const [openLeft, setOpenLeft] = useState(1);
-  const [openRight, setOpenRight] = useState(null);
+  const [openRight, setOpenRight] = useState(5);
 
   return (
     <section className="dh-section dh-why">

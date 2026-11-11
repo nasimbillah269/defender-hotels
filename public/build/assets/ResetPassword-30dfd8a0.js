@@ -1,0 +1,1 @@
+import{j as t,Y as s}from"./app-49fae042.js";import{M as r}from"./MainLayout-f6470d2a.js";import"./index-eafa7e67.js";function i(){return t.jsx(r,{children:t.jsx(s,{title:"Reset Password"})})}export{i as default};

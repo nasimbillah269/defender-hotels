@@ -60,6 +60,23 @@ class Post extends Model
         }
     }
     
+    /**
+     * Thumbnail URL for a video post (type 5): the uploaded image when there is one,
+     * otherwise the thumbnail of the YouTube link stored in search_key.
+     */
+    public function videoThumb(){
+        if($this->imageFile){
+            return asset($this->imageFile->file_url);
+        }
+        $link = (string) $this->search_key;
+        if(preg_match('~(?:youtube\.com/(?:watch\?(?:.*&)?v=|embed/|shorts/|live/)|youtu\.be/)([A-Za-z0-9_-]{11})~', $link, $m)){
+            // Shorts have a portrait thumbnail; regular videos a landscape one
+            $file = str_contains($link, '/shorts/') ? 'oardefault.jpg' : 'hqdefault.jpg';
+            return 'https://i.ytimg.com/vi/'.$m[1].'/'.$file;
+        }
+        return asset('medies/noimage.jpg');
+    }
+
     public function imageName(){
         
         if($this->imageFile){

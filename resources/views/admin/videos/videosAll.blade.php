@@ -111,7 +111,7 @@
                                                     <span><i class="fa fa-calendar" style="color: #1ab394;"></i> {{$video->created_at->format('d-m-Y')}}</span>
                                                 </td>
                                                 <td style="padding: 5px; text-align: center;">
-                                                    <img src="{{asset($video->image())}}" style="max-width: 60px; max-height: 80px;" />
+                                                    <img src="{{$video->videoThumb()}}" style="max-width: 60px; max-height: 80px;" />
                                                 </td>
                                                 <td style="word-break: break-all;">
                                                     @if($video->search_key)

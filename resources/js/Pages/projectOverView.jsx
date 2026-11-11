@@ -37,7 +37,7 @@ export default function projectOverView({
 
                 <section className="dh-section dh-section--pink">
                     <div className="container">
-                        <div className="row align-items-center gy-5">
+                        <div className="row align-items-center gy-5 dh-split">
                             <div className="col-lg-6" data-aos="fade">
                                 <p className="dh-kicker">Project Overview</p>
                                 <h2 className="dh-title dh-title--sm">

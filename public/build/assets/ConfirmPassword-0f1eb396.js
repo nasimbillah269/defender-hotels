@@ -1,0 +1,1 @@
+import{j as r,Y as o}from"./app-4579ab97.js";import{M as s}from"./MainLayout-564c4497.js";import"./index-43276c10.js";function a(){return r.jsxs(s,{children:[r.jsx(o,{title:"Confirm Password"}),r.jsx("p",{children:"confirm passowrd"})]})}export{a as default};

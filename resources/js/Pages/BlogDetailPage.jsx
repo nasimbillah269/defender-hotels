@@ -116,7 +116,7 @@ export default function BlogDetailPage({
                         <div className="row">
                             <div className="col-md-12" >
                                 <div className="postDes">
-                                    <div dangerouslySetInnerHTML={{ __html: blog.description }} />  
+                                    <div className="dh-richtext" dangerouslySetInnerHTML={{ __html: blog.description }} />  
                                 </div>
                             </div>
                         </div>

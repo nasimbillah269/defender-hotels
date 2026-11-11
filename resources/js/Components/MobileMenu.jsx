@@ -1,7 +1,6 @@
 import { Link } from "@inertiajs/react";
 import { useEffect, useMemo, useState } from "react";
-import { FaTimes } from "react-icons/fa";
-import { FiPlus, FiMinus } from "react-icons/fi";
+import { FiX, FiChevronDown, FiPhoneCall } from "react-icons/fi";
 
 const MobileMenu = ({ general, headerMenu, isOpen, onClose, activePath }) => {
   const [openSubmenu, setOpenSubmenu] = useState(null);
@@ -81,91 +80,109 @@ const MobileMenu = ({ general, headerMenu, isOpen, onClose, activePath }) => {
       });
   }, [headerMenu]);
 
+  // Close with the Escape key
+  useEffect(() => {
+    if (!isOpen) return undefined;
+    const onKey = (e) => e.key === "Escape" && onClose();
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [isOpen, onClose]);
+
+  const phone = general?.mobile || "+88 01953 000022";
+  const isPlaceholder = (slug) => String(slug ?? "").trim().startsWith("#");
+
   return (
     <>
-      <div className={`sidebar ${isOpen ? "active" : ""}`}>
-        <div className="sd-header d-flex justify-content-between align-items-center">
-          <Link href="/" onClick={onClose}>
-            <img
-              src={`/${general?.logo}`}
-              className="logo-img"
-              alt={general?.title || "Logo"}
-            />
+      <aside
+        className={`dh-mnav ${isOpen ? "is-open" : ""}`}
+        aria-hidden={!isOpen}
+        aria-label="Mobile navigation"
+      >
+        <div className="dh-mnav__head">
+          <Link href="/" onClick={onClose} className="dh-mnav__logo">
+            <img src={`/${general?.logo}`} alt={general?.title || "Logo"} />
           </Link>
-
-          <button
-            type="button"
-            className="btn btn-light"
-            onClick={onClose}
-            aria-label="Close menu"
-          >
-            <FaTimes />
+          <button type="button" className="dh-mnav__close" onClick={onClose} aria-label="Close menu">
+            <FiX />
           </button>
         </div>
 
-        {cleanedMenu?.length > 0 && (
-          <div className="sd-body">
-            <ul>
-              {cleanedMenu.map((item, index) => {
-                const parentActive =
-                  isActive(item.slug) ||
-                  (item.items?.some((sub) => isActive(sub.slug)) ?? false);
+        <nav className="dh-mnav__body">
+          <ul className="dh-mnav__list">
+            {cleanedMenu.map((item, index) => {
+              const hasChildren = (item.items?.length ?? 0) > 0;
+              const parentActive =
+                isActive(item.slug) ||
+                (item.items?.some((sub) => isActive(sub.slug)) ?? false);
+              const open = openSubmenu === index;
 
-                const hasChildren = (item.items?.length ?? 0) > 0;
-
-                return (
-                  <li key={item?.id ?? item?.slug ?? index}>
-                    <div className="d-flex align-items-center justify-content-between">
+              return (
+                <li key={item?.id ?? item?.slug ?? index} className={`dh-mnav__item ${open ? "is-open" : ""}`}>
+                  <div className="dh-mnav__row">
+                    {hasChildren && isPlaceholder(item.slug) ? (
+                      <button
+                        type="button"
+                        className={`dh-mnav__link ${parentActive ? "is-active" : ""}`}
+                        onClick={() => toggleSubmenu(index)}
+                      >
+                        {item.title}
+                      </button>
+                    ) : (
                       <Link
                         href={normalize(item.slug)}
-                        className={`sd-link ${parentActive ? "active" : ""}`}
+                        className={`dh-mnav__link ${parentActive ? "is-active" : ""}`}
                         onClick={onClose}
                       >
                         {item.title}
                       </Link>
-
-                      {hasChildren && (
-                        <button
-                          type="button"
-                          className="toggle-btn"
-                          onClick={() => toggleSubmenu(index)}
-                          aria-label="Toggle submenu"
-                        >
-                          {openSubmenu === index ? <FiMinus /> : <FiPlus />}
-                        </button>
-                      )}
-                    </div>
-
-                    {hasChildren && openSubmenu === index && (
-                      <ul className="dropdown-menu">
-                        {item.items.map((subItem, subIndex) => (
-                          <li key={subItem?.id ?? subItem?.slug ?? subIndex}>
-                            <Link
-                              href={normalize(subItem.slug)}
-                              className={`dropdown-item ${
-                                isActive(subItem.slug) ? "active" : ""
-                              }`}
-                              onClick={onClose}
-                            >
-                              {subItem.title}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
                     )}
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        )}
-      </div>
+
+                    {hasChildren && (
+                      <button
+                        type="button"
+                        className="dh-mnav__toggle"
+                        onClick={() => toggleSubmenu(index)}
+                        aria-label={`${open ? "Collapse" : "Expand"} ${item.title}`}
+                        aria-expanded={open}
+                      >
+                        <FiChevronDown />
+                      </button>
+                    )}
+                  </div>
+
+                  {hasChildren && open && (
+                    <ul className="dh-mnav__sub">
+                      {item.items.map((subItem, subIndex) => (
+                        <li key={subItem?.id ?? subItem?.slug ?? subIndex}>
+                          <Link
+                            href={normalize(subItem.slug)}
+                            className={`dh-mnav__sublink ${isActive(subItem.slug) ? "is-active" : ""}`}
+                            onClick={onClose}
+                          >
+                            {subItem.title}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+
+        <div className="dh-mnav__foot">
+          <Link href="/invest-now" className="dh-mnav__cta" onClick={onClose}>
+            Book a Consultation
+          </Link>
+          <a className="dh-mnav__phone" href={`tel:${phone.replace(/[^+\d]/g, "")}`}>
+            <FiPhoneCall /> {phone}
+          </a>
+        </div>
+      </aside>
 
       {/* Overlay */}
-      <div
-        className={`sidebar-overlay ${isOpen ? "active" : ""}`}
-        onClick={onClose}
-      />
+      <div className={`dh-mnav-overlay ${isOpen ? "is-open" : ""}`} onClick={onClose} />
     </>
   );
 };

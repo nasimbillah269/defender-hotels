@@ -78,10 +78,7 @@ const Header = ({ auth, general, headerMenu }) => {
               aria-label="Toggle navigation"
               onClick={() => setIsMenuOpen(true)}
             >
-              <span className="navbar-toggler-icon d-flex align-items-center justify-content-center">
-                <FiMenu size={26} />
-            </span>
-
+              <FiMenu size={26} />
             </button>
 
             {/* Desktop Menu */}

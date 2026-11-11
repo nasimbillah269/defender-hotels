@@ -33,41 +33,7 @@ export default function Comments({blog,comments}) {
     return (
         <>
            <div className="row">
-                <div className="col-md-8" data-aos="fade">
-                    {comments.data.length > 0 ?(
-                        <>
-                            {comments.data.map((comment)=>
-                            <div className="news-post-comment-wrap">
-                                <div className="post-user-comment">
-                                <img
-                                    src={comment.image_url}
-                                    alt={comment.name}
-                                />
-                                </div>
-                                <div className="post-user-content">
-                                    {/* <span>
-                                        <i className="star-rating"></i>
-                                        <i className="star-rating"></i>
-                                        <i className="star-rating"></i>
-                                        <i className="star-rating"></i>
-                                        <i className="star-rating"></i>
-                                        </span> */}
-                                    <h3>{comment.name}<span> {comment.formatDate}</span></h3>
-                                    <p>
-                                    {comment.content}
-                                    </p>
-                                    {/* <a className="post-repay" href="#">Reply<i className="ti-back-left"></i></a> */}
-                                </div>
-                            </div>
-                            )}
-                        </>
-                    ):(
-                        <div className="news-post-comment-wrap">
-                            No Comments
-                        </div>
-                    )}
-                </div>
-                
+                {/* posted comments list (avatar + name + text) removed from the blog page */}
                 <div className="col-md-8 mb-30" data-aos="fade">
                     <h2 className="mb-30">Leave a Reply</h2>
                     <AlertMessageComponents status={errors.status} message={errors.message} />

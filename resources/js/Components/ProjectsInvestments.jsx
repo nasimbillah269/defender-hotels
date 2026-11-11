@@ -1,12 +1,17 @@
 import { useEffect, useState } from "react";
 import { Link } from "@inertiajs/react";
-import video1 from "../../../public/images/Videos/DHRL Video 1.mp4";
-import video2 from "../../../public/images/Videos/DHRL Video 2.mp4";
 
 const VIDEOS = [
-  { id: "v1", src: video1, thumb: "/images/new/design/video-thumb-1.png", title: "Defender Hotels & Resorts" },
-  { id: "v2", src: video2, thumb: "/images/new/design/video-thumb-2.png", title: "Bella Maris, Inani – Cox's Bazar" },
+  { id: "v1", src: "https://www.facebook.com/reel/1550930067079207", thumb: "/images/new/design/video-thumb-1.png", title: "Defender Hotels & Resorts" },
+  { id: "v2", src: "https://www.youtube.com/shorts/7As_dFUMrwA", thumb: "/images/new/investor-videos/7As_dFUMrwA.jpg", title: "Bella Maris, Inani – Cox's Bazar" },
 ];
+
+/** Returns { href, vertical } for Facebook video/reel links, else null. */
+export function parseFacebook(url = "") {
+  const s = String(url);
+  if (!/^https?:\/\/(?:www\.|m\.|web\.)?(?:facebook\.com|fb\.watch)\//.test(s)) return null;
+  return { href: s, vertical: /\/reel\//.test(s) };
+}
 
 /** Fullscreen video modal (also used by other sections via named export). */
 /** Returns { id, vertical } for YouTube links (watch, youtu.be, embed, shorts, live), else null. */
@@ -17,7 +22,7 @@ export function parseYouTube(url = "") {
   return m ? { id: m[1], vertical: /\/shorts\//.test(url) } : null;
 }
 
-export function VideoModal({ src, onClose }) {
+export function VideoModal({ src, onClose, orientation }) {
   useEffect(() => {
     if (!src) return undefined;
     const onKey = (e) => e.key === "Escape" && onClose();
@@ -31,6 +36,9 @@ export function VideoModal({ src, onClose }) {
 
   if (!src) return null;
   const youTube = parseYouTube(src);
+  const facebook = youTube ? null : parseFacebook(src);
+  // a caller can force the frame shape (e.g. a landscape video posted under a /reel/ link)
+  const fbVertical = orientation ? orientation === "portrait" : facebook?.vertical;
 
   return (
     <div className="dh-modal" role="dialog" aria-modal="true" onClick={onClose}>
@@ -44,6 +52,15 @@ export function VideoModal({ src, onClose }) {
               src={`https://www.youtube.com/embed/${youTube.id}?autoplay=1&rel=0`}
               title="YouTube video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        ) : facebook ? (
+          <div className={`dh-modal__yt ${fbVertical ? "is-vertical" : ""}`}>
+            <iframe
+              src={`https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(facebook.href)}&show_text=false&autoplay=true`}
+              title="Facebook video"
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
               allowFullScreen
             />
           </div>

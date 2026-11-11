@@ -43,7 +43,7 @@ export default function PageView({
                     style={{ minHeight: "300px" }}
                 >
                     <div className="container">
-                     <div style={{ padding: "50px 0"}} dangerouslySetInnerHTML={{ __html: page.description }} />  
+                     <div className="dh-richtext" style={{ padding: "50px 0"}} dangerouslySetInnerHTML={{ __html: page.description }} />  
                     </div>
                 </div>
             </MainLayout>

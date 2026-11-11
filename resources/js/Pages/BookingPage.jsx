@@ -272,8 +272,8 @@ export default function BookingPage({
                       <option value="">Category of Ownership</option>
                       {servicesList.map((ctg) => (
                         <option key={ctg.id} value={ctg.id}>
-                          {ctg.name}
-                          {ctg.share_price ? ` — ${ctg.share_price}` : ""}
+                          {ctg.short_description ||
+                            `${ctg.name}${ctg.share_price ? ` — BDT ${Number(ctg.share_price).toLocaleString()}` : ""}`}
                         </option>
                       ))}
                     </Form.Select>
@@ -371,9 +371,6 @@ export default function BookingPage({
                   <button type="submit" className="dh-btn dh-btn--lg" disabled={processing || !!amountMessage}>
                     {processing ? "SUBMITTING..." : "INVEST NOW"}
                   </button>
-                  <p className="dh-text dh-center mt-3 mb-0" style={{ fontSize: 13 }}>
-                    By submitting this form, you agree to be contacted by our team for verification and next steps.
-                  </p>
                 </div>
               </Form>
             </div>

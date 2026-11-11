@@ -7571,12 +7571,12 @@ header .header-cta { padding: 11px 22px; }
   .dh-lightbox__nav { top: auto; bottom: 18px; transform: none; }
 }
 
-/* ---------- Floating WhatsApp button (bottom-left, premium) ---------- */
+/* ---------- Floating WhatsApp button (bottom-right, above the chat button) ---------- */
 .wa-float {
   --wa-size: 58px;
   position: fixed;
-  left: 24px;
-  bottom: 24px;
+  right: 21px;
+  bottom: 96px;
   z-index: 9998;
   display: flex;
   align-items: center;
@@ -7661,7 +7661,7 @@ header .header-cta { padding: 11px 22px; }
 
 /* Mobile: smaller, and sits above the fixed "Invest Now" bar */
 @media (max-width: 767px) {
-  .wa-float { --wa-size: 52px; left: 14px; bottom: 92px; }
+  .wa-float { --wa-size: 52px; right: 14px; bottom: 92px; }
   .wa-float__icon { font-size: 27px; }
 }
 
@@ -8535,3 +8535,552 @@ footer.footer.dh-footer .footerMenuLink a:hover { padding-left: 0 !important; tr
 .dh-gallery__carousel .dh-gallery__nav--next { right: calc(24% + 24px); }
 /* Footer: static white logo (already trimmed, so no offset needed) */
 .dh-footer .logoDiv img { margin-left: 0; width: 42%; max-width: 230px; height: auto; padding-bottom: 0; margin-bottom: 30px; display: block; }
+
+
+/* ---------- Rich text (admin editor content: blog, news & events, pages) ---------- */
+.dh-richtext { color: #1b1b2a; font-size: 17px; line-height: 1.75; overflow-wrap: break-word; }
+.dh-richtext > :first-child { margin-top: 0; }
+.dh-richtext p { margin: 0 0 1em; font-size: inherit; line-height: inherit; }
+.dh-richtext h1, .dh-richtext h2, .dh-richtext h3,
+.dh-richtext h4, .dh-richtext h5, .dh-richtext h6 {
+  color: #1b1b2a; font-weight: 700; line-height: 1.3; margin: 1.5em 0 0.5em;
+}
+.dh-richtext h1 { font-size: 2rem; }
+.dh-richtext h2 { font-size: 1.7rem; }
+.dh-richtext h3 { font-size: 1.45rem; }
+.dh-richtext h4 { font-size: 1.3rem; }
+.dh-richtext h5 { font-size: 1.15rem; }
+.dh-richtext h6 { font-size: 1rem; }
+.dh-richtext h1:empty, .dh-richtext h2:empty, .dh-richtext h3:empty,
+.dh-richtext h4:empty, .dh-richtext h5:empty, .dh-richtext h6:empty { display: none; }
+.dh-richtext b, .dh-richtext strong { font-weight: 700; }
+.dh-richtext i, .dh-richtext em { font-style: italic; }
+.dh-richtext u { text-decoration: underline; }
+.dh-richtext span { display: inline; }
+.dh-richtext a { display: inline; color: var(--dh-purple); text-decoration: underline; }
+.dh-richtext ul, .dh-richtext ol { margin: 0 0 1em; padding-left: 2.2em; }
+.dh-richtext ul { list-style: disc outside; }
+.dh-richtext ol { list-style: decimal outside; }
+.dh-richtext ul ul { list-style-type: circle; }
+.dh-richtext li { display: list-item; list-style: inherit; margin: 0 0 0.35em; padding: 0; font-size: inherit; line-height: inherit; color: inherit; }
+.dh-richtext blockquote { margin: 0 0 1em; padding: 8px 18px; border-left: 4px solid var(--dh-purple); color: #444; }
+.dh-richtext img { display: inline-block; max-width: 100%; height: auto; border-radius: 8px; }
+.dh-richtext table { width: 100%; border-collapse: collapse; margin: 0 0 1em; }
+.dh-richtext th, .dh-richtext td { border: 1px solid #d9d9e3; padding: 8px 12px; color: inherit; }
+.dh-richtext tr { border: 0; padding: 0; }
+.dh-richtext hr { border: 0; border-top: 1px solid #d9d9e3; margin: 1.5em 0; }
+@media (max-width: 767px) {
+  .dh-richtext { font-size: 15.5px; }
+  .dh-richtext h1 { font-size: 1.6rem; }
+  .dh-richtext h2 { font-size: 1.4rem; }
+  .dh-richtext h3 { font-size: 1.25rem; }
+  .dh-richtext h4 { font-size: 1.15rem; }
+}
+
+/* Inner-page banner: title sits a little lower, clear of the floating header */
+.pageBanner .bgImg h1 { margin-top: 56px !important; margin-bottom: 0; }
+
+.dh-consult__card textarea.form-control { height: auto; min-height: 110px; padding: 10px 15px; resize: vertical; }
+
+/* Project pages: overview heading sized to stay on two lines beside the image */
+.dh-title.dh-title--fit { font-size: clamp(24px, 2.7vw, 38px); }
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .dh-title.dh-title--fit { font-size: 26px; }
+}
+
+/* =========================================================
+   Mobile header (logo + menu button) and slide-in menu
+   ========================================================= */
+@media (max-width: 991.98px) {
+  header .navbar .header-container {
+    display: flex; flex-wrap: nowrap; align-items: center; justify-content: space-between;
+    max-width: none; padding-left: 18px; padding-right: 8px;
+  }
+  header .navbar .logo-wrapper { float: none; height: auto; margin: 0; padding: 0 !important; flex: 0 0 auto; }
+  header .navbar .logo-wrapper .logo { display: block; margin: 0; line-height: 0; }
+  header .navbar .logo-img { display: block; width: auto; height: 34px; max-width: 150px; padding: 0; margin: 0; object-fit: contain; }
+  header .navbar .navbar-toggler {
+    flex: 0 0 44px; width: 44px; height: 44px; margin: 0; padding: 0;
+    display: grid; place-items: center; line-height: 0;
+    border: 0; border-radius: 50%; background: transparent; color: var(--dh-ink); box-shadow: none;
+    transition: background .2s ease;
+  }
+  header .navbar .navbar-toggler:active,
+  header .navbar .navbar-toggler:focus-visible { background: rgba(123, 42, 143, .1); outline: 0; }
+  header .navbar .navbar-toggler svg { display: block; stroke: var(--dh-ink); }
+}
+
+.dh-mnav-overlay {
+  position: fixed; inset: 0; z-index: 10000; background: rgba(20, 6, 38, .55);
+  opacity: 0; visibility: hidden; transition: opacity .3s ease, visibility .3s ease;
+}
+.dh-mnav-overlay.is-open { opacity: 1; visibility: visible; }
+
+.dh-mnav {
+  position: fixed; top: 0; right: 0; bottom: 0; z-index: 10001;
+  width: min(86vw, 340px); display: flex; flex-direction: column;
+  background: #fff; color: var(--dh-ink); font-family: var(--dh-font);
+  border-radius: 24px 0 0 24px; box-shadow: -18px 0 50px rgba(20, 4, 40, .22);
+  transform: translateX(105%); visibility: hidden;
+  transition: transform .35s cubic-bezier(.22, .8, .3, 1), visibility .35s;
+}
+.dh-mnav.is-open { transform: translateX(0); visibility: visible; }
+
+.dh-mnav__head {
+  flex: 0 0 auto; display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 16px 18px 22px; border-bottom: 1px solid #efe9f5;
+}
+.dh-mnav__logo { display: block; line-height: 0; }
+.dh-mnav__logo img { display: block; height: 36px; width: auto; max-width: 170px; padding: 0; margin: 0; }
+.dh-mnav__close {
+  width: 40px; height: 40px; padding: 0; margin: 0; display: grid; place-items: center;
+  border: 0; border-radius: 50%; background: #f4ecfa; color: var(--dh-purple); font-size: 20px; line-height: 0;
+  cursor: pointer; transition: background .2s ease, color .2s ease;
+}
+.dh-mnav__close:hover, .dh-mnav__close:focus-visible { background: var(--dh-purple); color: #fff; outline: 0; }
+
+.dh-mnav__body { flex: 1 1 auto; overflow-y: auto; overscroll-behavior: contain; padding: 8px 14px; }
+.dh-mnav__list, .dh-mnav__sub { list-style: none; margin: 0; padding: 0; }
+.dh-mnav__item { margin: 0; padding: 0; border-bottom: 1px solid #f3eef7; }
+.dh-mnav__item:last-child { border-bottom: 0; }
+.dh-mnav__row { display: flex; align-items: center; gap: 6px; }
+.dh-mnav__link {
+  flex: 1 1 auto; display: block; margin: 0; padding: 14px 10px; border: 0; background: none; text-align: left;
+  font-family: inherit; font-size: 15px; font-weight: 600; letter-spacing: .4px; text-transform: uppercase;
+  line-height: 1.3; color: var(--dh-ink); text-decoration: none; cursor: pointer;
+}
+.dh-mnav__link:hover, .dh-mnav__link.is-active { color: var(--dh-plum); }
+.dh-mnav__toggle {
+  flex: 0 0 36px; width: 36px; height: 36px; padding: 0; margin: 0; display: grid; place-items: center;
+  border: 0; border-radius: 50%; background: #f7f2fb; color: var(--dh-purple); font-size: 18px; line-height: 0; cursor: pointer;
+}
+.dh-mnav__toggle svg { transition: transform .25s ease; }
+.dh-mnav__item.is-open .dh-mnav__toggle { background: var(--dh-purple); color: #fff; }
+.dh-mnav__item.is-open .dh-mnav__toggle svg { transform: rotate(180deg); }
+.dh-mnav__sub { margin: 0 0 12px 10px; padding-left: 12px; border-left: 2px solid #eadcf5; }
+.dh-mnav__sub li { margin: 0; padding: 0; border: 0; }
+.dh-mnav__sublink {
+  display: block; padding: 9px 10px; border-radius: 8px;
+  font-size: 14.5px; font-weight: 500; line-height: 1.35; color: #4a4658; text-decoration: none;
+}
+.dh-mnav__sublink:hover, .dh-mnav__sublink.is-active { background: #f7f2fb; color: var(--dh-plum); }
+
+.dh-mnav__foot { flex: 0 0 auto; padding: 16px 20px 22px; border-top: 1px solid #efe9f5; }
+.dh-mnav__cta {
+  display: block; padding: 13px 18px; border-radius: 999px; text-align: center;
+  background: var(--dh-plum); color: #fff !important; font-size: 15px; font-weight: 700; text-decoration: none;
+}
+.dh-mnav__cta:hover { background: var(--dh-purple); }
+.dh-mnav__phone {
+  display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 12px;
+  font-size: 15px; font-weight: 600; color: var(--dh-ink); text-decoration: none;
+}
+.dh-mnav__phone svg { color: var(--dh-plum); }
+@media (min-width: 992px) { .dh-mnav, .dh-mnav-overlay { display: none; } }
+@media (prefers-reduced-motion: reduce) { .dh-mnav, .dh-mnav-overlay { transition: none; } }
+
+/* Our Projects — mobile/tablet: image on top, text below (stacked card) */
+@media (max-width: 991.98px) {
+  .dh-projects { gap: 14px; }
+  .dh-project { border-radius: 20px; overflow: hidden; }
+  .dh-project__body { grid-template-columns: 1fr; position: relative; }
+  .dh-project__media { height: auto; aspect-ratio: 16 / 10; }
+  .dh-project__media img { width: 100%; height: 100%; object-fit: cover; }
+  .dh-project__content { padding: 22px 20px 24px; justify-content: flex-start; }
+  .dh-project__content h4 { font-size: 18px; line-height: 1.4; margin: 0 0 10px; max-width: none; }
+  .dh-project__content p { font-size: 15px; line-height: 1.7; text-align: left; hyphens: manual; }
+  .dh-project__foot { padding-top: 20px; display: flex; flex-direction: column-reverse; gap: 14px; }
+  .dh-project__content h3 { font-size: 20px; }
+  .dh-project__btn { width: 100%; font-size: 16px; padding: 14px 20px; margin-bottom: 0; }
+  .dh-project__corner {
+    top: 14px; right: 14px; width: 44px; height: 44px; font-size: 22px;
+    background: #fff; box-shadow: 0 6px 18px rgba(20, 4, 40, .18);
+  }
+  .dh-project__rail { padding: 12px 16px; }
+  .dh-project__railTitle { font-size: 17px; max-height: none; text-align: left; }
+}
+
+/* =========================================================
+   Photo gallery panel: title on top, tabs on the left, stacked carousel
+   ========================================================= */
+.dh-gallery-panel {
+  padding: 34px 36px 30px; border-radius: 36px;
+  background: rgba(123, 42, 143, .06); border: 1px solid rgba(123, 42, 143, .10);
+}
+.dh-section--pink .dh-gallery-panel { background: rgba(255, 255, 255, .72); }
+.dh-gallery-panel__title {
+  margin: 0 0 34px; text-align: center; text-transform: uppercase;
+  font-family: var(--dh-font); font-size: clamp(22px, 2.2vw, 30px); font-weight: 800; letter-spacing: .5px;
+  line-height: 1.2; color: var(--dh-purple);
+}
+.dh-gallery { grid-template-columns: auto minmax(0, 1fr); gap: 56px; align-items: center; }
+.dh-gallery.dh-gallery--single { grid-template-columns: minmax(0, 1fr); }
+.dh-gallery__tabs { display: flex; flex-direction: column; gap: 20px; }
+.dh-gallery__tab {
+  width: 104px; min-width: 0; padding: 14px 8px 12px; border-radius: 26px;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  background: #f1e9f7; color: var(--dh-ink); border: 2px solid #d8c3e8; box-shadow: none;
+  font-family: var(--dh-font); font-size: 14px; font-weight: 800; line-height: 1.5;
+  text-transform: uppercase; letter-spacing: .3px; cursor: pointer;
+  transition: background .25s ease, color .25s ease, border-color .25s ease, transform .25s ease, box-shadow .25s ease;
+}
+.dh-gallery__tab:hover { transform: translateY(-2px); border-color: var(--dh-plum); }
+.dh-gallery__tab.is-active {
+  background: var(--dh-purple); border-color: var(--dh-purple); color: #fff;
+  box-shadow: 0 12px 24px rgba(74, 17, 128, .30);
+}
+.dh-gallery__tabIcon {
+  display: block; width: 40px; height: 40px; border-radius: 50%; overflow: hidden;
+  border: 3px solid #cdb3e0; background: #fff; flex: 0 0 auto;
+}
+.dh-gallery__tab.is-active .dh-gallery__tabIcon { border-color: #1f0838; }
+.dh-gallery__tabIcon img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: auto; }
+.dh-gallery__tabLabel { display: block; }
+
+.dh-gallery__carousel .dh-gallery__nav {
+  background: var(--dh-plum); color: #fff; box-shadow: 0 6px 16px rgba(74, 17, 128, .30);
+}
+.dh-gallery__carousel .dh-gallery__nav:hover { background: var(--dh-purple); }
+
+@media (max-width: 991.98px) {
+  .dh-gallery-panel { padding: 24px 16px 18px; border-radius: 24px; }
+  .dh-gallery-panel__title { margin-bottom: 20px; }
+  .dh-gallery { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .dh-gallery__tabs { flex-direction: row; justify-content: center; gap: 10px; }
+  .dh-gallery__tab {
+    flex: 0 1 auto; width: auto; flex-direction: row; gap: 8px; padding: 8px 14px 8px 8px;
+    border-radius: 999px; font-size: 12.5px; line-height: 1.2; text-align: left;
+  }
+  .dh-gallery__tabIcon { width: 32px; height: 32px; border-width: 2px; }
+  .dh-gallery__tabLabel br { display: none; }
+}
+
+/* =========================================================
+   Video gallery: framed player on the left, scrollable playlist on the right
+   ========================================================= */
+.dh-vg { grid-template-columns: minmax(0, 1fr) 320px; gap: 22px; align-items: stretch; }
+.dh-vg__main {
+  padding: 8px; border-radius: 24px; background: #fff; overflow: visible;
+  box-shadow: 0 14px 36px rgba(20, 4, 40, .08);
+}
+.dh-vg__main video, .dh-vg__main iframe {
+  display: block; width: 100%; height: auto; min-height: 0; max-height: none;
+  aspect-ratio: 16 / 9; border: 0; border-radius: 18px; background: #000; object-fit: cover;
+}
+.dh-vg__list {
+  /* same height as the player; extra videos scroll inside the card */
+  height: 0; min-height: 100%; max-height: none; overflow-y: auto; overscroll-behavior: contain;
+  justify-content: flex-start; gap: 12px; padding: 14px; border-radius: 20px; background: #fff;
+  box-shadow: 0 14px 36px rgba(20, 4, 40, .08);
+  scrollbar-width: thin; scrollbar-color: #cdb3e0 transparent;
+}
+.dh-vg__list::-webkit-scrollbar { width: 6px; }
+.dh-vg__list::-webkit-scrollbar-thumb { background: #cdb3e0; border-radius: 6px; }
+.dh-vg__item {
+  flex: 0 0 auto; min-height: 0; align-items: flex-start; gap: 14px; padding: 10px;
+  background: #fff; color: var(--dh-ink); border: 1px solid #ece3f3; border-radius: 8px;
+  font-family: var(--dh-font); text-align: left; cursor: pointer;
+  transition: background .25s ease, border-color .25s ease, transform .25s ease, box-shadow .25s ease;
+}
+.dh-vg__item:hover { transform: none; border-color: var(--dh-plum-soft); box-shadow: 0 6px 16px rgba(123, 42, 143, .12); }
+.dh-vg__item.is-active { background: var(--dh-plum); border-color: var(--dh-plum); box-shadow: 0 10px 22px rgba(123, 42, 143, .28); }
+.dh-vg__thumb { flex: 0 0 100px; width: 100px; height: 80px; border-radius: 6px; object-fit: cover; background: #f1e9f7; }
+.dh-vg__item > span { display: block; min-width: 0; padding-top: 0; }
+.dh-vg__item h6 { font-size: 13px; font-weight: 700; line-height: 1.35; margin: 0 0 6px; color: var(--dh-ink); }
+.dh-vg__item p {
+  font-size: 11.5px; line-height: 1.5; margin: 0; color: #5a566a; text-align: left;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+.dh-vg__item.is-active h6 { color: #fff; }
+.dh-vg__item.is-active p { color: rgba(255, 255, 255, .92); }
+
+@media (max-width: 991.98px) {
+  .dh-vg { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .dh-vg__main { padding: 6px; border-radius: 18px; }
+  .dh-vg__main video, .dh-vg__main iframe { border-radius: 13px; }
+  .dh-vg__list { height: auto; min-height: 0; max-height: 380px; padding: 10px; border-radius: 16px; }
+  .dh-vg__thumb { flex-basis: 92px; width: 92px; height: 72px; }
+}
+
+/* the theme's global `button:hover { border: 0 }` removed these borders on hover and made the text re-wrap */
+.dh-vg__item, .dh-vg__item:hover, .dh-vg__item:focus { border: 1px solid #ece3f3; }
+.dh-vg__item:hover { border-color: var(--dh-plum-soft); }
+.dh-vg__item.is-active, .dh-vg__item.is-active:hover { border-color: var(--dh-plum); }
+.dh-gallery__tab, .dh-gallery__tab:hover, .dh-gallery__tab:focus { border: 2px solid #d8c3e8; }
+.dh-gallery__tab:hover { border-color: var(--dh-plum); }
+.dh-gallery__tab.is-active, .dh-gallery__tab.is-active:hover { border-color: var(--dh-purple); }
+/* playlist cards share the column height evenly, so no empty space is left under them */
+@media (min-width: 992px) {
+  .dh-vg__item { flex: 1 0 auto; align-items: center; }
+}
+
+/* Brochure button: small download badge on the corner of the document icon */
+.dh-icon-box a.dh-icon-box__download { position: relative; }
+.dh-icon-box__badge {
+  position: absolute; right: 4px; bottom: 4px; width: 20px; height: 20px; border-radius: 50%;
+  display: grid; place-items: center; background: var(--dh-plum); color: #fff; font-size: 12px; line-height: 0;
+  border: 2px solid #fff; box-shadow: 0 2px 6px rgba(74, 17, 128, .35);
+  transition: transform .2s ease, background .2s ease;
+}
+.dh-icon-box__badge svg { stroke-width: 3; }
+.dh-icon-box a.dh-icon-box__download:hover .dh-icon-box__badge { background: var(--dh-purple); transform: translateY(2px); }
+
+/* Gallery tab with no images yet */
+.dh-gallery__empty {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+  aspect-ratio: 16 / 8.6; padding: 24px; text-align: center; border-radius: 24px;
+  background: #fff; border: 2px dashed #d8c3e8;
+}
+.dh-gallery__emptyTitle { margin: 0; font-size: 22px; font-weight: 800; color: var(--dh-purple); }
+.dh-gallery__emptyText { margin: 0 0 8px; font-size: 15px; color: #5a566a; max-width: 420px; }
+@media (max-width: 575.98px) { .dh-gallery__empty { aspect-ratio: auto; min-height: 240px; } }
+
+/* Footer credit link */
+.designText a { color: inherit; text-decoration: none; border-bottom: 1px solid transparent; transition: color .2s ease, border-color .2s ease; }
+.designText a:hover, .designText a:focus-visible { color: #fff; border-bottom-color: currentColor; }
+
+/* ---------- Invest Now: thank-you page ---------- */
+.dh-success {
+  max-width: 760px; margin: 0 auto; padding: 44px 40px 40px; text-align: center;
+  background: #fff; border-radius: 28px; box-shadow: 0 18px 44px rgba(20, 4, 40, .08);
+}
+.dh-success__icon {
+  width: 76px; height: 76px; margin: 0 auto 18px; display: grid; place-items: center; border-radius: 50%;
+  background: var(--dh-plum); color: #fff; font-size: 38px; line-height: 0;
+  box-shadow: 0 0 0 10px rgba(123, 42, 143, .12);
+}
+.dh-success__icon svg { stroke-width: 3; }
+.dh-success__title { margin: 4px 0 12px; font-size: clamp(24px, 2.6vw, 34px); font-weight: 800; color: var(--dh-ink); line-height: 1.25; }
+.dh-success__lead { margin: 0 auto 26px; max-width: 560px; font-size: 16px; line-height: 1.7; color: #4a4658; }
+.dh-success__lead strong { color: var(--dh-purple); white-space: nowrap; }
+.dh-success__summary { margin: 0 0 22px; padding: 6px 22px; text-align: left; border-radius: 16px; background: #f8f3fc; border: 1px solid #ece3f3; }
+.dh-success__row { display: flex; justify-content: space-between; gap: 16px; padding: 11px 0; border-bottom: 1px solid #ece3f3; }
+.dh-success__row:last-child { border-bottom: 0; }
+.dh-success__row dt { margin: 0; font-size: 14px; font-weight: 500; color: #6a6578; }
+.dh-success__row dd { margin: 0; font-size: 14.5px; font-weight: 700; color: var(--dh-ink); text-align: right; overflow-wrap: anywhere; }
+.dh-success__note { margin: 0 0 24px; font-size: 13px; color: #6a6578; }
+.dh-success__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.dh-success__actions .dh-btn { display: inline-flex; align-items: center; gap: 8px; }
+.dh-success__actions .dh-btn--outline { background: #fff; color: var(--dh-plum) !important; border: 2px solid var(--dh-plum); }
+.dh-success__actions .dh-btn--outline:hover { background: var(--dh-plum); color: #fff !important; }
+@media (max-width: 575.98px) {
+  .dh-success { padding: 32px 18px 26px; border-radius: 20px; }
+  .dh-success__summary { padding: 4px 14px; }
+  .dh-success__row { flex-direction: column; gap: 2px; }
+  .dh-success__row dd { text-align: left; }
+  .dh-success__actions .dh-btn { width: 100%; justify-content: center; }
+}
+
+/* ---------- Invest Now form: taller fields, larger text, no white autofill ---------- */
+.dh-invest .form-control, .dh-invest .form-select,
+.dh-invest .dh-file__name, .dh-invest .dh-file__btn {
+  height: 56px; font-size: 16px; border-radius: 8px;
+}
+.dh-invest .form-control { padding: 0 20px; }
+.dh-invest .form-select { padding: 0 44px 0 20px; background-position: right 18px center; }
+.dh-invest .dh-file__name { padding: 0 20px; }
+.dh-invest textarea.form-control { height: auto; min-height: 112px; padding: 16px 20px; }
+.dh-invest .row.g-3 { --bs-gutter-y: 1.25rem; }
+/* browser autofill paints saved values on a white/light-blue box — keep the purple field and white text */
+.dh-invest .form-control:-webkit-autofill,
+.dh-invest .form-control:-webkit-autofill:hover,
+.dh-invest .form-control:-webkit-autofill:focus,
+.dh-invest .form-control:-webkit-autofill:active {
+  -webkit-text-fill-color: #fff;
+  caret-color: #fff;
+  -webkit-box-shadow: 0 0 0 1000px #560f7a inset;
+  box-shadow: 0 0 0 1000px #560f7a inset;
+  transition: background-color 9999s ease-out 0s;
+}
+.dh-invest .form-control:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #4a0b6b inset, 0 0 0 3px rgba(155, 79, 176, .4);
+  box-shadow: 0 0 0 1000px #4a0b6b inset, 0 0 0 3px rgba(155, 79, 176, .4);
+}
+.dh-invest .form-control:autofill { background-color: #560f7a; color: #fff; }
+@media (max-width: 575.98px) {
+  .dh-invest .form-control, .dh-invest .form-select,
+  .dh-invest .dh-file__name, .dh-invest .dh-file__btn { height: 52px; font-size: 15px; }
+}
+
+/* Project highlights list: solid black text */
+.dh-list li { color: #000; font-weight: 500; }
+.dh-list li::before { background: #000; }
+
+/* ---------- Home: Investor Video Review (large video left, two reels right) ---------- */
+.dh-ivr__grid {
+  display: grid; grid-template-columns: minmax(0, 2.3fr) minmax(0, 1fr); gap: 20px;
+  max-width: 1040px; margin: 0 auto;
+}
+.dh-ivr__main {
+  position: relative; border-radius: 22px; overflow: hidden; background: #1b1b1f;
+  aspect-ratio: 16 / 9; box-shadow: 0 18px 40px rgba(20, 4, 40, .14);
+}
+.dh-ivr__main iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
+.dh-ivr__side { display: grid; grid-template-rows: 1fr 1fr; gap: 20px; min-height: 0; }
+.dh-ivr__card {
+  position: relative; display: block; width: 100%; height: 100%; min-height: 0; padding: 0; margin: 0;
+  border: 0; border-radius: 22px; overflow: hidden; background: #1b1b1f; cursor: pointer;
+  box-shadow: 0 12px 30px rgba(20, 4, 40, .12);
+}
+.dh-ivr__card img { width: 100%; height: 100%; object-fit: cover; object-position: center 25%; display: block; transition: transform .5s ease; }
+.dh-ivr__card::after { content: ""; position: absolute; inset: 0; background: rgba(15, 5, 25, .25); transition: background .3s ease; }
+.dh-ivr__card .dh-play { z-index: 1; width: 52px; height: 52px; }
+.dh-ivr__card:hover img { transform: scale(1.05); }
+.dh-ivr__card:hover::after { background: rgba(15, 5, 25, .1); }
+.dh-ivr__card:hover .dh-play { transform: scale(1.1); }
+.dh-ivr__card:focus-visible { outline: 3px solid var(--dh-plum); outline-offset: 3px; }
+@media (max-width: 767.98px) {
+  .dh-ivr__grid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .dh-ivr__side { grid-template-columns: 1fr 1fr; grid-template-rows: none; gap: 14px; }
+  .dh-ivr__card { aspect-ratio: 4 / 3; height: auto; border-radius: 16px; }
+  .dh-ivr__main { border-radius: 16px; }
+}
+
+/* Investor Video Review — plain dark cards with a centred play button (matches the design) */
+.dh-ivr__grid { grid-template-columns: minmax(0, 2.35fr) minmax(0, 1fr); gap: 18px; max-width: 1000px; }
+.dh-ivr__side { gap: 14px; }
+.dh-ivr__card {
+  display: grid; place-items: center; background: #1d1c1f; border-radius: 16px; box-shadow: none;
+  transition: background .25s ease, transform .25s ease;
+}
+.dh-ivr__card::after { display: none; }
+.dh-ivr__card--main { aspect-ratio: 16 / 8.7; height: auto; }
+.dh-ivr__card .dh-play { position: relative; inset: auto; margin: 0; z-index: 1; }
+.dh-ivr__card--main .dh-play { width: 52px; height: 52px; }
+.dh-ivr__card--small .dh-play { width: 30px; height: 30px; }
+.dh-ivr__card:hover { background: #2a2730; }
+@media (max-width: 767.98px) {
+  .dh-ivr__card--main { aspect-ratio: 16 / 9; }
+  .dh-ivr__card--small { aspect-ratio: 16 / 10; }
+}
+
+/* Investor Video Review — thumbnail behind the play button */
+.dh-ivr__card { position: relative; overflow: hidden; }
+.dh-ivr__thumb {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 22%;
+  display: block; transition: transform .5s ease;
+}
+.dh-ivr__card:has(.dh-ivr__thumb)::after {
+  content: ""; display: block; position: absolute; inset: 0; background: rgba(15, 5, 25, .28); transition: background .3s ease;
+}
+.dh-ivr__card .dh-play { z-index: 2; }
+.dh-ivr__card:hover .dh-ivr__thumb { transform: scale(1.05); }
+.dh-ivr__card:hover:has(.dh-ivr__thumb)::after { background: rgba(15, 5, 25, .12); }
+
+/* Investor Video Review — Facebook cover frame on the large card, bigger play buttons */
+.dh-ivr__poster {
+  position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block;
+  pointer-events: none; transform: scale(1.02);
+}
+.dh-ivr__card:has(.dh-ivr__poster)::after { content: ""; display: block; position: absolute; inset: 0; z-index: 1; background: transparent; }
+.dh-ivr__card--main .dh-play { width: 74px; height: 74px; }
+.dh-ivr__card--small .dh-play {
+    width: 90px;
+    height: 90px;
+}
+@media (max-width: 767.98px) {
+  .dh-ivr__card--main .dh-play { width: 60px; height: 60px; }
+  .dh-ivr__card--small .dh-play { width: 42px; height: 42px; }
+}
+
+/* Investor Video Review: grid spans the full container, same edges as the sections above */
+.dh-ivr__grid { max-width: none; margin: 0; }
+
+/* Investor Video Review — Facebook cover frame scaled to cover the card (keeps its icon centred under ours) */
+.dh-ivr__posterBox { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.dh-ivr__posterBox .dh-ivr__poster {
+  position: absolute; top: 50%; left: 50%; right: auto; bottom: auto; width: 1280px; height: 720px; max-width: none;
+  border: 0; transform-origin: center center; pointer-events: none;
+}
+.dh-ivr__card:has(.dh-ivr__posterBox)::after { content: ""; display: block; position: absolute; inset: 0; z-index: 1; background: transparent; }
+/* solid ring behind our play icon hides Facebook's thinner white ring */
+.dh-ivr__card--main:has(.dh-ivr__posterBox) .dh-play {
+  width: 84px; height: 84px; border-radius: 50%;
+  background-color: rgba(74, 17, 128, .35); background-size: 74px 74px; box-shadow: 0 6px 20px rgba(0, 0, 0, .25);
+}
+
+/* Investor Video Review — mobile/tablet (kept last so it wins over the desktop rules above) */
+.dh-ivr { overflow-x: clip; }
+.dh-ivr__grid, .dh-ivr__side, .dh-ivr__card { min-width: 0; max-width: 100%; }
+@media (max-width: 767.98px) {
+  .dh-ivr .dh-title { font-size: clamp(24px, 6.4vw, 30px); }
+  .dh-ivr__grid { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .dh-ivr__side { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: none; gap: 12px; }
+  .dh-ivr__card { height: auto; border-radius: 14px; }
+  .dh-ivr__card--main { aspect-ratio: 16 / 9; }
+  .dh-ivr__card--small { aspect-ratio: 4 / 5; }
+  .dh-ivr__card--main .dh-play { width: 58px; height: 58px; }
+  .dh-ivr__card--main:has(.dh-ivr__posterBox) .dh-play { width: 66px; height: 66px; background-size: 58px 58px; }
+  .dh-ivr__card--small .dh-play { width: 44px; height: 44px; }
+}
+
+/* WhatsApp button: sit clear of the chat widget and its "We Are Here!" label */
+.wa-float { bottom: 150px; }
+@media (max-width: 991px) { .wa-float { bottom: 140px; } }
+
+/* Why Choose Us accordion: every open panel is 3 lines tall, so switching items never moves the next section */
+.dh-benefit.is-open .dh-benefit__desc { min-height: calc(3 * 1.45em + 30px); }
+.dh-benefit.is-open .dh-benefit__btn { cursor: default; }
+@media (max-width: 575px) {
+  .dh-benefit.is-open .dh-benefit__desc { min-height: calc(4 * 1.45em + 22px); }
+}
+
+/* ---------- Contact Us: mobile-friendly type sizes ---------- */
+@media (max-width: 767.98px) {
+  .pageBanner--contact h1 { font-size: 30px; }
+  .dh-contact__kicker { font-size: 11px; margin-bottom: 8px; }
+  .dh-contact__info h2 { font-size: 22px; line-height: 1.25; margin-bottom: 10px; }
+  .dh-contact__lead { font-size: 14px; line-height: 1.6; margin-bottom: 22px; }
+  .dh-contact__list { gap: 16px; }
+  .dh-contact__list li { font-size: 14px; gap: 12px; }
+  .dh-contact__list small, .dh-contact__social small { font-size: 11px; }
+  .dh-contact__ico { width: 38px; height: 38px; flex: 0 0 38px; font-size: 16px; }
+  .dh-contact__social { margin-top: 26px; padding-top: 20px; }
+  .dh-contact__social a { width: 38px; height: 38px; font-size: 15px; }
+
+  .dh-contact__form .dh-kicker { font-size: 11px; }
+  .dh-contact__form .dh-title, .dh-contact__form .dh-title--sm { font-size: 24px; line-height: 1.25; }
+  .dh-contact__form .dh-text { font-size: 14px; line-height: 1.6; margin-bottom: 18px; }
+  .dh-contact__form .form-label { font-size: 12.5px; margin-bottom: 5px; }
+  .dh-contact__form .form-control { font-size: 14px; min-height: 46px; padding: 10px 14px; border-radius: 12px; }
+  .dh-contact__form textarea.form-control { min-height: 120px; }
+  .dh-contact__actions { gap: 12px; }
+  .dh-contact__submit { width: 100%; justify-content: center; font-size: 14.5px; padding: 13px 22px; }
+  .dh-contact__note { width: 100%; text-align: center; font-size: 12px; }
+
+  .dh-contact__mapchip strong { font-size: 13px; }
+  .dh-contact__mapchip small { font-size: 11px; }
+}
+
+/* Mobile menu round buttons: force true circles (iOS Safari sizes <button> from its content/line-height) */
+.dh-mnav__close, .dh-mnav__toggle {
+  -webkit-appearance: none; appearance: none; box-sizing: border-box;
+  display: inline-flex !important; align-items: center; justify-content: center;
+  padding: 0 !important; margin: 0; line-height: 1 !important; border: 0 !important;
+  border-radius: 50% !important; aspect-ratio: 1 / 1; overflow: hidden; flex-shrink: 0;
+}
+.dh-mnav__close { width: 40px !important; height: 40px !important; min-width: 40px; min-height: 40px; max-width: 40px; max-height: 40px; font-size: 20px; }
+.dh-mnav__toggle { width: 36px !important; height: 36px !important; min-width: 36px; min-height: 36px; max-width: 36px; max-height: 36px; font-size: 18px; }
+.dh-mnav__close svg, .dh-mnav__toggle svg { display: block; width: 1em; height: 1em; flex: 0 0 auto; }
+.dh-mnav__row { min-height: 50px; }
+
+/* Project overview (text | image): wider gap between the columns; the row's negative margins
+   keep the outer edges on the container lines */
+@media (min-width: 992px) {
+  .row.dh-split { --bs-gutter-x: 4.5rem; }
+}
+@media (min-width: 1200px) {
+  .row.dh-split { --bs-gutter-x: 6rem; }
+}
+
+/* Investor Video Review: this cover is already cropped to the card shape */
+.dh-ivr__thumb[src*="client-trust-story"] { object-position: center top; }
+.dh-ivr__thumb[src*="client-trust-guests"] { object-position: center 30%; }
+
+/* Investor Video Review: bigger play button on the large card (desktop/tablet) */
+@media (min-width: 768px) {
+  .dh-ivr__card--main .dh-play,
+  .dh-ivr__card--main:has(.dh-ivr__posterBox) .dh-play {
+    width: 124px; height: 124px; background-size: 110px 110px;
+  }
+}

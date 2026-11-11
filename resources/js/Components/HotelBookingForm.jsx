@@ -5,25 +5,22 @@ import AlertMessageComponents from "./AlertMassageCompononets";
 
 /**
  * "Free Consultation" block shown at the bottom of every page.
- * Posts to the existing `booking` route (booking_type = 1).
+ * Same fields as the Contact Us form; posts to the `contactMail` route.
  */
-export default function HotelBookingForm({ servicesList }) {
+export default function HotelBookingForm() {
     const { props } = usePage();
-    const ownershipList = servicesList ?? props.servicesList ?? [];
     const phone = props.general?.mobile || "+88 01953 000022";
 
     const { data, setData, post, reset, processing, errors } = useForm({
-        booking_type: 1,
         name: "",
         email: "",
-        mobile: "",
-        category: "",
-        quantity: "",
+        subject: "",
+        message: "",
     });
 
     const submit = (e) => {
         e.preventDefault();
-        post(route("booking"), {
+        post(route("contactMail"), {
             preserveScroll: true,
             onSuccess: () => reset(),
             onError: (err) => {
@@ -61,14 +58,14 @@ export default function HotelBookingForm({ servicesList }) {
                             <p className="dh-kicker">Register Your Interest</p>
                             <h4>Free Consultation</h4>
 
-                            <AlertMessageComponents status={errors.status} message={errors.message} />
+                            <AlertMessageComponents status={errors.status} message={errors.messages || (errors.status ? errors.message : null)} />
 
                             <Form onSubmit={submit} noValidate={false}>
                                 <Form.Group className="mb-3">
                                     <Form.Control
                                         type="text"
-                                        placeholder="Applicant Name"
-                                        aria-label="Applicant Name"
+                                        placeholder="Your Name"
+                                        aria-label="Your Name"
                                         required
                                         value={data.name}
                                         onChange={(e) => setData("name", e.target.value)}
@@ -88,46 +85,32 @@ export default function HotelBookingForm({ servicesList }) {
                                     {errors.email && <span className="text-danger">{errors.email}</span>}
                                 </Form.Group>
 
-                                <div className="row g-2 mb-3">
-                                    <div className="col-6">
-                                        <Form.Control
-                                            type="tel"
-                                            inputMode="tel"
-                                            placeholder="Phone No."
-                                            aria-label="Phone Number"
-                                            required
-                                            value={data.mobile}
-                                            onChange={(e) => setData("mobile", e.target.value)}
-                                        />
-                                        {errors.mobile && <span className="text-danger">{errors.mobile}</span>}
-                                    </div>
-                                    <div className="col-6">
-                                        <Form.Control
-                                            type="number"
-                                            min="1"
-                                            placeholder="Ownership Qty"
-                                            aria-label="Ownership Quantity"
-                                            value={data.quantity}
-                                            onChange={(e) => setData("quantity", e.target.value)}
-                                        />
-                                    </div>
-                                </div>
+                                <Form.Group className="mb-3">
+                                    <Form.Control
+                                        type="text"
+                                        placeholder="Subject"
+                                        aria-label="Subject"
+                                        required
+                                        maxLength={100}
+                                        value={data.subject}
+                                        onChange={(e) => setData("subject", e.target.value)}
+                                    />
+                                    {errors.subject && <span className="text-danger">{errors.subject}</span>}
+                                </Form.Group>
 
                                 <Form.Group className="mb-3">
-                                    <Form.Select
-                                        required
-                                        aria-label="Ownership Category"
-                                        value={data.category}
-                                        onChange={(e) => setData("category", e.target.value)}
-                                    >
-                                        <option value="">Select Ownership</option>
-                                        {ownershipList.map((ctg) => (
-                                            <option key={ctg.id} value={ctg.id}>
-                                                {ctg.name}
-                                            </option>
-                                        ))}
-                                    </Form.Select>
-                                    {errors.category && <span className="text-danger">{errors.category}</span>}
+                                    <Form.Control
+                                        as="textarea"
+                                        rows={4}
+                                        placeholder="Message"
+                                        aria-label="Message"
+                                        maxLength={500}
+                                        value={data.message}
+                                        onChange={(e) => setData("message", e.target.value)}
+                                    />
+                                    {errors.status !== "success" && errors.message && (
+                                        <span className="text-danger">{errors.message}</span>
+                                    )}
                                 </Form.Group>
 
                                 <button type="submit" className="dh-submit" disabled={processing}>

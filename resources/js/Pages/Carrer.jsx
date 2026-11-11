@@ -44,9 +44,6 @@ export default function CareerPage({
           >
             <div className="container">
               <h1 className="mt-4">Career</h1>
-              <h5 align="center">
-                Build a meaningful career with a team shaping premium hospitality and destination living.
-              </h5>
             </div>
           </div>
         </div>

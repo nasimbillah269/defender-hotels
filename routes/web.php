@@ -47,6 +47,7 @@ Route::get('/geo/filter/{id}',[InertiaWelcomeController::class,'geo_filter'])->n
 Route::get('/service/category/{slug}',[InertiaWelcomeController::class,'serviceCategory'])->name('serviceCategory');
 Route::get('/service/{slug}',[InertiaWelcomeController::class,'serviceView'])->name('serviceView');
 Route::post('/booking',[InertiaWelcomeController::class,'booking'])->name('booking');
+Route::get('/invest-now/success',[InertiaWelcomeController::class,'investSuccess'])->name('investSuccess');
 
 Route::get('/blog',[InertiaWelcomeController::class,'blogsPage'])->name('blogsPage');
 Route::get('/videos',[InertiaWelcomeController::class,'videosPage'])->name('videosPage');
