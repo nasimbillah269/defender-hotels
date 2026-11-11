@@ -33,10 +33,27 @@ export const PROJECT_VIDEOS = [
   },
 ];
 
+/** Video Gallery on every project page (Bella Maris, Blue Rain, Lusai Cottage, Raj Darbar). */
+const yt = (id, title, text) => ({
+  id,
+  src: `https://www.youtube.com/watch?v=${id}`,
+  thumb: `https://i.ytimg.com/vi/${id}/maxresdefault.jpg`,
+  title,
+  text,
+});
+
+export const GALLERY_VIDEOS = [
+  yt("Hr_Fte3FW0s", "ডিফেন্ডারের উপর আস্থার গল্প", "একজন ওনারের মুখে তার অভিজ্ঞতা — বেলা মারিস, ইনানী"),
+  yt("fSk7sYataaA", "একজন বাবার শেষ স্বপ্ন", "Defender Hotels & Resorts Ltd."),
+  yt("5OedZM3bA38", "পরিবারের নিরাপদ ভবিষ্যতের জন্য স্মার্ট বিনিয়োগ", "Defender Hotels & Resorts Ltd."),
+  yt("BG_w-JjcCAA", "আজীবন হালাল আয়", "Defender Hotels & Resorts Ltd."),
+  yt("pMEN40IkY6U", "পর্যটন অর্থনীতি: সম্ভাবনার বাংলাদেশ", "Happening Point · Defender Hotels & Resorts Ltd · 17 May 2026"),
+];
+
 /** Playlist needs at least this many cards to fill the column beside the player. */
 const MIN_PLAYLIST = 4;
 
-export default function VideoPalyer({ videos: source = PROJECT_VIDEOS, background = "blue" }) {
+export default function VideoPalyer({ videos: source = GALLERY_VIDEOS, background = "blue" }) {
   // too few videos → repeat them (with unique ids) so the playlist has no empty space
   const videos = useMemo(() => {
     if (!source.length || source.length >= MIN_PLAYLIST) return source;

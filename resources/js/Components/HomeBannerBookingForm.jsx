@@ -71,7 +71,7 @@ export default function HomeBannerBookingForm({bookingUrl,servicesList}) {
                                                     Select Ownership</option>
                                                     {servicesList.map(service => (
                                                         <option key={service.id} value={service.id}>
-                                                            {service.name}
+                                                            {service.short_description || service.name}
                                                         </option>
                                                     ))}
 

@@ -171,10 +171,12 @@ class InertiaWelcomeController extends Controller
 
 
 
-        $servicesList =Post::where('type',3)
+        // Hero "Select Ownership" list = the Invest Now ownership packages (posts.type = 6),
+        // so the chosen id pre-selects the same package on the Invest Now form
+        $servicesList =Post::where('type',6)
         ->where('status','active')
-        ->whereDate('created_at','<=',Carbon::now())
-        ->get(['id','name']);
+        ->orderBy('view')
+        ->get(['id','name','short_description','share_price']);
 
         $booking =pageTemplate('Booking');
         $bookingUrl =null;
